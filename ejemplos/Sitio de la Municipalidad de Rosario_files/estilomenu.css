@@ -1,0 +1,150 @@
+#divmenu {	
+	float:left !important;
+	display:block;
+}
+
+
+
+/* lista menu principal */
+#menu {
+		width: 140px;
+		padding:0px; margin:0px;
+        background-color:#ffffff;
+		
+}
+
+
+#menu ul {
+	list-style-type: none;
+	padding:0px; margin:0px;
+}
+
+#menu ul li {
+	border-bottom:1px solid #dddddd;
+	margin:0px; padding:0px;
+}
+
+#menu ul li a{
+	display:block;
+	padding:8px 4px 4px 8px;
+	text-decoration:none;
+	color:#333333;
+	position: relative;
+	z-index: 1;
+	background-color: #ffffff;
+}
+
+
+#menu ul li ul{
+	display:none;
+}
+
+#menu ul li a:hover{
+	color:#333333 !important;
+	background-color: #eeeeee !important;
+}
+
+
+#menu ul li.nivelactivo ul{
+
+	display:block !important;
+	
+}
+
+#menu ul li.nivelactivo a{
+
+	background-color: #F77C20 !important;
+	color:#ffffff !important;
+	font-weight:bold; 
+	
+}
+
+#menu ul li.nivelactivo ul li a{
+	color:#333333 !important;
+	background-color:#DFDFDF !important;
+	border-bottom:1px solid #eeeeee;
+	font-weight:normal; 
+}
+
+
+
+
+
+
+#menu ul li.nivelactivo a:hover{
+	color:#333333;
+	background-color: #cccccc !important;
+}
+
+
+
+
+#menu a.subactivo {
+
+	font-weight:bold !important; 	
+}
+
+
+
+/* Buscador */ 
+
+#divbuscador {
+	margin:20px 0px 10px 0px;
+	padding:0px;
+	background-image: url(imagenes/buscador.png);
+	background-repeat:no-repeat;
+	background-position:5px 10px;
+	/* height:110px; */
+	width:140px;
+	font-weight: bold;
+	border-top:1px solid #cccccc;
+	text-align: center !important;
+}
+
+#divbuscador a{
+	color:#888888;
+	display:block;
+	padding:0px 10px 6px 14px;
+	text-indent:0px;
+	text-decoration:none;
+	font-size:100%;
+}
+
+
+/*   Reclamos */ 
+
+ {
+	
+	background-repeat: no-repeat;
+}
+
+
+
+#reclamos a {
+	display:block;
+	width:140px;
+	height:40px;
+	margin:0px;
+	text-indent:50px;
+	padding:25px 0px 0px 0px;
+	color: #F38F1B;
+	font-weight: bold;
+	font-size: 120%;	
+	background-image: url(imagenes/reclamos_out.png);
+	background-repeat: no-repeat;
+	background-position:10px 10px;
+	text-align: center;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	text-decoration:none;
+}
+	
+
+
+#reclamos a:hover {
+
+	color:#999999;
+	background-image:url(imagenes/reclamos_over.png);
+	
+}
+

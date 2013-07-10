@@ -1,0 +1,619 @@
+#contenido {
+	
+	padding:0px 0px 20px 19px !important;
+	
+	
+}
+
+h2 {
+	font-size: 120%;
+	margin:2em 0em 1em 1em;
+	font-weight:bold;
+	color: #666666;
+}
+
+/* Divs de Layout */
+
+#columna1 {
+	clear:both;
+	float:left;
+	margin:0px 25px 0px 0px;
+	_margin:0px 20px 0px 0px;
+	background-color:#ffffff;
+	
+}
+
+#columna2 {
+	float:left;
+	width:203px;
+	margin:0em;
+	border-left: 1px solid #cccccc;
+	background-color:#ffffff;
+	
+	
+}
+
+
+
+/*  dentro de columna1 - noticias */
+
+
+
+
+#noticias, #destacados {	
+	margin:1em 0em 1.5em 0em;	
+	width:360px;
+}
+
+#noticias {
+	background-image: url(imagenes/noticias.png);
+	background-repeat:no-repeat;
+
+}
+
+
+#destacados {	
+	background-image: url(imagenes/destacados.png);
+	background-repeat:no-repeat;
+	clear:both;
+	
+}
+
+#noticias h2, #destacados h2, #consultas h2, #videohome h2  {
+		
+	padding:0.7em 0em 0em 0em;
+	color: #333333;
+	margin:0em 0em 1em 3.5em;
+	
+}
+
+
+
+#videohome {
+	
+	background-image:url(imagenes/videohome.png);
+	background-repeat:no-repeat;
+	padding: 0px 0 0 0px;
+	display:block;
+	margin:0 0 10px 0;
+	height:160px;
+	width:360px;
+	
+		
+}
+
+#videohome #videomaxi {
+	
+	display:none;
+	
+}
+
+
+
+#videohome #videomini {
+	
+	display: block;
+	padding:0;	
+	border:1px solid #ccc;
+	height:115px;
+	background:#eee;
+	
+
+	
+}
+
+#videohome #videomini a {
+
+
+	display:block;
+	color:#000;
+
+}
+
+#videohome #videomini a:hover {
+	
+	
+	
+}
+
+
+#videohome #videomini #videotitulo {
+	
+	/* float:right; */
+	width:340px;
+	
+	margin:0;
+	font-size:90%;
+	font-weight:bold;
+	color: #fff;
+	background-color:#000;
+	padding:5px 10px 5px 10px;
+	overflow:hidden;
+	display:block;
+	
+	
+}
+
+#videohome #videomini #videotitulo a{
+	
+	color:#fff;
+	
+}
+
+
+#videohome #videomini #videotitulo a:hover{
+	
+	color:#eee !important;
+	
+}
+
+#videohome #videomini #videodescripcion {
+	
+	float:left;
+	width:220px;
+	height:90px;
+	font-size:80%;
+	margin:0;
+	overflow:hidden;
+	clear:right;
+	
+}
+
+#videohome #videomini #videodescripcion a {
+	
+	display: block;
+	width:210px;
+	height:90px;
+	margin:0;
+	padding:10px 15px 10px 10px;
+	
+	
+}
+
+#videohome #videomini #videodescripcion a:hover {
+	
+	color: #666 !important;
+	
+}
+
+
+
+
+
+
+#videohome #vercanal {
+	
+	float: right;
+	font-size:80%;
+	font-weight:bold;
+}
+
+
+/****************************/
+
+#noticias #scrolable {
+
+	overflow:auto;
+	padding:0px 10px 10px 0px;
+	margin:0px 0px 0px 0px;
+	height:350px; 	
+	width:350px;
+	_width:340px; 
+	/* border:none !important; */
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc; 
+}
+
+ 
+
+/* h3 para Titulo de cada  noticia */ 
+#noticias h3 {
+	font-size: 110%;
+	margin:0em 0.5em 0.5em 0em;
+	padding: 0em;
+	background-image:none;
+	clear: both;
+	color: #F77C20;
+}
+
+
+/* h5 para volanta de noticias */
+#noticias h5 {
+	color:#999999;
+	font-size: 85%;
+	margin: 0em 0em 0.5em 0em;
+	clear: both;
+	
+}
+
+/* h4 para bajada de noticias ( incluye linea )*/
+#noticias h4 {
+	color:#999999;
+	font-size: 90%;
+	font-weight:normal;
+	padding:0em 0em 0.7em 0em;
+	margin: 0em 0em 0.8em 0em;
+	display: block;
+	
+}
+
+#noticias img {
+	margin: 0px 10px 10px 0px;
+	display: inline;
+	float: left;
+}
+
+#noticias div {
+	display:block;
+	clear:both;
+	border-top:1px solid #999999;
+	height: auto;
+	margin: 0px 0px 15px 0px;
+	padding:10px 0px 0px 0px;
+}
+
+#noticias .vermas {
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+
+#noticias .vermas a {
+	color: #f38e1a;
+	display: block;
+	text-align:right;
+	background-image:url(imagenes/vermas_out.png);
+	background-position:right 3px;
+	background-repeat:no-repeat;
+	padding:3px 20px 0px 0px;
+	height:20px;
+	margin:0px;
+	
+}
+
+#noticias .vermas a:hover {
+	color: #999999;
+	background-image:url(imagenes/vermas_over.png);
+}
+
+
+/* dentro de columna1 - destacados   */ 
+
+
+
+#destacados ul {
+	list-style:none;
+	margin:0;
+	padding:0px;
+}
+
+#destacados ul li {
+	margin:0px;
+	padding:7px 0px 0px 0px;
+	font-weight:bold;
+	border-bottom:1px solid #CCCCCC;
+	background-image:url(imagenes/circulito.png);
+	background-repeat: no-repeat;
+	background-position:0px 12px;
+}
+
+#destacados ul li a{
+	color:#888888;
+	display:block;
+	padding:0px 10px 6px 14px;
+	text-indent:0px;
+}
+
+#destacados ul li a:hover, #divbuscador a:hover{
+	color: #666666;
+	
+}
+
+
+
+
+
+/* dentro de columna 2 - tramites on line */
+
+
+/******* Columna 2 *********/ 
+
+/* Tr�mites */ 
+
+#tramitebloque {
+	
+	margin:7px 0px 10px 3px;
+	padding:0px;
+	height:60px;
+	width:200px;
+	text-align:center;
+	
+	
+}
+
+#tramitebloque a {
+	display:block;
+	background-image:url(imagenes/tramoline_out.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:60px;
+	width:200px;
+		
+}
+
+#tramitebloque a:hover {
+	background-image:url(imagenes/tramoline_over.png);
+	text-align: center;
+	
+}
+
+
+/********* Cultura : Link al subportal ***********/
+
+#cultura {
+	
+	margin:0px 0px 0px 3px;
+	padding:6px 0 0 0;
+	height:60px;
+	width:200px;
+	text-align:center;
+	border-top: 1px solid #cccccc;
+	
+	
+}
+
+#cultura a {
+	display:block;
+	background-image:url(imagenes/cultura_out.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:60px;
+	width:200px;
+		
+}
+
+#cultura a:hover {
+	background-image:url(imagenes/cultura_over.png);
+	text-align: center;
+	
+}
+
+/*************************************/
+
+
+
+#consultas {
+	margin:1em 0em 1em 3px;
+	padding:0em;
+	background-image: url(imagenes/faq.png);
+	background-repeat:no-repeat;
+	
+}
+
+#consultas ul {
+	list-style:none;
+	margin:30px 0px 4px 8px;
+	padding:0px;
+}
+
+#consultas ul li {
+	margin:2px 6px 10px 0px;
+	font-weight:bold;
+	font-size:10px;
+	background-image:url(imagenes/circulito.png);
+	background-repeat: no-repeat;
+	background-position:0px 3px;
+}
+
+#consultas ul li a{
+	text-decoration:none;
+	color:#888888;
+}
+
+#consultas ul li a:hover{
+	text-decoration:none;
+	color: #666666;
+}
+
+
+/* dentro de columna2 - buscador */
+
+
+/* Banner */ 
+
+#banner {
+	margin:1em 0em 1em 0.4em;
+	padding:0.3em 0em 0.3em 0em;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+
+/* cortes de calles */ 
+
+#cortes, #links, #turismo {
+	border-top:1px solid #cccccc;
+	clear:both;
+	margin:0px 0px 0px 3px;
+	
+}
+
+#links {
+		border-bottom:1px solid #cccccc;
+}
+
+#cortes a, #links a, #turismo a {
+	display:block;
+	width:200px;
+	height:40px;
+	margin:0px;
+	text-indent:10px;
+	padding:25px 0px 0px 0px;
+	color: #F38F1B;
+	font-weight: bold;
+	font-size: 110%;	
+	background-repeat: no-repeat;
+	background-position:140px 5px;
+	
+}
+
+#cortes a {
+	background-image:url(imagenes/cortes_out.png);
+}
+
+#cortes a:hover {
+
+	color:#999999;
+	background-image:url(imagenes/cortes_over.png);
+	/* background-color:#F38F1B; */ 
+}
+
+
+#links a {
+
+	background-image:url(imagenes/links_out.png);
+	
+	
+}
+
+#links a:hover {
+	color:#999999;
+	background-image:url(imagenes/links_over.png);
+	/* background-color:#F38F1B; */ 
+}
+
+/* Turismo */ 
+
+#turismo a {
+
+	background-image:url(imagenes/turismo_out.png);
+	
+	
+}
+
+#turismo a:hover {
+	color:#999999;
+	background-image:url(imagenes/turismo_over.png);
+	/* background-color:#F38F1B; */ 
+}
+
+/* Votacion PP */
+
+#votacionpp {
+	text-align:center;
+	background-image: url(imagenes/pp-votacion.png);
+	background-repeat:no-repeat;
+	height: 110px;
+	background-color:#333333;
+	color:#333333;
+	border-top:#F77C20 solid 6px;
+	border-bottom: #666666 solid 4px; 
+	font-size:14px;
+}
+
+#votacionpp div {
+
+	width:250px;
+	margin:35px 45px 0 45px;
+	padding:0 10px;
+	
+	
+}
+
+#votacionpp .cantidadvotantes {
+
+	color: #F77C20;
+	font-weight:bold;
+	font-size:18px;
+	
+}
+                /*
+              /*
+/******************/
+/*                */
+/*  Video Home    */
+/*                */
+/******************/
+
+/*
+#videohomesm {
+
+	background-color: #eeeeee;
+	height:120 px;
+	width:100%;
+	margin: 10px 0 10px 0;
+	border-top:20px solid #333333;
+	padding:10px;
+	
+	
+}
+
+*/
+
+
+
+/****** Registro Unico de Postulantes **********/
+
+#rup {
+	
+	witdth:200px;
+	height: 65px;
+	text-align:center;
+	margin:5px 0;
+	
+}
+
+#rup a {
+	background: url(imagenes/boton-home.png);
+	background-repeat:no-repeat;
+	display:block;
+	height: 65px;
+	margin: 0 0 0 6px;
+	
+}
+
+#rup a:hover {
+	
+	background: url(imagenes/boton-home-hover.png);
+	background-repeat:no-repeat;
+		
+}
+
+#rup a span {
+	
+	display:none;
+	
+}
+
+
+/*******************************/
+
+#sorteo a, #sorteo2 a, #sorteo3 a {
+
+	margin: 10px 0 10px 0;
+	width:590px;
+	height:97px;
+	display:block;	
+	
+	
+}
+
+
+#sorteo a {
+
+	background:url(/sitio/paginainicial/imagenes/banner-sorto.png);
+
+}
+
+#sorteo2 a {
+
+	background:url(/sitio/paginainicial/imagenes/banner-31.png);
+
+}
+
+#sorteo3 a {
+
+	background:url(/sitio/paginainicial/imagenes/banner-1nov.png);
+
+}

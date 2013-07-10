@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Acccesibilidad Web - Guía Práctica</title>
+
+		<meta name="description" content="Presentación para las mini charlas tecnológicas 2013">
+		<meta name="author" content="Pablo Botta">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!--<link rel="stylesheet" href="css/reveal.min.css">-->
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		
+		<style type="text/css">
+			.text-hightlight {
+				color:yellow!important;
+			}
+			.text-hightlight-blue {
+				color:#00DDDD;
+			}
+			.tall-image {
+				max-height:80%!important;
+				max-width:80%!important;
+			}
+			.text {
+				text-align: left;
+			}
+			figure {
+				position:relative;
+				width:80%;
+				margin:auto;
+				display:inline-block!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > .img {
+				position:relative;
+				z-index:0;
+				max-width:100%!important;
+				max-height:100%!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > figcaption {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+				z-index:1;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure:hover > figcaption,
+			figure:focus > figcaption {
+				border: 0;
+				clip: auto;
+				height: auto;
+				margin: auto;
+				width: 100%;
+				overflow: hidden;
+				padding: .3em;
+				position: absolute;
+				bottom:0;
+				background:gray;
+				z-index:1;
+			}
+			.reveal table {
+				margin: auto;
+			}
+			
+			.reveal table th {
+				text-shadow:none;
+				text-align: right;
+			}
+			.reveal table td  {
+				text-align: right;
+				color:#00DDDD;
+			}
+			.reveal h1 {
+				font-size: 3.2em;
+			}
+			.reveal code {
+				font-family: consolas, "Courier New", monospace;
+				/*font-family: consolas!important;*/
+			}
+		</style>
+		
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Acccesibilidad Web <br />Guía Práctica</h1>
+					<p>Mini Charlas Tecnológicas @ <abbr title="Universidad Tecnológica Nacional">UTN</abbr> 2013</p>
+					<p>
+						<a href="#">Pablo Botta</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Pablo Botta</h2>
+					<p>Algunos detalles para que me conozcan un poco mejor...</p>
+					<ul>
+						<!-- Organizar la presentación -->
+						<li class="fragment"><strong>Ingeniero en Sistemas</strong> de la <abbr title="Universidad Tecnológica Nacional">UTN</abbr></li>
+						<li class="fragment"><strong>Desarrollador Web</strong> en Autologica</li>
+						<li class="fragment"><strong>Creador</strong> de <a href="http://awar.com.ar/" target="_blank" class="external">Accesibilidad Web Argentina</a></li>
+						<li class="fragment"><strong>Colaborador</strong> en <a href="http://a11yproject.com/" target="_blank" class="external"><abbr title="Accessibility">A11y</abbr> Project</a></li>
+						<li class="fragment"><strong>Colaborador</strong> en <a href="http://www.forosdelweb.com/" target="_blank" class="external">Foros del Web</a></li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Accesibilidad Web</h2>
+						<p>
+							La accesibilidad Web significa que <span class="text-hightlight">personas con algún tipo de discapacidad van a poder hacer uso de la Web</span>. En concreto, al hablar de accesibilidad Web se está haciendo referencia a un diseño Web que va a permitir que estas personas puedan percibir, entender, navegar e interactuar con la Web, aportando a su vez contenidos a la misma.
+						</p>
+						<p><small>Fuente: <a href="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility">Introducción a la Accesibilidad Web - <abbr title="World Wide Web Consortium">W3C</abbr></a></small></p>
+					</section>
+				</section>
+				<section>
+					<h2>Analogía para entender la <br /> accesibilidad Web</h2>
+					<img src="images/analogia-explicada.jpg" alt="" width="750" />
+					<p>En nuestro entorno cotidiano (<span class="text-hightlight">la web</span>) y a pesar de que las personas (<span class="text-hightlight">usuarios</span>) cuenten con herramientas, tales como una silla de ruedas, para disminuir sus dificultades (<span class="text-hightlight">tecnologías de apoyo, por ejemplo un lector de pantalla</span>) existen lugares públicos o privados (<span class="text-hightlight">sitios web</span>) que <strong>NO</strong> tienen las condiciones para recibirlos (<span class="text-hightlight">Accesibilidad Web</span>).</p>
+				</section>	
+				<section>
+					<h2>Discapacidad en números</h2>
+					<p class="fragment text"><strong class="text-hightlight-blue">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight-blue">mundo</strong> están afectadas por algún tipo de discapacidad.<br /><small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small></p>
+					<p class="fragment text">En <strong class="text-hightlight-blue">Argentina</strong> aproximadamente el <strong class="text-hightlight-blue">7.1% de la población</strong> sufre de algún tipo de discapacidad. <br /><small>Fuente: <a href="www.indec.gov.arprincipal.asp?id_tema=166">Encuesta Nacional de Personas con Discapacidad 2002-2003. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small></p>
+				</section>
+				
+				<section>
+					<h2>¿Por qué no se desarrolla accesible?</h2>
+					<p>(Opinión Personal)</p>
+				</section>
+				
+				<section>
+					<h3>La accesibilidad Web <span class="text-hightlight">NO es una tendencia</span></h3>
+					<!--<p>Interés relativo de búsqueda a lo largo del tiempo</p>-->
+					<img src="images/tendencia.png" width="900" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
+					<br />
+					<p>Personas con discapacidad versus uso de <abbr title="Internet Explorer">IE</abbr> 6 y 7 (combinado)</p>
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Argentina</th>
+								<th>Mundial</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Internet Explorer 6 y 7</th>
+								<td>2.0%</td>
+								<td>8.0%</td>
+							</tr>
+							<tr>
+								<th>Población con discapacidad</th>
+								<td>7.1%</td>
+								<td>15.0%</td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+					<p class="text text-hightlight">Potencialmente se cree que no exite mucho público beneficiado por la Accesibilidad Web, además que no es tópico de gran debate en Internet.</p>
+					<p><small>Fuente: <a href="http://www.netmarketshare.com/">Net Market Share</a> y <a href="http://gs.statcounter.com/#browser_version_partially_combined-AR-monthly-201202-201302">Stats Counter</a></small></p>
+				</section>
+				
+				<section>
+					<h3>¿Por qué debería aplicarla entonces?</h3>
+					<img src="images/why.jpg" alt="" />
+					<p><small>Imagen cortesía de <a href="http://www.flickr.com/photos/86979666@N00/7623744452/">Tsahi Levent-Levi</a></small></p>
+				</section>
+				
+				<section>
+					<h3 style="line-height:1.25em;">Averigua la respuesta a esta pregunta y a muchas preguntas más en las...</h3>
+					<h2 style="font-size:210%;" class="text-hightlight">Mini Charlas Tecnológicas de Primavera 2013</h2>
+					<br />
+					<h3 style="line-height:1.25em;">No te pierdas de...</h3>
+					<h2 style="font-size:210%;" class="text-hightlight">Acccesibilidad Web Guía Práctica</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

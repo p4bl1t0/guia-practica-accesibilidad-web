@@ -1,2 +1,2 @@
-guia-practica-accesibilidad-web
+Guía Práctica de Accesibilidad Web
 ===============================

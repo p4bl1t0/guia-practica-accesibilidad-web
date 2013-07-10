@@ -1,0 +1,1568 @@
+/* Estilo General de Posici�n y Tama�o */
+
+/* F77C20 naranja */ 
+
+html {
+	margin:0px; margin-left:auto; margin-right:auto;
+	
+}
+
+body {
+	text-align: center;
+	background-color: #eeeeee;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	margin:0em;	padding:0em;
+	background-image:url(imagenes/fondo_globos.jpg);
+}
+
+/* este div es para centrar todo el contenido */
+
+#main {
+	
+	overflow: hidden;
+	width:760px; padding: 0em;
+	margin-left: auto; 	margin-right: auto;	text-align: left;	
+	background-image:url(../menu/imagenes/fondo_menu.png);
+	background-repeat: repeat-y; background-color:#FFFFFF;
+	
+}
+
+
+/* incluye men� y contenido */
+#central {
+	float:left; display:block;
+}
+
+/* todo el texto */
+
+#contenido {
+	float: left !important;
+	width:590px;
+	margin:0px;	padding:0px 0px 20px 29px;
+	_height: auto;
+	font-size:120%;
+	
+}
+
+/******** TITULOS ********/ 
+
+#contenido h1 {
+	padding: 0em 0em 0em 1.2em;
+	margin:1em 0em 0.3em 0em ;
+	font-size:250%;
+	font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+	color: #666666;
+	/* letter-spacing:-1px; */
+	background-image: url(imagenes/h1.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	font-weight: bold;
+	
+	
+}
+
+#contenido h2 {
+	margin:0em 0em 1em 0em;
+	padding:0em;
+	font-size:120%;
+	color: #F77C20;
+	background-color:#FFFFFF;	/* esto para el opera */
+}
+
+#contenido h3 {	
+	margin:1em 0em 0.7em 0em;
+	padding:0px;
+	font-size:110%;	
+	color: #F77C20;
+	background-color:#FFFFFF; /* esto para el opera */
+}
+
+#contenido h4 {	
+	margin:1em 0em 0.7em 0em;
+	padding:0px;
+	font-size:100%;
+	color:#666666;
+}
+
+#contenido h5 {	
+	margin:1em 0em 0.7em 0em;
+	padding:0em;
+	font-size:100%;
+	color:#999999;
+}
+
+/* links */
+
+#contenido a {
+	text-decoration:none;
+	color: #F77C20;
+}
+
+#contenido a:hover {
+	color: #333333  !important;
+}
+
+
+/* parrafos y estilos agregados */
+
+#contenido p {
+	margin:0.2em 0em 1.2em 0em;
+	padding:0em;
+	line-height: 140%;
+	
+}
+
+#contenido .gris {
+	color:#666666;
+}
+
+
+#contenido .piefoto {
+	font-size: 90%;
+	color:#666666;
+	
+}
+
+#contenido #colder212 .piefoto {
+	
+	width:140px;
+	
+}
+
+#contenido .small {
+	font-size:80%;
+}
+
+/* Estilo pdf para marcar extensiones de archivo diferentes */ 
+
+.pdf {
+	font-size:80%;
+	color:#999999;
+}
+
+
+strong {
+	color:#555555;
+}
+
+.colcolor strong {
+	#ffffff;
+}
+
+/*** para destacar en Buscador   ********************/
+
+.azul {
+	color:#12659C;
+	font-weight:bold;
+	
+}
+
+.fondogris {
+	background-color: #eeeeee;
+	padding:0.1em 0.4em;
+}
+
+
+/* Columnas CAMBIARON ANCHO !!!  */ 
+
+/* Dos iguales 281 - 281 */ 
+
+
+#colizq281 {
+
+	width:260px;
+	float: left;
+	margin: 10px 0px 0px 15px;
+	_margin: 10px 0px 0px 9px;
+	
+
+}
+
+#colder281 {
+	width:260px;
+	float: left;
+	margin: 10px 0px 0px 15px;
+	
+}
+
+/* otro modelo :  350 - 212 */
+
+#colizq350 {
+	width:320px;
+	float: left;
+	margin: 10px 0px 0px 15px;
+	_margin: 10px 0px 0px 9px;
+	
+	
+}
+
+#colder212 {
+	width:200px;
+	float: left;
+	display:block;
+	margin: 10px 0px 0px 15px;
+	padding:10px 0px 10px 0px;
+	
+}
+
+
+
+#colder212 img {
+	margin:0 0 0.5em 0;
+}
+
+
+/* #colder212 div {
+	float: right;
+}
+*/
+
+/* otro mas: 425 - 137 */
+
+#colizq425 {
+	width:400px;
+	float: left;
+	margin: 10px 0px 0px 17px;
+	_margin: 10px 0px 0px 9px;
+	padding:0px;
+	clear: both;
+	
+}
+
+#colder137 {
+	width:130px;
+	display:block;
+	float: left;
+	margin: 10px 0px 0px 17px;
+	
+}
+
+/* Una sola columna 550 */
+
+#col550 {
+	width:530px;
+	float: left;
+	margin: 10px 0px 0px 17px;
+	_margin: 10px 0px 0px 9px;
+}
+
+/* Columna color */ 
+
+#colcolor {
+	width:200px;
+	float: left;
+	margin: 10px 0px 0px 15px;
+	padding:0px 0px 20px 0px;
+	color:#ffffff;
+}
+
+
+
+
+/* Listas */ 
+
+/* Menu vertical */
+
+#contenido ul {
+	list-style:none;
+	padding:0em;
+	margin:0em 0em 1em 0em;
+}
+
+#contenido ul li {
+	padding:0em 0em 0em 1.5em;
+	margin:0em 0em 0.5em 0em;
+	background-image: url(imagenes/flechita_naranja.png);
+	background-position:0em 0.25em;
+	background-repeat:no-repeat;
+	line-height: 140%;
+	
+}
+
+#contenido ul.listalinks li {
+	background-image: url(imagenes/flechita_negra.png);
+	
+}
+
+#contenido ul.listalinks li li {
+	background-image:url(imagenes/circulito_gris.png);
+}
+
+#contenido ul.listalinks li li li {
+	background-image:url(imagenes/rayita_gris.png);
+}
+
+
+
+#contenido li a:hover , #contenido ul.listalinks li a:hover {
+	color: #666666 !important;
+	
+	
+}
+
+
+#contenido ul.menuvertical, #contenido ul.menuancla {
+	margin:0em 0em 1em 0em;
+	
+}
+
+
+#contenido ul.menuvertical li, #contenido ul.menuancla li {
+	margin:0em;
+	padding:0 0 0.1em 1.5em;
+	background-image: url(imagenes/doble_negra.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0.4em;
+	line-height:100%;
+	
+}
+
+#contenido ul.menuancla li {
+	background-image: url(imagenes/doble_naranja.png);
+}
+
+
+
+#contenido ul.menuvertical li a, #contenido ul.menuancla a {
+	display:block;
+	padding:0.2em 0em 0.5em 0.1em;
+	font-size: 110%;
+	line-height:125%;
+	color:#666666 !important;
+	border-bottom: 1px solid #cccccc;
+	
+}
+
+#contenido ul.menuvertical li a:hover, #contenido ul.menuancla a:hover {
+	background-color:#eeeeee;
+	border-bottom: 1px solid #F77C20;
+	color:#DF6E1B !important;
+	
+	
+}
+
+/* lista nivel 2 */
+
+#contenido ul ul {
+	margin: 1.2em 0em 0em 0em !important;
+	padding:0em 0em 0em 1.2em ;
+	
+}
+
+/* lista con letras */
+#contenido #col550 .letras, #colizq425 .letras, #colizq350 .letras, #colizq281 .letras {
+	list-style-position: inside;
+	list-style-type: lower-alpha;
+}
+
+#contenido ol{
+	padding:0em;
+	margin:0em;
+	list-style-position: inside;
+}
+
+#contenido ol li {
+	padding: 0em 0em 0em 1.3em;
+	margin:0em 0em 0.5em 0em;
+	background-position:0px 7px;
+	background-repeat:no-repeat;
+	line-height: 140%;
+}
+
+/******** Menu Horizontal ************/
+
+#menuhorizontal, #paginador{
+	clear:both;
+	display:block;
+	padding:0px 0px 20px 0px;
+	margin:0px 17px 0px 0px;
+}
+
+#menuhorizontal ul, #paginador ul {
+	float:right;
+	list-style:none;
+	padding:3px 0;
+	margin:0px;
+	clear: both;
+	height:auto;
+	
+	
+}
+
+#menuhorizontal ul li{
+	float:left;
+	margin: 0px 0px 0px 4px;
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 10px !important;
+	background-position: 0px 1px !important;
+	font-size:80%;
+	font-weight:bold;
+	color:#CCCCCC;
+	line-height: 100%;
+	white-space: nowrap;
+	height:1em;
+	
+}
+
+#paginador ul li {
+	background-image:url(imagenes/vinieta_gris4x4.png); 
+	float:left;
+	margin: 0px 8px 0px 0px;
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 8px !important;
+	background-position: 0px 4px !important;
+	font-size:80%;
+	font-weight:bold;
+	color:#CCCCCC;
+	line-height: 100%;
+	white-space: nowrap;
+}
+
+
+#contenido #menuhorizontal ul li a, #contenido #paginador ul li a{
+	color:#666666 !important;
+	
+	
+}
+
+#menuhorizontal ul li.sinvinieta, #paginador ul li.sinvinieta {
+	background-image:none !important;
+}
+
+
+#contenido #menuhorizontal ul.segundalinea {
+	border-top: 1px solid #CCCCCC;
+	display: block;
+	text-align: right;
+	margin: 3px 0px 0px 0px;
+	padding:3px 0px 3px 0px;
+	width: 570px;
+	
+}
+
+#contenido #menuhorizontal ul.segundalinea li{
+	float:right;
+}
+
+
+
+/********  Menu letras para paginacion por letras  *********/
+
+/* Menu letras */
+
+#menuletras {
+	clear:both;
+	display:block;
+	padding:0px 0px 20px 0px;
+	margin:0px 17px 0px 0px;
+}
+
+#menuletras ul {
+	float:right;
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	clear: both;
+}
+
+#menuletras ul li{
+	float: left;
+	margin: 0px 0px 0.5em 0.5em;
+	background-image:none !important;
+	padding: 0em;
+	font-size:90%;
+	font-weight:bold;
+	color:#CCCCCC;
+	line-height: 100%;
+	white-space: nowrap;
+	
+}
+
+#menuletras ul li a {
+	border:1px solid #999999;
+	padding:0.2em 0.4em;
+	margin:0em;
+	display:block;
+}
+
+#menuletras ul li a:hover {
+	background-color:#eeeeee;
+	
+}
+
+/****** fin menu letras    **********/
+
+/* Columna Color */
+
+#colcolor h2, #colcolor h3, #colcolor p {
+	color:#ffffff !important;
+	margin:10px 10px 8px 16px;
+	background-color: #F77C20;
+}
+
+#colcolor p {
+	font-size: 90%;
+	line-height:120%;
+}
+
+#colcolor a {
+	color:#FFFFFF!important;
+	font-weight: bold;
+}
+
+#colcolor a:hover {
+	color:#eeeeee !important;
+	text-decoration:underline;
+	
+}
+
+#colortop {
+	width:100%;
+	height:20px;
+	border-bottom:2px solid #fff;
+
+}
+
+#contenido #colcolor dl {
+	font-size: 90%;
+	margin:10px 16px 10px 16px;
+}
+
+#contenido #colcolor dl dt {
+	font-weight:bold;
+	color:#ffffff;
+	margin:10px 0px 6px 0px;
+	padding:0px;
+}
+
+#contenido #colcolor dl dd {
+	margin:0px;
+	padding:0px;
+}
+
+#contenido #colcolor a {
+	font-size: 90%;
+}
+
+#contenido #colcolor a:hover {
+	text-decoration:none;
+	
+}
+
+
+/********** Volver, Adelante, Imprimir *************/
+
+
+#volver {
+	font-size: 90%;
+	margin: 2em 0 2em 0;
+	float: left;
+	line-height:150%;
+}
+
+#adelante, #nuevabusqueda {
+	font-size: 90%;
+	float: right;
+	margin: 2em 0 2em 0;
+	line-height:150%;
+}
+
+
+#volver a, #adelante a, #nuevabusqueda a {
+	background-repeat: no-repeat;
+	background-position: 0em 0em;
+	padding: 0 0 0.2em 1.7em;	
+}
+
+#volver a {
+background-image:url(imagenes/atras_out.png);
+	
+}
+
+#imprimir {
+	margin: 20px 0px 20px 0px;
+	float: right;
+	_width: 1px;
+	
+	
+}
+
+
+#imprimir a{
+	background-repeat: no-repeat;
+	padding: 2px 0px 0px 25px;
+	display: block;
+	font-size: 10px;
+	height: 20px;
+	
+}
+
+#volver a:hover {
+	background-image: url(../estilos/imagenes/atras_over.png);
+	color:#999999 !important;
+}
+
+#adelante a:hover {
+	background-image:url(../estilos/imagenes/adelante_over.png);
+	color:#999999 !important;
+}
+
+
+#imprimir a:hover {
+	background-image:url(imagenes/imprimir_over.png);
+	color:#999999 !important;
+	
+}
+
+#nuevabusqueda a {
+	background-image: url(imagenes/adelante_out.png);
+}
+
+
+#nuevabusqueda a:hover {
+	background-image:url(imagenes/adelante_over.png);
+	color:#999999 !important;
+}
+
+
+.arriba {
+	
+	margin:1em 0;
+	padding:0px 0px 4px 0px;
+	display:block;
+	text-align:right;
+	line-height:100%;
+	
+}
+
+.arriba a {
+	background-repeat: no-repeat;
+	background-image:url(imagenes/arriba_out.png);
+	background-position: right;
+	padding: 1px 16px 0px 0px;
+	font-size: 10px;
+	
+}
+
+#contenido .arriba a:hover {
+	background-image: url(imagenes/arriba_over.png);
+	color:#999999 !important;
+}
+
+
+/******** Iconito para Agenda ***********/
+
+a.agendita { 
+
+	background:url(imagenes/agendita.png);
+	background-repeat:no-repeat;
+	padding:5px 0 4px 25px;
+	margin:10px 0 0 0;
+	
+	
+}
+
+
+/* Tablas */ 
+
+#contenido caption {
+font-size:12px;
+font-weight:bold;
+text-align:center;
+padding:5px;
+
+}
+
+#contenido table {
+	width:100%;
+	border:1px solid #cccccc;
+	border-left:none;	
+	margin:0px 0px 20px 0px;
+	padding:0px;
+}
+
+
+#contenido table th {
+	font-size:100%;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:0.6em 1em 0.4em 0.5em;
+}
+
+#contenido table td {
+	padding:0.5em 0.5em 0.3em 0.5em;
+	border-left:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	font-size:80%;
+}
+
+.oculto {
+	display:none;
+}
+
+#bloquehorizontal {
+	background-color:#CCCCCC;
+	display:block;
+	border:1px solid #CCCCCC;
+	height:auto;
+	margin:10px 0px 0px 0px;
+}
+
+/*tabla de dos colores */
+
+.doscolores, .doscolores tr, .doscolores td {
+border:none !important;
+}
+
+.doscolores .color {
+background-color: #EEEEEE;
+
+}
+
+.doscolores .color td, .doscolores th {
+border-right: solid 2px #FFFFFF !important;
+}
+
+.doscolores caption {
+	color:#FFFFFF !important;
+	border-bottom:solid 1px #FFFFFF;
+	border-right: solid 1px #FFFFFF;
+	background-color:#FF9900;
+	font-size:120%;
+
+} 
+
+.doscolores th {
+	font-size:100%;
+}
+
+.doscolores td {
+          font-size:80%;
+		  padding:0px;
+}
+
+
+
+/* Estilo buscador */ 
+
+fieldset {
+	border: 1px solid #666666; 
+	padding:1em 1.5em; 
+	margin:0em 0em 1em 0em;
+	
+	
+}
+
+fieldset div {
+	margin:0em 0em 1em 0em;
+}
+
+
+legend {
+	color:#FFFFFF;
+	background-color: #F77C20;
+	padding:5px 10px;
+	font-weight:bold;
+}
+
+
+label {
+font-size:90%;
+font-weight:bold;
+color:#666666;
+margin:0em 0em 1em 0em;
+
+}
+
+select {
+	
+	margin:0em 0.5em 0em 0.5em;
+	padding:0;
+	font-size:85%;
+	
+}
+
+button {
+	font-size:90%;
+	padding:0.3em 0.5em;
+	margin: 0.2em 0.3em 0 0.3em;
+}
+
+.botonderecha {
+	widows:100%;
+	display:block;
+	text-align:right;
+	margin:0.5em 0em 0.6em 0em;
+}
+
+
+/* Agregados dl y dt comunes */ 
+
+dl {
+	padding:0px;
+	margin:10px 0px 10px 0px;
+}
+
+dt {
+	font-weight:bold;
+	margin: 10px 0px 4px 0px;
+	padding: 0px;
+	color:#333333;
+	
+}
+
+dd {
+	display: block;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	
+}
+/* lista de definici�n */
+#caja div {
+margin-bottom:10px;
+background-repeat:no-repeat;
+background-position:470px 30px;
+width: 400px;
+}
+#caja h4 {
+	color:#FFFFFF;
+	padding:5px 0px 3px 20px;
+	margin-top: 0px;
+	background-color:#0033cc;
+
+}
+
+#caja ul ul {
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+#caja ul ul li {
+	background-image:none !important;
+	
+}
+
+#caja dl {
+	padding:0px;
+	margin:10px 0px 10px 10px;
+	line-height: 150%;		
+}
+
+
+
+/* AGREGADO lista de definicion con class flotada */ 
+
+.flotada {
+	padding:0px;
+	line-height: 150%;
+}
+
+#caja dt, .flotada dt {
+	display:block;
+	float:left;
+	font-weight:bold;
+	margin:0px;
+}
+#caja dd, .flotada dd {
+	display:block;
+	padding: 0px;
+	margin: 0px;
+	text-indent:4px;
+}
+
+
+
+/* otra lista de definici�n para los distritos, poner color en estilo de secci�n*/
+#datoslista div {
+margin-bottom:10px;
+}
+#datoslista h4 {
+	color:#FFFFFF;
+	padding:5px 0px 3px 10px;
+	margin-top: 0px;
+	background-color:#990000;
+}
+
+#datoslista h5  {
+	font-size:100%;
+	font-weight:bold;
+	color:#990000;
+	margin:0px 0px 6px 0px;
+	padding:0px 6px 4px 5px;
+	background-color: #eedddd;	
+}
+
+#datoslista h6  {
+	font-size:100%;
+	font-weight:bold;
+	color:#990000;
+	margin:0px 0px 6px 0px;
+	padding:0px 6px 4px 5px;
+}
+#datoslista ul ul {
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+#datoslista ul ul li {
+	background-image:none !important;
+	
+}
+
+#datoslista dl {
+	padding:0px;
+	margin:5px 0px 10px 10px;
+	line-height: 150%;		
+}
+
+#datoslista dt {
+	display:block;
+	float:left;
+	font-weight:bold;
+	margin:0px;
+}
+#datoslista dd {
+	display:block;
+	padding: 0px;
+	margin: 0px;
+	text-indent:4px;
+}
+
+#datoslista div {
+border:1px solid #666666;
+}
+
+#datoslista .masinfo {
+	background-color:#eeeeee;
+	font-size:90%;
+	text-indent:10px;
+	margin-bottom:0px;
+}
+#datoslista a {
+	text-decoration:none;
+	color:#990000;
+}
+
+#datoslista a:hover {
+	color: #666666;
+}
+
+#datoslista a:visited {
+	color: #990000;
+	clear: both;
+}
+
+
+
+/*********** COLORES   ****************/
+
+
+
+
+#contenido ul li a, #volver a, #contenido #menuhorizontal ul li a:hover {
+	color: #F77C20 !important;
+}
+
+
+
+#contenido #menuhorizontal ul li, #contenido ul ul li {
+	background-image: url(imagenes/circulito.png);
+}
+
+#contenido ul ul ul li {
+	background-image: url(imagenes/rayita.png);
+}
+
+
+
+
+#colortop {
+	background-color:#ff9933;
+}
+
+#colcolor, #contenido table th {
+	background-color: #F77C20;
+}
+
+#contenido #colizq425 h3 {
+	padding-top:5px !important;
+	clear:both;
+}
+
+#contenido h3 a:hover {
+	color:#999999 !important;
+}
+
+.subencabezado {
+	background-color: #eeeeee;
+}
+
+caption {
+color:#F77C20;
+}
+
+/* para preguntas*/
+#faq dl {
+	font-size:90%;
+	padding:0px 20px 0px 0px;
+	}
+	
+#faq dl dt { 
+		border-bottom: #666666 solid 1px;
+		list-style:decimal;
+		margin:20px 0px 12px 0px;
+		background-color:#eeeeee;
+		padding:5px 8px 3px 10px;
+		font-weight: bold;
+		color: #666666;
+		line-height: 140%;} 
+
+#faq dl dd {
+	margin: 0px;
+	padding: 0px;
+	color: #333333;
+	line-height: 140%;
+	} 
+
+#faq dl ol li {
+	margin:0px 0px 6px 0px;
+}
+
+
+/*especificaciones de paginador */
+
+#paginador {
+border:1px solid blue;
+}
+
+#paginador #pagatras {
+border:1px solid red;
+float:left;
+}
+
+#paginador #pagatras a{
+
+	background-image:url(imagenes/atras_out.png);
+	background-repeat:no-repeat;
+	padding:0 0 0 1.5em;
+
+}
+
+#paginador #pagatras a:hover{
+	background-image:url(imagenes/atras_over.png);
+}
+
+#paginador #pagadelante {
+border:1pxz solid green;
+}
+
+
+#paginador ul li {
+	background-image: url(imagenes/arriba_over.png);	
+}
+
+#paginador ul li a{
+color:#F77C20 ;
+}
+
+
+
+/*******************/
+
+
+
+#datoslista div {
+margin-bottom:10px;
+}
+
+#datoslista h4 {
+	color:#FFFFFF;
+	padding:5px 0px 3px 10px;
+	margin-top: 0px;
+	background-color:#F77C20;
+}
+
+#datoslista h5  {
+	font-size:100%;
+	font-weight:bold;
+	color:#ff6600;
+	margin:0px 0px 6px 0px;
+	padding:0px 6px 4px 5px;
+	background-color: #FFE0C1;	
+}
+
+#datoslista h6  {
+	font-size:100%;
+	font-weight:bold;
+	color:#F77C20;
+	margin:0px 0px 6px 0px;
+	padding:0px 6px 4px 5px;
+}
+#datoslista ul ul {
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+#datoslista ul ul li {
+	background-image:none !important;
+	
+}
+
+#datoslista dl {
+	padding:0px;
+	margin:5px 0px 10px 10px;
+	line-height: 150%;		
+}
+
+#datoslista dt {
+	display:block;
+	float:left;
+	font-weight:bold;
+	margin:0px;
+}
+#datoslista dd {
+	display:block;
+	padding: 0px;
+	margin: 0px;
+	text-indent:4px;
+}
+#datoslista div {
+border:1px solid #666666;
+}
+#datoslista .masinfo {
+	background-color:#eeeeee;
+	font-size:90%;
+	text-indent:10px;
+	margin-bottom:0px;
+}
+#datoslista a {
+	text-decoration:none;
+	color:#ff6600;
+}
+
+#datoslista a:hover {
+	color: #666666;
+}
+
+#datoslista a:visited {
+	color: #F77C20;
+	clear: both;
+}
+
+/********* DL df ***************/ 
+/* Se utiliza en listas din�micas de lugares */
+
+dl.listado {
+
+margin:0em;
+padding:0em;
+clear:both;
+}
+
+.listado dt {
+color:#666666;
+font-weight:bold;
+font-size:90%;
+margin:1.2em 0em 0.2em 0em;
+padding:0em;
+clear:both;
+
+}
+
+
+.listado dd {
+	/* border-bottom:1px solid #cccccc; */
+	padding:0em 0em 0.3em 0em;
+	margin:0em !important;
+	color:#666666;
+	font-size:80%;
+}
+
+.listado #derecha {
+
+	width:55%;
+	float:right;
+	
+}
+
+.listado #izquierda {
+ 
+ 	width:40%;	
+	float:left;
+}
+
+/* Iconitos */
+
+.listado .atencion, .listado .cocina, .listado .mail, .listado .web, .listado .mapa {
+
+background-repeat:no-repeat;
+padding:0.5em 0em 0.2em 2.5em;
+margin:0.3em 1em 0em 0em;
+float:left;
+height:auto;
+
+}
+
+.listado .mail, .listado .web, .listado .mapa {
+	height:20px;
+}
+
+/* Icono Atencion */
+
+.listado .atencion {
+
+	background-image: url(imagenes/infoico.png);
+	float:none;
+}
+
+/* Icono Cocina */
+
+.listado .cocina {
+	background-image: url(imagenes/cocina.png);
+	float:none;
+}
+
+/* Icono mail */
+
+.listado .mail {
+	background-image: url(imagenes/mail.png);
+}
+
+.listado .mail:hover {
+	background-image: url(imagenes/mail_over.png);
+}
+
+/* Icono web */
+
+.listado .web {
+	background-image: url(imagenes/web.png);
+}
+
+.listado .web:hover {
+	background-image: url(imagenes/web_over.png);
+}
+
+/* Icono Mapa */
+
+.listado .mapa {
+	background-image: url(imagenes/mapa.png);
+}
+
+.listado .mapa:hover {
+	background-image: url(imagenes/mapa_over.png);
+}
+
+/* Linea para separar en los listado */ 
+
+.linea {
+	clear:both;
+	border-bottom:1px solid #cccccc;
+	height:0.3em;
+}
+
+
+
+.lang {
+	margin:20px 30px 0px 0px;	
+	float:right;
+	}
+
+.lang a {
+	text-decoration:none;
+	color:#F77C20;
+}
+
+/******* h1 especiales ************/
+
+h1.h1buscador, h1.h1mapasitio, h1.h1datosutiles, h1.h1noticias, h1.turismo, h1.h1links, h1.h1reclamos {
+
+	
+	line-height:180%;
+	background-position: 0px 0px;
+	text-indent: 0.5em;
+}
+
+h1.h1buscador {
+
+background-image: url(../barrasuperior/imagenes/buscador_out.png) !important;
+}
+
+h1.h1mapasitio {
+
+background-image: url(../barrasuperior/imagenes/sitemap_out.png) !important;
+
+}
+
+h1.h1datosutiles {
+
+background-image: url(../barrasuperior/imagenes/telefono_out.png) !important;
+
+}
+
+h1.h1noticias {
+
+background-image: url(../paginainicial/imagenes/noticias.png) !important;
+
+}
+
+h1.turismo {
+
+background-image: url(../estilos/imagenes/h1turismo.png) !important;
+
+}
+
+h1.h1links {
+
+background-image: url(../estilos/imagenes/h1links.png) !important;
+
+}
+
+h1.h1reclamos {
+
+	background-image: url(../menu/imagenes/reclamos_out.png) !important;
+
+}
+
+/*****  Field Set Destacados  *****/
+
+fieldset.destacado {
+	border:1px solid #666666;
+	background-color: #eeeeee;
+}
+
+fieldset.destacado legend {
+	background-color: #dddddd;
+	border:1px solid #999999;
+	border-bottom:2px solid #666666;
+	border-right:2px solid #666666;
+	color:#666666;
+}
+
+/* div favoritos */ 
+
+#favoritos {
+
+	clear:both;
+	text-align: right;
+	padding:5px 30px 5px 0;
+	font-size:120%;
+	background-color:#dddddd;
+	height:20px;
+}
+
+#favoritos a {
+
+	 color:#ff0000;
+	 text-decoration:none;
+	 padding:0.1em 0.3em;	 
+	 background-repeat:no-repeat !important;
+	 float:right;
+	 display:block;
+	 width:20px;
+	 height:20px;
+}
+
+#favoritos a span {
+	
+	display: none; /* esto para no dejar links vacios */
+	
+}
+
+#favoritos a:hover {
+	
+	 color:#666666;
+	 text-decoration:none;	
+	 background-repeat:no-repeat !important;
+}
+
+
+#favoritos a#twitter {
+	
+	background:url(../barrasuperior/imagenes/twitter_out.png);
+
+}
+
+#favoritos a#twitter:hover {
+	
+	 background:url(../barrasuperior/imagenes/twitter_over.png);
+
+}
+
+#favoritos a#youtube {
+	
+		background:url(../barrasuperior/imagenes/youtube_out.png);
+
+}
+
+#favoritos a#youtube:hover {
+	
+		background:url(../barrasuperior/imagenes/youtube_over.png);
+
+}
+
+
+
+
+
+
+
+
+/* div Galeria */ 
+
+#contenido .galeria {
+	border:1px solid #333333;
+	float: right;
+	padding:0;
+	margin:0 0 0.5em 1em;
+}
+
+#contenido .galeria img {
+	clear:both;
+	float: none;
+	margin:0;
+	padding:0;
+	border:5px solid #eeeeee;
+	width:190px !important;
+
+}
+
+#contenido .galeria a {
+	
+	background-color:#eeeeee;
+	display:block;
+	/*  width:100%;  */
+	padding:0;
+	margin:0;
+
+}
+
+#contenido .galeria a:hover {
+	
+background-color:#cccccc;
+}
+
+#contenido .galeria a span {
+	
+background-repeat:no-repeat;
+background-image: url(imagenes/galeria_chica.png);
+background-position:2px 2px;
+margin:0.2em;
+padding:0.2em;
+text-indent:2em;
+display:block;
+font-size:80% !important;
+
+}
+
+/**********  Estilo Videos ************/
+
+.video {
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
+	padding: 5px 4px 0px;
+	border: 1px solid rgb(51, 51, 51);
+	text-align: center;
+	margin:0 0 20px 0;
+	
+}
+
+/*  Class Info para los fielset en vez de colcolor */
+
+fieldset.info {
+	font-size: 90%;
+	
+	
+}
+
+
+fieldset #info p {
+	
+	line-height:120%;
+}
+
+fieldset #info a {
+	font-weight: bold;
+}
+
+fieldset #info a:hover {
+
+	
+}
+
+
+fieldset #info dl {
+	font-size: 90%;
+	margin:0px 16px 10px 16px;
+}
+
+fieldset #info dl dt {
+	font-weight:bold;
+	margin:10px 0px 6px 0px;
+	padding:0px;
+}
+
+fieldset #info dl dd {
+	margin:0px;
+	padding:0px;
+}
+
+fieldset #info a {
+	font-size: 90%;
+}
+
+fieldset #info a:hover {
+	text-decoration:none;
+	
+}
+
+fieldset #info img {
+	border:none;
+}
+
+.listaintendentes {
+
+}
+
+.listaintendentes .fotointendente {
+	text-align:center;
+	
+}
+
+.listaintendentes .fotointendente img {
+	margin:0.3em;
+}
+
+
+/* mmm y estos ? */
+
+
+.video{
+	
+	background:none repeat scroll 0% 0% rgb(238, 238, 238);
+	padding:5px 4px 0px; border: 1 px solid rgb(51, 51, 51);
+	text-align:center;
+	margin: -15px 0pt 15px 0pt;
+	clear:both;
+
+}
+	
+	
+.galeria{
+	
+	padding:0;
+	border: 1 px solid #333333;
+	float:right;
+	margin: 0 0 0.5em 1em;
+
+}
+
+
+
+
+/* Fix PP */
+
+#votacionpp {
+
+	margin-bottom:20px !important;
+	
+} 

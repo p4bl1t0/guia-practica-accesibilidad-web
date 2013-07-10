@@ -1,0 +1,232 @@
+#todotop {
+	width:760px;
+	_width:773px;
+	display:block;
+	background-color:#FFFFFF;
+}
+
+#top {
+	/* padding:0px; */
+
+}	
+	
+	
+
+
+#top a {
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+#barra {
+
+	clear:both;
+	height:60px;
+	_height:20px;
+	border-bottom:1px solid #cccccc;
+	margin: 2px 0px 0px 0px;
+	width: 760px;
+	_width:753px;
+	background-color:#CCCCCC:
+	
+}
+
+#fecha {
+	float:right;
+	font-size:9px;
+	color: #666666;
+	width:210px;
+	margin:8px 16px 0px 6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+#/*	background-image:url(imagenes/clima.png); */
+	background-repeat:no-repeat;
+	background-position:left;
+	line-height:200%;
+
+}
+
+#accesos {
+	float:right;
+	width:220px;
+	margin:8px 10px 0px 10px;
+	height: 10px;
+	text-align: right;
+	
+
+}
+
+.accesorapido {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	line-height: 100%;
+	width: 210px;
+	
+}
+
+#iconos {
+	
+	/* width:350px; /* antes 200 */
+	margin: 6px 0px 4px 6px;
+	padding:0px;
+	height:50px;
+	width:auto;
+	/* width:480px; */ 
+	float:left;
+	
+	
+}
+
+#iconos ul {
+
+	list-style: none;
+	padding:0px;
+	margin:0px 0px 0px 0px;
+	
+}
+
+#iconos ul li {
+	float:left;
+	margin: 2px 3px 2px 2px;
+}
+
+#iconos ul li a{
+	width:44px;
+	height:44px;
+	display: block;
+}
+
+
+/* imagenes iconitos */ 
+
+/* Inicio */
+
+#inicio_ico {background-image:url(imagenes/inicio_out.png);}
+#inicio_ico:hover {background-image:url(imagenes/inicio_over.png);}
+
+/* Mapa del sitio  */
+
+#sitemap_ico {background-image:url(imagenes/sitemap_out.png);}
+#sitemap_ico:hover {background-image:url(imagenes/sitemap_over.png);}
+
+/* Contacto */ 
+
+#contacto_ico {background-image:url(imagenes/contacto_out.png);}
+#contacto_ico:hover {background-image:url(imagenes/contacto_over.png);}
+
+/* Buscador */ 
+
+#buscador_ico {background-image:url(imagenes/buscador_out.png);}
+#buscador_ico:hover {background-image:url(imagenes/buscador_over.png);}
+
+/* Agenda */ 
+
+#agenda_ico {background-image:url(imagenes/agenda_out.png);}
+#agenda_ico:hover {background-image:url(imagenes/agenda_over.png);}
+
+/* Mapa */ 
+
+#infomapa_ico {background-image:url(imagenes/infomapa_out.png);}
+#infomapa_ico:hover {background-image:url(imagenes/infomapa_over.png);}
+
+/* Como llego  */ 
+
+#como_llego_ico {background-image:url(imagenes/como_llego_out.png);}
+#como_llego_ico:hover {background-image:url(imagenes/como_llego_over.png);}
+
+/* Trámites */ 
+
+#tramites_ico {background-image:url(imagenes/mouse_out.png);}
+#tramites_ico:hover {background-image:url(imagenes/mouse_over.png);}
+
+/* galeria  */ 
+
+#galeria_ico {background-image:url(imagenes/galeria_out.png);}
+#galeria_ico:hover {background-image:url(imagenes/galeria_over.png);}
+
+/* Datos Ütiles */ 
+
+#datos_ico {background-image:url(imagenes/telefono_out.png);}
+#datos_ico:hover {background-image:url(imagenes/telefono_over.png);}
+
+/*  FIN ICONITOS */ 
+
+
+
+
+/* Esto va */ 
+/*
+.inferior {
+	width:600px;
+	text-align: center;
+	vertical-align: bottom;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+	line-height: 130%;
+	margin:10px 0px 10px 0px;
+	padding:10px 10px 10px 10px;
+	border-top:1px solid #999999;
+	clear:both;
+}
+
+*/
+
+#pieadmin {
+		
+	text-align: center;
+	padding:1em;
+	font-size: 90%;
+	color: #333333;
+	clear:both;
+	background-color: #ffffff;
+		
+}
+#piehome {
+		
+	text-align: center;
+	padding:1em;
+	font-size: 90%;
+	color: #ffffff;
+	border-bottom:16px solid #f77c20;
+	clear:both;
+	background-color: #000000;
+	
+	
+}
+
+#piehome p {
+	line-height:145%;
+	margin:0;
+}
+
+
+
+.inferior a, #piehome a {	
+	text-decoration:none;
+	color:#999999;
+	font-weight:bold;
+}
+
+.inferior a:hover, #piehome a:hover {	
+	color: #f77c20;
+}
+
+
+
+
+.hora {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+
+}
+
+#accesos form {
+	padding: 0px;
+	margin: 0px;
+}
