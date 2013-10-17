@@ -1,0 +1,538 @@
+﻿body{
+	margin-top:0px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#EFEFEF;
+	background:#000;
+	text-align:center;
+}
+div{
+	width:auto;
+	height:auto;
+}
+.divCentrado{
+	text-align:center;
+}
+.floatRight{
+	float:right;
+}
+.floatLeft{
+	float:left;
+}
+.bannerGrande{
+	text-align:center;
+}
+#prensa{
+	font-size: 0.95em;
+	padding: 0px 0px 10px 5px;
+	width:600px;
+}
+.bannerDerecha{
+	float:right;
+
+}
+.dialogoLink{
+	float:right;
+	padding-top:18px;
+	padding-right: 6px;
+
+}
+#bannerUp{
+	padding: 0px 0px 20px 5px;
+	width:720px;
+}
+#comInstitucional{
+	font-size: 1.1em;
+	font-weight:600;
+	
+}
+#novedades{
+	font-size: 0.95em;
+	padding: 0px 0px 10px 5px;
+}
+#idiomas{
+	padding: 2px 2px 2px 2px;
+	margin-top: 17px;
+	border: 1px #666 solid;
+}
+A{
+	text-decoration:none;
+	color:#FFF;
+	outline: none;
+}
+A.perfiles{
+	color:#ADDDEB;
+	font-weight:700;
+}
+A:hover{
+	text-decoration:underline;
+}
+.linkGral{
+	font-weight:700;
+}
+#claveFiscal{
+	color:#000;
+}
+.textoResaltadoCeleste{
+	background-color:#ADDDEB;
+	border:solid 1px #666;
+	color:#000;
+	padding: 1px 6px 1px 6px;
+	line-height: 20px;
+	font-weight:bold;
+	font-size:12px;
+}
+.textoResaltadoNaranja{
+	background-color:#F93;
+	border:solid 1px #666;
+	padding: 1px 6px 1px 6px;
+	font-weight:bold;
+	color:#000;
+	width:200px;
+}
+.textoResaltadoVerde{
+	background-color:#093;
+	border:solid 1px #666;
+	width:100%;
+	padding: 1px 6px 1px 6px;
+	font-weight:bold;
+
+}
+.textoResaltadoRojo{
+	background-color:#CC0000;
+	width:100%;
+	padding: 1px 6px 1px 6px;
+	font-weight:bold;
+}
+.textoResaltadoGris{
+	background-color:#333;
+	border:solid 1px #ADDDEB;
+	width:100%;
+	padding: 1px 6px 1px 6px;
+	font-weight:bold;
+}
+.clear5{
+	clear:both;
+	height:5px;
+}
+.clear10{
+	clear:both;
+	height:10px;
+}
+.clear15{
+	clear:both;
+	height:15px;
+}
+.clear20{
+	clear:both;
+	height:20px;
+}
+.clear25{
+	clear:both;
+	height:25px;
+}
+.clear30{
+	clear:both;
+	height:30px;
+}
+.clear40{
+	clear:both;
+	height:40px;
+}
+.containerGral {
+	width: 1000px;
+	overflow:visible;
+	margin:0 auto;
+	text-align:left;
+	padding: 2px 8px 0px 8px;
+	/*behavior: url(scripts/iepngfix.htc);*/
+	background-image:url(http://www.afip.gov.ar/home/images/edificioTransp.jpg);
+	background-repeat:no-repeat;
+	background-color:#000;
+	border-left: solid 1px #666;
+	border-right: solid 1px #666;
+}
+.containerGral2 {
+	width: 1000px;
+	overflow:visible;
+	margin:0 auto;
+	text-align:left;
+	background-color:#000;
+}
+.containerGralIdiomas{
+	width: 724px;
+	background-image:url(http://www.afip.gov.ar/home/images/edificioTransp.png);
+	overflow:visible;
+	margin:0 auto;
+	text-align:left;
+	background-color:#000;
+}
+.topTop{
+	background-color:#666;
+	height:30px;
+	border:solid 1px #999;
+	color:#FFF;
+}
+.cssChange{
+	height:auto;
+	float:left;
+	padding:6px 6px 6px 10px;
+}
+#topRight{
+	height:auto;
+	float:right;
+	padding:10px 10px 6px 6px;
+}
+#claveFiscal{
+	margin-top: 7px;
+}
+#logo{
+	float:left;
+	width: 231px;
+	padding: 100px 0px 20px 0px;
+	margin-left:10px;
+	background-image:url("../images/logos/logoNegro.png");
+    background-repeat: no-repeat;
+	background-position:bottom;
+	background-position:left;
+}
+
+.items{
+	float:left;
+	width:auto;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	font-weight:600;
+	margin: 2px 2px 2px 2px;
+}
+.aviso{
+	float:left;
+	background-color:#FFF;
+	width:95%;
+	color:#F60;
+	padding: 20px 20px 20px 20px;
+	font-size: 12px;
+	margin: 0px 2px 20px 4px;
+}
+.fondoTexto{
+	text-decoration:underline;
+	
+}
+
+#accesoClaveFiscal{
+	margin: 0px 0px 0px 60px;
+	padding: 0px 0px 0px 0px;
+}
+#tramitesYServicios{
+	margin: 0px 0px 0px 162px;
+	padding: 0px 0px 0px 0px;
+}
+.subMenu{
+	padding: 10px 10px 10px 10px;
+	font-weight:bold;
+	height: 16px;
+	color:#CCC;
+	background-color:#666;
+	border:solid 1px #CCC;
+}
+.subMenu a{
+	color: #ccc;
+}
+.textoMini{
+	font-size:0.8em;
+}
+
+/*
+====================================
+SLIDE
+======================================
+*/
+.contieneCentral{
+	float:left;
+	width:724px;
+	margin-bottom:auto;
+}
+.contieneSlide{
+	border:solid 1px #666;
+	overflow:auto;
+	float:left;
+	width:722px;
+}
+.contieneImagen{
+    width: 500px;
+	height: 339px; /*--Alto de la caja del título y copete de las gacetillas.--*/
+    float: left;
+    background: #333;
+    position: relative;
+    overflow: hidden; /*--Overflow hidden allows the description to toggle/tuck away as it slides down--*/
+	border:solid 1px #666;
+}
+.contieneImagen h2 {
+    font-size: 1.2em;
+    font-weight:bold;
+    margin: 0px 0px 0px;
+    padding: 10px;
+	color:#CCC;
+}
+.contieneImagen p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    padding: 10px;
+    margin: 0px;
+	color:#CCC;
+}
+.contieneImagen .block small {margin-left: 10px;}
+.contieneImagen .desc{
+    position: absolute;
+    bottom: 0;
+    left: 0; /*--Stick the desc class to the bottom of our main image container--*/
+    width: 100%;
+    display:inherit; /*--Hide description by default, if js is enabled, we will show this--*/
+	color:#CCC;
+}
+.contieneImagen .block{
+    width: 100%;
+    background: #333;
+    border-top: 1px solid #000;
+	color: #ccc;
+}
+.contieneImagen a.abrirCerrar { /*--This is our hide/show tab--*/
+    background: url(../images/slide/cerrarAbrir.png) no-repeat left top;
+    /*behavior: url(scripts/iepngfix.htc);*/
+	height: 20px;
+    width: 70px;
+    text-indent: -99999px;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+}
+.contieneImagen a.show {
+	background-position: left bottom;
+}
+
+.image_thumb {
+    float: left;
+    width: 220px;
+/*  height: 333px;*/
+    background: #333;
+    border-right: 1px solid #666;
+    border-top: 1px solid #666;
+}
+.image_thumb img {
+    border: 1px solid #666;
+    padding: 4px;
+    background: #fff;
+    float: left;
+}
+.image_thumb ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.image_thumb ul li{
+    margin: 0;
+    padding: 11px 10px;
+    width: 198px;
+    float: left;
+    border-bottom: 1px solid #666;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+	border-left: 1px solid #666;
+}
+.image_thumb ul li.hover { /*--Hover State--*/
+    background: #999;
+    cursor: pointer;
+}
+.image_thumb ul li.active { /*--Active State--*/
+	color:#333;
+    background: #666;
+    cursor: default;
+	
+}
+html .image_thumb ul li h2 {
+	color:#ccc;
+    font-size: 10px;
+    margin: 0px 0px;
+    padding: 0px;
+}
+.image_thumb ul li .block {
+    float: left;
+    margin-left: 6px;
+    padding: 0;
+    width: 130px;
+	color:#000;
+}
+.image_thumb ul li p{
+	display: none;
+}
+/*
+====================================
+FIN DE SLIDE
+======================================
+*/
+
+.columna{
+	width: 250px;
+	float:right;
+}
+.columnaInclude{
+	width: 250px;
+	float:left;
+}
+.bannersColumna{
+	text-align:center;
+
+}
+.menuLateral{
+	padding-bottom: 20px;
+}
+#perfiles{
+	margin-top:0px;
+	padding:0px 5px 0px 5px;
+}
+.tituloMenu{
+	border-bottom: 4px solid #666;
+	font: bold 1.1em sans-serif;
+	color: #000;
+	margin-bottom: 5px;
+	min-height: 0;
+	padding: 5px 8px 6px;
+	background-color: #F93;
+}
+
+#bckgRojo{
+	background-color: #CC0000;
+}
+#bckgVerde{
+	background-color: #093;
+}
+#bckgNaranja{
+	background-color:#F93;
+	color:#000;
+}
+#bckgAzul{
+	background-color:#069;
+}
+#bckgCeleste{
+	background-color:#DDEDF7;
+}
+ul.contenidoColumna{
+	padding: 0px 0px;
+	margin-left: 0px;
+	list-style: none;
+	line-height: 26px;
+}
+ul.contenidoColumna li:hover{
+	background-color: #666;
+	text-decoration: none;
+}
+ul.contenidoColumna li{
+	border-bottom: solid  1px #666;	
+}
+.separa{
+	clear: both;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	height: 0px;
+	border-bottom: solid #666 1px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.noticias{
+	float:left;
+	width:460px;	
+}
+.panelNoticias{
+	padding: 10px 10px 10px 10px ;
+	color: #CCC;
+	text-align: justify;
+	
+}
+.tituloNoticia{
+	font-size: 1.8em;
+	color: #ADDDEB;
+	width: 100%;
+	padding: 10px 2px 2px 0px;
+	text-align:left;
+}
+.columnaCentral{
+	float:right;
+	width: 236px;
+	margin-top: 0px;
+	
+}
+.contenidoNoticias{
+	
+		
+}
+
+.cajaNota{
+	color:#CCC;
+	padding: 10px 10px 10px 10px;
+	border:solid 1px #666;
+	float:left;
+}
+.tituloNota{
+	font-size: 1.3em;
+	color: #CCC;
+	width: auto;
+	padding: 8px 8px 8px 8px;
+	text-align:left;
+	background-color:#333;
+	/*background-color:#f0f0f0;*/
+	/*border-bottom: solid 4px #ddd;*/
+	border-bottom: solid 4px #666;
+}
+.cajaInferiorGral{
+	height: 100%;
+	overflow:hidden;	
+}
+#cajaInferior{
+	width: 270px;
+	margin: 20px 0px 15px 30px;
+}
+.pie{
+	background-color: #333;
+	padding: 10px 10px 10px 10px;
+	font-weight:bold;
+}
+
+
+/* ANTERIOR*/
+
+/*
+Slide Banners
+*/
+#slideshowBanners {
+    position:relative;
+    height:200px;
+	width: 251px;
+	border:#CCC 2px solid;
+}
+#slideshowBanners DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    /*opacity:0.0;*/
+    height: 200px;
+    background-color: #FFF;
+	text-align:center;
+}
+
+#slideshowBanners DIV.active {
+    z-index:10;
+    /*opacity:1.0;*/
+}
+#slideshowBanners DIV.last-active {
+    z-index:9;
+}
+#slideshowBanners DIV IMG {
+    height: 200px;
+    display: block;
+    border: 0;
+    margin-bottom: 10px;
+}
+/* ANTERIOR*/
+

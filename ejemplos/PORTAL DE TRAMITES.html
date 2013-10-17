@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><style></style>
+        <meta name="author" content="Dirección Provincial de Gobierno Digital">
+        <meta name="copyright" content="Gobierno de Santa Fe">
+        <meta name="description" content="E-government">
+        <meta name="keywords" content="gobierno, santa fe, development framework">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link rel="Shortcut icon" href="http://www.santafe.gov.ar/extension/eztramites/design/eztramites_dgn/images/estrellas.ico" type="image/x-icon">
+        <link rel="alternate" href="http://www.santafe.gov.ar/index.php/rss/feed/tramites" type="application/rss+xml" title="Trámites Gobierno">
+        <title>PORTAL DE TRAMITES </title>
+        <link href="PORTAL%20DE%20TRAMITES_files/master.css" rel="stylesheet" type="text/css">
+        <link href="PORTAL%20DE%20TRAMITES_files/reset.css" rel="stylesheet" type="text/css">
+        <link href="PORTAL%20DE%20TRAMITES_files/default.css" rel="stylesheet" type="text/css">
+        <link href="PORTAL%20DE%20TRAMITES_files/global.css" rel="stylesheet" type="text/css">
+        <link href="PORTAL%20DE%20TRAMITES_files/layout.css" rel="stylesheet" type="text/css">
+        <!--link href="/extension/eztramites/design/eztramites_dgn/stylesheets/pagination.css"  rel="stylesheet" type="text/css"-->
+        <link href="PORTAL%20DE%20TRAMITES_files/showLoading.css" rel="stylesheet" type="text/css">
+
+        
+
+        <script language="javascript" type="text/javascript" src="PORTAL%20DE%20TRAMITES_files/tools.js">
+        </script>
+        <script language="javascript" type="text/javascript" src="PORTAL%20DE%20TRAMITES_files/jquery_002.js">
+        </script>
+        <script type="text/javascript" src="PORTAL%20DE%20TRAMITES_files/jquery.js">
+        </script>
+        <script type="text/javascript" src="PORTAL%20DE%20TRAMITES_files/formularios.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/DD_roundies_0.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/jquery_003.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/jquery_004.js">
+        </script>
+        <!--script src="/extension/eztramites/design/eztramites_dgn/javascript/jquery.showLoading.min.js"-->
+        
+        <script src="PORTAL%20DE%20TRAMITES_files/jquery_pagination.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/fontsizemanagement.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/ventana.js">
+        </script>
+        <script src="PORTAL%20DE%20TRAMITES_files/ac_runactivecontent.js">
+        </script>
+        <script language="javascript" type="text/javascript">
+            
+            // Script para intercambio de tabs multimedia
+            $(document).ready(function(){
+            
+                //var pathname = window.location.pathname;
+                //alert(jQuery.url.attr("path"));
+                //alert(jQuery.url.param("m"));
+                
+                //obtengo el parametro m para
+                //saber en q modulo estoy
+                modulo = jQuery.url.param("m");
+                switch (modulo) {
+                    case "home":
+                        //aplico clase de boton presionado
+                        //para home
+                        //y en off los demas
+                        $("#imgInicio").addClass("botonOn");
+                        $("#imgTemas").addClass("botonOff");
+                        $("#imgOrganismos").addClass("botonOff");
+                        //alert(modulo);
+                        break;
+                    case "tramites_por_temas":
+                        $("#imgInicio").addClass("botonOff");
+                        $("#imgTemas").addClass("botonOn");
+                        $("#imgOrganismos").addClass("botonOff");
+                        //alert(modulo);
+                        break;
+                    case "tramites_por_dependencias":
+                        $("#imgInicio").addClass("botonOff");
+                        $("#imgTemas").addClass("botonOff");
+                        $("#imgOrganismos").addClass("botonOn");
+                        //alert(modulo);
+                        break;
+                }
+                
+                $("a.tab").click(function(){
+                    $(".active").removeClass("active");
+                    $(this).addClass("active");
+                    $(".content-tab-tramite").slideUp();
+                    var content_show = $(this).attr("title");
+                    $("#" + content_show).slideDown();
+                });
+            });
+            
+            // Cambio de estado de botones
+            function offButtons(){
+                setOut(document.getElementById("img-enviar"));
+                setOut(document.getElementById("img-compartir"));
+                setOut(document.getElementById("img-comentar"));
+            }
+            
+            // Cambio de estado de botones		  
+            function onButton(img){
+                document.getElementById("content-tabs").style.height = 'auto';
+                offButtons();
+                setHover(img);
+            }
+        </script>
+         
+    </head>
+    <body id="layout_principal_body" class="body-stars">
+        <div id="layout_principal" class="content overflow" style="background-color:#49484A;">
+            
+<style>
+
+    /*a {
+     color: blue;
+     cursor: pointer;
+     text-decoration: underline;
+     }*/
+    div.instructions_container {
+        float: left;
+        width: 350px;
+        margin-right: 50px;
+    }
+    
+    div#activity_pane {        
+        width: 50px;
+        height: 50px;
+        border: 1px solid #CCCCCC;
+        background-color: #EEEEEE;
+        padding-top: 50px;
+        text-align: center;		
+    }
+    
+    div.example_links .link_category {
+        margin-bottom: 15px;
+    } .loading-indicator-bars {
+        background-image: url('../images/loading-bars.gif');
+        width: 150px;
+    }
+</style>
+ 
+<div class="header overflow" style="height:137px">
+    <div class="header-top">
+            	<ul>
+                	<li style="margin-right:9px;margin-top:5px;">Lunes, 14 de octubre de 2013</li>
+					<li><a title="RSS" href="http://www.santafe.gov.ar/index.php/rss/feed/tramites" target="_blank" class="rss">Rss</a></li>  
+                	<li style="margin:0;"><img src="PORTAL%20DE%20TRAMITES_files/icon-contacto-on.gif" alt="contacto" class="float-left"><a style="text-decoration:none" onclick="javascript:window.open('http://www.santafe.gov.ar/index.php/web/guia/contactenos','contacto','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,menubar=no,width=830,height=657,top=0,left=50')" href="#" title="Contacto" class="float-left">Contacto</a></li>
+					<li><a href="http://www.facebook.com/GobSantaFe" target="_blank" class="rss" style="background-image:url('http://www.santafe.gov.ar/facebook.gif');width:40px;height:25px;margin-left:15px;">Facebook</a></li>
+                	 <li><a href="http://www.youtube.com/GobSantaFe" target="_blank" class="rss" style="background-image:url('http://www.santafe.gov.ar/youtube.gif');width:40px;height:25px;margin-left:15px;">YouTube</a></li>
+<li><a href="http://www.twitter.com/GobSantaFe" class="rss" "="" target="_blank" style="background-image:url('http://www.santafe.gov.ar/twitter.gif');width:15px;height:20px;">Twitter</a></li>
+                </ul>
+            </div>
+<div class="header-mid">
+				<a target="_blank" href="http://www.santafe.gov.ar/"><img src="PORTAL%20DE%20TRAMITES_files/header-logo.gif" alt="Gobierno de Santa Fe" class="float-left"></a>
+            	<a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home"><img src="PORTAL%20DE%20TRAMITES_files/header-tramites.gif" alt="TrÃƒ¡mites" class="float-right" style="margin-right:15px;"></a>
+</div>
+ 
+    
+		 
+
+			<div class="menu">
+            	<ul>
+                	<li><a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" title=""><img class="botonOn" id="imgInicio" src="PORTAL%20DE%20TRAMITES_files/menu-inicio-off.jpg" alt="Inicio"></a></li>
+                	<li><a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=tramites_por_temas" title=""><img class="botonOff" id="imgTemas" src="PORTAL%20DE%20TRAMITES_files/menu-temas-off.jpg" alt="Temas"></a></li>
+                	<li><a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=tramites_por_dependencias" title=""><img class="botonOff" id="imgOrganismos" src="PORTAL%20DE%20TRAMITES_files/menu-organismos-off.jpg" alt="Organismos"></a></li>
+                </ul>
+                <div>
+                	<a target="_blank" href="http://www.santafe.gov.ar/">www.santafe.gob.ar</a>
+                </div>
+                
+            </div>		
+	 
+</div>
+
+<script language="javascript" type="text/javascript">
+    
+    // Script para intercambio de tabs multimedia
+    /* $(document).ready(function(){
+     $("a.tab").click(function(){
+     $(".active").removeClass("active");
+     $(this).addClass("active");
+     $(".content-tab-tramite").slideUp();
+     var content_show = $(this).attr("title");
+     $("#" + content_show).slideDown();
+     });
+     });
+     
+     // Cambio de estado de botones
+     function offButtons(){
+     setOut(document.getElementById("img-enviar"));
+     setOut(document.getElementById("img-compartir"));
+     setOut(document.getElementById("img-comentar"));
+     }
+     
+     // Cambio de estado de botones
+     function onButton(img){
+     document.getElementById("content-tabs").style.height = 'auto';
+     offButtons();
+     setHover(img);
+     }*/
+</script>
+<script>
+    function swapImages(){
+        var $active = $('#myGallery .active');
+        var $next = ($('#myGallery .active').next().length > 0) ? $('#myGallery .active').next() : $('#myGallery div:first');
+        $active.fadeOut(function(){
+            $active.removeClass('active');
+            $next.fadeIn().addClass('active');
+        });
+    }
+    
+    function swapImages2(){
+        var $active = $('#myGallery2 .active');
+        var $next = ($('#myGallery2 .active').next().length > 0) ? $('#myGallery2 .active').next() : $('#myGallery2 div:first');
+        $active.fadeOut(function(){
+            $active.removeClass('active');
+            $next.fadeIn().addClass('active');
+        });
+    }
+    
+    function swapImages3(){
+        var $active = $('#myGallery3 .active');
+        var $next = ($('#myGallery3 .active').next().length > 0) ? $('#myGallery3 .active').next() : $('#myGallery3 div:first');
+        $active.fadeOut(function(){
+            $active.removeClass('active');
+            $next.fadeIn().addClass('active');
+        });
+        
+    }
+    
+    function temporizadora(){
+        setTimeout('swapImages()', 5000);
+        setTimeout('swapImages2()', 5000);
+        setTimeout('swapImages3()', 5000);
+    }
+    
+    
+    $(document).ready(function(){
+        // Run our swapImages() function every 5secs
+        setTimeout('swapImages()', 5000);
+        setTimeout('swapImages2()', 5000);
+        setTimeout('swapImages3()', 5000);
+        
+        setInterval('temporizadora()', 5000);
+        
+    })
+</script>
+<script>
+    /* IE only */
+    /*DD_roundies.addRule('.destacados_redondeados', '5px 5px 5px 5px');*/
+    
+    /*DD_roundies.addRule('.myGallery', '10px');*/
+</script>
+<style>
+    #myGallery {
+        position: relative;
+        width: 167px;
+        height: 130px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        background-color: #E5E5E5;
+    } #myGallery div {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } #myGallery div.active {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 160px;
+        height: 130px;
+    } #myGallery h3 {
+    color: #48484A;
+    font-size: 15px; 
+    margin: 3px 10px 0 0px;
+	} #myGallery p {
+    color: #48484A;
+    line-height: 12px;
+    margin: 5px 10px 0 0px;
+	} #myGallery2 {
+        position: relative;
+        width: 167px;
+        height: 130px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        background-color: #969696;
+    } #myGallery2 div {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } #myGallery2 div.active {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 160px;
+        height: 130px;
+    } #myGallery3 {
+        position: relative;
+        width: 167px;
+        height: 130px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        background-color: #666666;
+    } #myGallery3 div {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } #myGallery3 div.active {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 160px;
+        height: 130px;
+    }
+</style>
+ <!-- Este es el contenido central de la web, son dos columnas -->
+<div class="content-center overflow">
+    <!-- Este es el contenido de la izquierda -->
+    <div id="resultado_busqueda" class="content-center-left">
+        <div class="content-center-left-top-blue">
+            <object type="application/x-shockwave-flash" data="PORTAL%20DE%20TRAMITES_files/banner_home.swf" height="128" width="511">
+                <param name="movie" value="http://www.santafe.gov.ar/extension/eztramites/design/eztramites_dgn/images/banner_home.swf"><param name="quality" value="high">
+            </object>
+        </div>
+        <div style="padding:0px">
+            <div id="myGallery" class="box-center-tramite destacados_redondeados">
+                <div style="display: none;" class="">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=97816"><h3>¿Tenés que realizar algún trámite de tu DNI? </h3>
+                        <p>
+                            Solicitá un turno desde la web. Es más simple, más ágil.
+                        </p>
+                    </a>
+                </div>
+                <div class="active" style="display: block;">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=162438"><h3>Turnos por internet para trámites con la Provincia</h3>
+                        <p>
+                            Válido para trámite de DNI, pasaporte, firma
+ de acuerdos laborales y visita guiada a Casa de Gobierno
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div id="myGallery2" class="box-center-tramite destacados_redondeados">
+                <div style="display: none;" class="">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=122265"><h3>¿Vas a viajar al exterior? Tramitá tu pasaporte</h3>
+                        <p>
+                            Según donde vivas podrás tramitar un turno por internet o telefónicamente.
+                        </p>
+                    </a>
+                </div>
+                <div class="active" style="display: block;">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=155907"><h3>Licencia de conducir: simulador del examen </h3>
+                        <p>
+                            Ahora, antes de rendir, podés realizar una simulación del examen teórico vía web
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div id="myGallery3" class="box-center-tramite destacados_redondeados" style="margin:8px 0 0 0;">
+                <div style="display: none;" class="">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=166901"><h3>Acuerdos laborales </h3>
+                        <p>
+                            Conocer el nuevo régimen de acuerdos establecido por el Ministerio de Trabajo y Seguridad Social
+                        </p>
+                    </a>
+                </div>
+                <div class="active" style="display: block;">
+                    <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=159724"><h3>Inscripción al Registro "No Llame" </h3>
+                        <p>
+                            Sistema de protección, para usuarios de servicios telefónicos, contra llamados no deseados.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="clear-it">
+        </div>
+        <div style="padding:0px">
+            <div id="resultado_busqueda_simple" class="content-right-tramites-online">
+                <img src="PORTAL%20DE%20TRAMITES_files/img-tramites-mas-visitados.gif" alt="Tramites mas visitados">
+            </div>
+            <div id="resultados">
+                  
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=95213"><h3>Patente Única sobre Vehículos: Impresión de Boletas</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=95212"><h3>Impuesto Inmobiliario: Impresión de Boletas </h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=96870"><h3>Patente Única sobre Vehículos: Visualización y/o Liquidación de deuda </h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=96205"><h3>Impuesto inmobiliario: visualización y liquidación de deuda</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=96920"><h3>Impuesto sobre los Ingresos Brutos: Impresión de Boletas </h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=101225"><h3>Estudiantes: Solicitud del beneficio del medio boleto</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=99007"><h3>Personal escolar: Solicitud de licencia por enfermedad, familiar enfermo o maternidad</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=98190"><h3>Impuesto sobre los Ingresos Brutos: Constancia de Inscripción de Ingresos Brutos</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=162438"><h3>Turnos Web: Solicitud de turnos para trámites en el Gobierno de Santa Fe</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                      
+                 
+                <div class="item-tramite-on-line result">
+                     
+                        <div style="margin-left:35px; margin-top:2px;margin-bottom:8px;">
+                            <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=descripcion&amp;id=95216"><h3>Patente Única sobre Vehículos: Consulta de Radicación de Vehículos</h3>
+							<p>                		
+								 
+       						</p></a>
+                        </div>
+                    </div>
+                                    </div>
+                <div class="content-left-tramites-online">
+                    <!--img src="/extension/eztramites/design/eztramites_dgn/images/img-tramites-que-puedes-realizar.gif"  alt="Tramites que se pueden realizar Online"/-->
+                </div>
+            </div>
+        </div>
+        <!-- Este es el contenido de la derecha, la culmna de buscador, tramites y encuesta -->
+        <div id="menu_derecha" class="content-center-right" style="height:760px;">
+    <div style="padding:0px">
+        <div class="box-blue" style="width:167px;height:128px;">
+            <div class="campo_texto" style="margin-top:50px;margin-left:10px">
+				<form name="busqueda_simple" id="busqueda_simple" method="post" onsubmit="callform('busqueda_simple','resultado_busqueda','simple','/index.php/tramites/modul1/index?m=busqueda&amp;cat=simple');return false;">
+					<input id="SearchText" name="SearchText" type="hidden"><input id="PhraseSearchText" name="PhraseSearchText" type="hidden">					                                                  
+            											
+					<input id="contenido_busqueda" name="contenido_busqueda" class="float-left" style="heigth:20px" type="text">				
+					<!--input type="hidden" value="por_temas" name="check_temas" id="check_temas"-->
+					<input id="opciones" name="opciones" value="todos" type="hidden">
+					<input id="combo_organismos" name="combo_organismos" value="todos" type="hidden">
+					
+					<a href="#" onclick="callform('busqueda_simple','resultado_busqueda','simple','/index.php/tramites/modul1/index?m=busqueda&amp;cat=simple')">
+						<!-- onClick="document.busqueda_simple.submit();" -->
+            		<img src="PORTAL%20DE%20TRAMITES_files/btn-search.gif" alt="GO!" class="float-left" title="click para buscar..." border="0"></a>              
+             		Todos<input checked="checked" value="0" name="filtro" style="width:13px;background:none" type="radio"> Online<input value="1" name="filtro" style="width:13px;background:none" type="radio">    
+            	</form>
+            <br>
+			<img src="PORTAL%20DE%20TRAMITES_files/bullet-search-busqueda.gif" alt=""><a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=busqueda&amp;a=avanzada" style="color:#FFFFFF;font-size:11px;">Búsqueda avanzada</a>
+        	</div>
+		</div>
+    </div>
+    <!--div class="banner-gray" style="width:167px">
+        <img src="/extension/eztramites/design/eztramites_dgn/images/img-banner.jpg"  alt="Banner"/>
+    </div-->
+	
+	
+
+	
+	
+	
+    
+    
+    <style>
+    .box-green-opinion {
+background-image:url("http://www.santafe.gov.ar/kernel/guia/portal_compras/images/box-green3.gif");
+background-position:center top;
+background-repeat:no-repeat;
+color:#FFFFFF;
+height:auto;
+margin:10px 0 0;
+}
+
+.box-green-opinion div {
+font-size:10px;
+height:auto;
+}
+    </style>
+    
+     <div class="box-green-opinion" style="height:240px;">
+      <div style="margin-top:65px;margin-left:10px;height:auto;">
+		<link href="PORTAL%20DE%20TRAMITES_files/style.css" rel="stylesheet" type="text/css">
+		<!--script src="jquery.js" type="text/javascript" charset="utf-8"></script-->
+		<!--script src="http://www.santafe.gov.ar/poll/web/jquery.cookie.js" type="text/javascript" charset="utf-8"></script-->
+		<script src="PORTAL%20DE%20TRAMITES_files/poll.js" type="text/javascript" charset="utf-8"></script>
+			<div id="poll-container" style="height:auto;">
+					¿Como evaluás este nuevo espacio de www.santafe.gob.ar destinado a trámites?<br><br>
+					<form id="poll" name="poll" action="http://www.santafe.gov.ar/poll/web/poll.php" method="post" accept-charset="utf-8">
+						<input name="poll2" value="opt1" id="opt1" onclick="document.getElementById('boton_encuesta').disabled = false;" type="radio"><label for="opt1" onclick="document.getElementById('boton_encuesta').disabled = false;">&nbsp;Muy bueno</label><br>
+						<input name="poll2" value="opt2" id="opt2" onclick="document.getElementById('boton_encuesta').disabled = false;" type="radio"><label for="opt2" onclick="document.getElementById('boton_encuesta').disabled = false;">&nbsp;Bueno</label><br>
+						<input name="poll2" value="opt3" id="opt3" onclick="document.getElementById('boton_encuesta').disabled = false;" type="radio"><label for="opt3" onclick="document.getElementById('boton_encuesta').disabled = false;">&nbsp;Regular</label><br>
+						<input name="poll2" value="opt4" id="opt4" onclick="document.getElementById('boton_encuesta').disabled = false;" type="radio"><label for="opt4" onclick="document.getElementById('boton_encuesta').disabled = false;">&nbsp;Malo</label><br>
+						<input name="poll2" value="opt5" id="opt5" onclick="document.getElementById('boton_encuesta').disabled = false;" type="radio"><label for="opt5" onclick="document.getElementById('boton_encuesta').disabled = false;">&nbsp;Muy malo</label><br>						
+						<center><input id="boton_encuesta" disabled="disabled" style="color:#686868;font-size:11px;" value="Votá" type="submit"></center><p></p>
+					</form>
+			</div>
+        </div>
+       </div> 
+    
+    <!--div class="box-subscripcion" style="width:167px">
+        <a href="http://www.santafe.gov.ar/index.php/web/guia/multimedia?cat=rss" target="_blank" ><img src="/extension/eztramites/design/eztramites_dgn/images/banner-suscribirse.gif"  alt="Suscribirse"/></a>
+    </div-->
+</div> 
+    </div>
+
+<!--div id="activity_pane"></div-->
+    <!-- Este es el pie de pagina, footer -->
+<div style="padding:0px">
+		<div class="footer" style="height:100%;">
+        	<span class="float-left" style="width: 380px; margin-left: 11px;">
+            	<strong>GOBIERNO DE SANTA FE</strong>  3 de Febrero 2649 (S3000DEE) Santa Fe <br>
+				Teléfono 54 + 342 4506600 | 4506700 | 4506800 
+            </span>
+        	<span class="float-right" style="width:190px;">
+            	© 2010 - Todos los derechos reservados.<br>				
+            </span>
+        </div>
+</div> 
+</div>
+ 
+        
+        
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="PORTAL%20DE%20TRAMITES_files/ga.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-13285624-1");
+                pageTracker._setDomainName(".santafe.gov.ar");
+                pageTracker._trackPageview();
+            } 
+            catch (err) {
+            }
+        </script>
+        
+    
+
+</body></html>

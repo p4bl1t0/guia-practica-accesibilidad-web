@@ -1,0 +1,35 @@
+body {
+	background-color: #7A7A7A;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align:center;/*lucas*/
+
+}
+
+.linkRed {
+	text-decoration:underline !important;
+	color: #e30713 !important;
+}
+
+div{
+	overflow:hidden;
+	/*height:100%;*/
+}
+
+/*a:active, a:visited, a:link{
+	text-decoration: none;
+	color: #616161;
+	font-size: 12px;
+}*/
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #616161;
+	font-size: 12px;
+}
+
+a:hover {
+	text-decoration:underline;
+	color: #e30713;
+	font-size: 12px;
+}

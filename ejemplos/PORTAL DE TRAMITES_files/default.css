@@ -1,0 +1,51 @@
+
+.border-black, .border-red, .border-blue {
+	border: solid red 1px;
+}
+
+.clear-it{
+	clear: both;
+	height: 0px;
+}
+
+.content{
+	margin: 0px auto 20px;
+	overflow: hidden;
+	width: 716px;
+	text-align: left; /*agregado*/
+}
+
+.float-left{
+	float: left;
+}
+
+.float-right{
+	float:right;
+}
+
+.hr{
+	background-image: url(../images/hr.gif);
+	background-repeat: no-repeat;
+	height: 17px;
+	margin: 10px 0 10px 0;
+	width: 423px;
+}
+
+.list{
+	list-style-image: url(../images/bullet.gif);
+	list-style-position: inside;
+	line-height: 10px;
+	color: #666666;
+	font-size: 10px;
+}
+
+.no-border{
+	border: 0 !important;
+}
+
+/*.overflow {
+height: 100%;
+}*/
+
+
+

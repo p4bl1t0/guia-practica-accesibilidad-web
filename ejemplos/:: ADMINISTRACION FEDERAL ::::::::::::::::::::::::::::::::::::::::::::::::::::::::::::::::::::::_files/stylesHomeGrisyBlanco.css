@@ -1,0 +1,86 @@
+﻿body{
+	background-color:#CCC;
+	color:#333;
+}
+.containerGral {
+	background-color:#FFF;
+	background-image:none;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+}
+.containerGral2{
+	background-color:#F0F0F0;	
+}
+#logo{
+	float:left;
+	width: 240px;
+	padding: 100px 0px 20px 0px;
+	background-image:url("../images/logos/logoBlanco.png");
+    background-repeat: no-repeat;
+	background-position:bottom;
+	background-position:left;
+}
+.subMenu{
+	color:#333;
+	background-color:#F0F0F0;
+	border:solid 1px #ddd;
+}
+.subMenu a{
+	color: #333;
+}
+A{
+	color:#333;
+}
+A.perfiles{
+	color:#5EBBD7;
+}
+#idiomas{
+	border: 1px #ddd solid;
+}
+.topTop{
+	background-color:#F0F0F0;
+	border:solid 1px #ddd;
+	color:#333;
+}
+ul.contenidoColumna{
+	color:#333;
+}
+ul.contenidoColumna li{
+	border-bottom: solid  1px #ddd;
+}
+ul.contenidoColumna li:hover{
+	background-color: #ddd;
+}
+.panelNoticias{
+	color: #333;
+}
+.tituloNoticia{
+	color: #5EBBD7;
+}
+.separa{
+	border-bottom: solid #ddd 1px;
+}
+.cajaNota{
+	color:#333;
+	border:solid 1px #ddd;
+}
+.textoResaltadoGris{
+	background-color:#666;
+	color:#FFF;
+	width:100%;
+	padding: 1px 6px 1px 6px;
+	font-weight:bold;
+}
+.aviso{
+	float:left;
+	background-color:#000;
+	width:95%;
+	color:#F60;
+	padding: 20px 20px 20px 20px;
+	font-size: 12px;
+	margin: 0px 2px 20px 4px;
+}
+.fondoTexto{
+	text-decoration:underline;
+	
+}

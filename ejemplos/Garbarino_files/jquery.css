@@ -1,0 +1,88 @@
+/* Selectmenu
+----------------------------------*/
+.ui-selectmenu { display: block; display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; }
+.ui-selectmenu-icon { position:absolute; right:6px; margin-top:-8px; top: 50%; }
+.ui-selectmenu-menu { padding:0; margin:0; position:absolute; top: 0; display: none; z-index: 1005;} /* z-index: 1005 to make selectmenu work with dialog */
+.ui-selectmenu-menu  ul { padding:0; margin:0; list-style:none; position: relative; overflow: auto; overflow-y: auto ; overflow-x: hidden; } 
+.ui-selectmenu-open { display: block; }
+.ui-selectmenu-menu-popup { margin-top: -1px; }
+.ui-selectmenu-menu-dropdown { }
+.ui-selectmenu-menu li { padding:0; margin:0; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0 !important; border-left-width: 0 !important; font-weight: normal !important; }
+.ui-selectmenu-menu li a,.ui-selectmenu-status { line-height: 1.4em; display: block; padding: .405em 2.1em .405em 1em; outline:none; text-decoration:none; }
+.ui-selectmenu-menu li.ui-state-disabled a, .ui-state-disabled { cursor: default; }
+.ui-selectmenu-menu li.ui-selectmenu-hasIcon a,
+.ui-selectmenu-hasIcon .ui-selectmenu-status { padding-left: 20px; position: relative; margin-left: 5px; }
+.ui-selectmenu-menu li .ui-icon, .ui-selectmenu-status .ui-icon { position: absolute; top: 1em; margin-top: -8px; left: 0; }
+.ui-selectmenu-status { line-height: 1.4em; }
+.ui-selectmenu-open li.ui-selectmenu-item-focus a { }
+.ui-selectmenu-open li.ui-selectmenu-item-selected { }
+.ui-selectmenu-menu li span,.ui-selectmenu-status span { display:block; margin-bottom: .2em; }
+.ui-selectmenu-menu li .ui-selectmenu-item-header { font-weight: bold; }
+.ui-selectmenu-menu li .ui-selectmenu-item-content { }
+.ui-selectmenu-menu li .ui-selectmenu-item-footer { opacity: .8; }
+/* for optgroups */
+.ui-selectmenu-menu .ui-selectmenu-group { font-size: 1em; }
+.ui-selectmenu-menu .ui-selectmenu-group .ui-selectmenu-group-label { line-height: 1.4em; display:block; padding: .6em .5em 0; font-weight: bold; }
+.ui-selectmenu-menu .ui-selectmenu-group ul { margin: 0; padding: 0; }
+/* IE6 workaround (dotted transparent borders) */
+* html .ui-selectmenu-menu li { border-color: pink; filter:chroma(color=pink); width:100%; }
+* html .ui-selectmenu-menu li a { position: relative }
+/* IE7 workaround (opacity disabled) */
+*+html .ui-state-disabled, *+html .ui-state-disabled a { color: silver; }
+
+
+/* demo styles */
+	body {font-size: 62.5%; font-family:"Verdana",sans-serif; }
+	fieldset { border:0; margin:0; padding:0}	
+	label,select,.ui-select-menu { float: left; margin-right: 10px; }
+	select { width: 311px; margin-left: 15px; }
+	.ui-selectmenu-menu li a, .ui-selectmenu-status {}
+				
+	/* select with custom icons */
+	body a.customicons { height: 2.8em;}
+	body .customicons li a, body a.customicons span.ui-selectmenu-status { line-height: 2em; padding-left: 30px !important; }
+	body .video .ui-selectmenu-item-icon, body .podcast .ui-selectmenu-item-icon, body .rss .ui-selectmenu-item-icon { height: 24px; width: 24px; }
+	body .video .ui-selectmenu-item-icon { background: url(images/24-video-square.png) 0 0 no-repeat; }
+	body .podcast .ui-selectmenu-item-icon { background: url(images/24-podcast-square.png) 0 0 no-repeat; }
+	body .rss .ui-selectmenu-item-icon { background: url(images/24-rss-square.png) 0 0 no-repeat; }
+	
+	/* select with CSS avatar icons */
+	option.css-avatar { background-repeat: no-repeat !important; padding-left: 20px; }
+	
+	/* select with big avatar icons */
+	a.avatar-big { height: 5em; }
+	.avatar-big .ui-selectmenu-item-icon { height: 50px; width: 100px; }		
+	.ui-selectmenu-menu li.avatar-big a, a.avatar-big span.ui-selectmenu-status {background:#FFF; border-bottom: 1px solid #CCCCCC; color:#555; font-size:12px}
+	
+	
+	
+	
+.LabelBancos {
+width: 85px; height:42px; display:block; float:left; background-image:url(../../images/carrito-promos-bancarias.png); margin-top: 8px; margin-right:17px;
+}
+
+.avatar-titulo {
+	height:35px;
+	font-size: 14px;
+color:#B6B6B6;
+font-style: italic;
+padding-top: 5px;
+/*margin-left: -17px;*/
+}
+
+
+.avatar-titulo span{
+	color:#b6b6b6;
+}
+
+.avatar-big ui-selectmenu-hasIcon span{
+	padding-top: 20px;
+	height:41px;
+	font-size: 14px;
+color:#B6B6B6;
+font-style: italic;
+}
+
+.MediosDePagoHome_simple div fieldset div a#selectBancos-button.ui-selectmenu {height:35px; margin-left: 5px; margin-top: -9px; width:161px !important;}
+
+

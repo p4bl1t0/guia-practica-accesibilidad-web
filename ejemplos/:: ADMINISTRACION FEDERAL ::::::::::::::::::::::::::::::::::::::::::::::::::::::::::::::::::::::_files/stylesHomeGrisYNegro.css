@@ -1,0 +1,25 @@
+﻿body{
+	background-color:#333;
+}
+.containerGral {
+	background-color:#000;
+}
+.containerGral2{
+	background-color:#333;	
+}
+#logo{
+	float:left;
+	background-image:url("../images/logos/logoNegro.png");
+    background-repeat: no-repeat;
+	background-position:bottom;
+	background-position:left;
+}
+.panelNoticias{
+	color: #CCC;
+}
+.tituloNoticia{
+	color: #ADDDEB;
+}
+.separa{
+	border-bottom: solid #666 1px;
+}
