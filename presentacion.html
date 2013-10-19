@@ -112,6 +112,19 @@
                 margin:0 auto;
                 vertical-align:top;
             }
+            .reveal small {
+                display:inline;
+            }
+            .visuallyhidden {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
 		</style>
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -182,10 +195,14 @@
 				<section>
 					<h2>Discapacidad en números</h2>
 					<p class="fragment text">
-						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)<br /><small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
+						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)
+						<br />
+						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
 					</p>
 					<p class="fragment text">
-						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">7.1% de la población</strong> sufre de algún tipo de discapacidad (equivaldría a toda la población de la provincia de Santa Fe). <br /><small>Fuente: <a href="www.indec.gov.arprincipal.asp?id_tema=166" target="_blank">Encuesta Nacional de Personas con Discapacidad 2002-2003. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
+						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">7.1% de la población</strong> sufre de algún tipo de discapacidad (equivaldría a toda la población de la provincia de Santa Fe). 
+						<br />
+						<small>Fuente: <a href="www.indec.gov.arprincipal.asp?id_tema=166" target="_blank">Encuesta Nacional de Personas con Discapacidad 2002-2003. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
 					</p>
 				</section>
 				
@@ -225,7 +242,7 @@
 					</table>
 					<br />
 					<p class="text text-hightlight">
-						Existe la creencia entre los desarrolladores y los dueños de negocio que no exite público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
+						Existe la creencia entre los desarrolladores y los dueños de negocio que no existe público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
 					</p>
 					<p>
 						<small>Fuente: <a href="http://www.google.com/trends/explore?q=web+accesibility#q=web%20accesibility%2C%20css3%2C%20html5%2C%20internet%20explorer%206%2C%20internet%20explorer%209&cmpt=q" target="_blank">Google Trends</a>, <a href="http://www.netmarketshare.com/" target="_blank">Net Market Share</a> y <a href="http://gs.statcounter.com/#browser_version_partially_combined-AR-monthly-201202-201302" target="_blank">Stats Counter</a></small>
@@ -241,17 +258,17 @@
 				<section>
 				    <h3>La accesibilidad Web es para TODOS</h3>
 				    <p>
-				        Su implementación en sitios Web beneficia a todas las personas y no solo a las que tienen un algún tipo de dificultad.
+				        Su implementación en sitios Web beneficia a todas las personas y no solo a aquellas que tienen un algún tipo de dificultad.
                     </p>
 				    <p>
-				        Si la accesibilidad Web mejora la experiencia de usuario para las personas con discapacidades, por qué no lo haría para personas sin dificultades.
+				        Si la accesibilidad Web mejora la experiencia de usuario para las personas con discapacidades, por qué no lo haría en personas sin dificultades.
 				    </p>
 				</section>
 				<section>
 					<h3>"Discapacitados temporales"</h3>
 					<img src="images/discapacitados_temporales.jpg" alt="" />
 					<p>
-						Las estadisticas anteriores no tienen en cuenta que todos podemos quedar temporalmente disminuidos, siendo entonces el número personas discapacitadas en un período de tiempo aún mayor.
+						Las estadísticas anteriores no tienen en cuenta que todos podemos quedar temporalmente disminuidos, siendo entonces el número de personas afectadas, en un período de tiempo, aún mayor.
 					</p>
 					<p>
 						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/cameronparkins/3717438663/" target="_blank">Cameron Parkins</a></small>
@@ -261,13 +278,13 @@
 					<h3>Otros grupos beneficiados directamente</h3>
 					<ul>
 						<li class="fragment">Personas mayores</li>
-						<li class="fragment">Personas sin estudios o que no son nativos en la lengua del sitio.</li>
-						<li class="fragment">Personas con conexiones lentas o que utilizan tecnología desactualizada</li>
-						<li class="fragment">Nuevos usuarios o usuarios infrecuentes</li>
+						<li class="fragment">Personas sin estudios o que no sean nativas en la lengua del sitio Web</li>
+						<li class="fragment">Personas con conexiones lentas o que utilizan tecnologías desactualizadas</li>
+						<li class="fragment">Nuevos usuarios o usuarios infrecuentes del sitio</li>
 					</ul>
 					<br />
 					<br />
-					<p class="fragment">
+					<p class="fragment text">
 						<small>Fuente: <a href="http://www.amazon.es/Web-Accessibility-Standards-Regulatory-Compliance/dp/1590596382" target="_blank">Web Accessibility Web Standards and Regulatory Compliance</a></small>
 					</p>
 				</section>
@@ -309,7 +326,7 @@
                             El <strong class="text-hightlight">98%</strong> de los sitios gubernamentales alojados bajo los dominios gob.ar y gov.ar presentan <strong class="text-hightlight">al menos una barrera de acceso al contenido</strong>. 
                         </p>
                         <p class="text">
-                            Estos sitios fallan en algunos de los criterios de nivel A propuestos en las pautas WCAG.
+                            Estos sitios fallan en algunos de los criterios de nivel A propuestos en las pautas <abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>.
                         </p>
                         <small>Fuente: <a href="https://docs.google.com/presentation/d/1f6mHKd3B9XAXPZL1-vPto5XQxAwkYjFNawhXxWKlu9U/edit?usp=sharing" target="_blank">Accesibilidad Web Gubernamental - 2012</a></small>
                     </section>
@@ -387,24 +404,24 @@
 				        </ul>
 				    </section>
 				    <section>
-				    	<h4>API de Accesibilidad</h4>
+				    	<h4><abbr title="Application Programming Interface" lang="en">API</abbr> de Accesibilidad</h4>
 				    	<p class="text">
 				    		Son un conjunto de funciones que otorga un sistema operativo para facilitar la accesibilidad de cualquier aplicación.
 			    		</p>
 				    	<p class="text">
-				    		Los navegadores Web implementan esta API sobre los elementos HTML.
+				    		Los navegadores Web implementan esta <abbr title="Application Programming Interface" lang="en">API</abbr> sobre los elementos <abbr title="HyperText Markup Language" lang="en">HTML</abbr> presentes en cada sitio.
 			    		</p>
 				    	<p class="text">
-				    		Usar elementos nativos destinados para un fin, es asegurarse que tengan su correspondiente acceso al API.
+				    		Usar elementos nativos con un cierto significado, es asegurarse que tengan su correspondiente acceso a la <abbr title="Application Programming Interface" lang="en">API</abbr>.
 			    		</p>
 				    	<p class="text">
-				    		Utilizar HTML de manera incorrecta o no semántica anula el acceso a las API de accesibilidad, afectando entre otros a las siguientes interacciones: foco, estados, acceso por teclado.
+				    		Utilizar <abbr title="HyperText Markup Language" lang="en">HTML</abbr> de manera incorrecta o no semántica anula el acceso a las <abbr title="Application Programming Interface" lang="en">API</abbr> de accesibilidad, afectando entre otros a las siguientes interacciones: foco, estados, acceso por teclado.
 			    		</p>
 				    </section>
 				    <section>
                         <h4>Etiquetas para campos de entrada de datos</h4>
                         <p class="text">
-                        	Los controles sin etiquetas no comunican a las personas con dificultades en la visión el objetivo de dicho control y tampoco los requisitos del mismo (ejemplo: es obligatorio).
+                        	Los controles sin etiquetas no comunican a las personas con dificultades en la visión el objetivo de dicha entrada y tampoco los requisitos del mismo (ejemplo: es obligatorio).
                     	</p>
                         <p class="text">
                         	Ejemplo: <a  target="_blank" href="http://api.santafe.gov.ar/tra2010/in/boleta/index.php">API Santa FE - Reimpresión de boleta</a>.
@@ -417,7 +434,7 @@
                     	<h4>Beneficios del uso correcto del marcado</h4>
                     	<ul>
                     		<li>
-                    			<span class="text-hightlight">Obtener comportamiento nativo</span>, identico al de otras aplicaciones de la plataforma, compatible con los que los usuarios están acostumbrados a esperar.
+                    			<span class="text-hightlight">Obtener comportamiento nativo para los elementos presentes en una Web</span>, idéntico al de otras aplicaciones de la plataforma, compatible con el comportamiento que los usuarios están acostumbrados a esperar.
                 			</li>
                     		<li>
                 				<span class="text-hightlight">Mejora la usabilidad</span>, porque muchos de estos controles ya traen comportamiento nativo. Por ejemplo, los enlaces y botones ya tienen acceso por teclado o al hacer click en una etiqueta se hace foco en una control.
@@ -446,7 +463,10 @@
 					</section>
 					<section>
 						<h4>Posibles soluciones</h4>
-						<pre><code style="max-height:600px;">&lt;div id=&quot;columna2&quot;&gt;
+						<p class="text">
+						    Utilizar el atributo <code>title</code> en aquellos elementos que su contenido va a ser una imagen de fondo en <abbr title="Hojas de estilo en cascada">CSS</abbr>.
+						</p>
+						<pre aria-hidden="true"><code style="max-height:600px;">&lt;div id=&quot;columna2&quot;&gt;
   	&lt;a target=&quot;_blank&quot; title=&quot;Trámites online (abre en nueva ventana)&quot;
 		    href=&quot;http://www.rosario.gov.ar/tramitesonline/&quot; &lt;/a&gt;
   	&lt;!-- Enlace que va ser leído como "LINK" --&gt;
@@ -477,13 +497,13 @@
 						<h4>Como usar el atributo <code>alt</code> de manera correcta (primera parte)</h4>
 						<ul>
 							<li class="fragment">
-								Utilizar el atributo <code>alt</code> en todas imagenes de la página, <span class="text-hightlight">el contenido del atributo debe describir la función de la imagen y no la imagen en si misma</span>.
+								Utilizar el atributo <code>alt</code> en todas imágenes de la página, <span class="text-hightlight">el contenido del atributo debe describir la función de la imagen y no la imagen en si misma</span>.
 							</li>
 						    <li class="fragment">
 						    	Asegurarse que <span class="text-hightlight">la descripción de la imagen sea útil</span>. Por ejemplo, si la imagen es el logo de una empresa el <code>alt</code> debería ser el nombre de la empresa y no "logo".
 						    </li>
 						    <li class="fragment">
-						    	<span class="text-hightlight">Las imágenes dentro de enlaces deben describir hacia donde van</span>. Por ejemplo, si un el logo de la empresa está enlazado a la página principal debería marcarse como <code>alt="Principal"</code>
+						    	<span class="text-hightlight">Las imágenes dentro de enlaces deben describir hacia donde se dirijen</span>. Por ejemplo, si el logo de la empresa está enlazado a la página principal debería marcarse como <code>alt="Principal"</code>
 						    </li>
 						    <li class="fragment">
 						    	No empenzar el contenido del atributo con "foto de ..." o "imagen de ...", ya que las tecnologías de apoyo actualmente ya realizan esto.
@@ -508,7 +528,7 @@
 							En ocaciones <span class="text-hightlight">para dar una alternativa textual requerimos de texto extra que visualmente puede estropear el diseño de una página Web</span>.
 						</p>
 						<p class="text">
-							Existen técnicas en CSS para ocultar texto visualmente continuando siendo leídos por los programas de lectura de pantalla. Por ejemplo la <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L152" target="_blank">clase "visuallyhidden" del HTML5 Boilerplate</a>.
+							Existen técnicas en <abbr title="Hojas de estilo en cascada">CSS</abbr> para ocultar texto visualmente mientras que continuan siendo leídos por los programas de lectura de pantalla. Por ejemplo la <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L152" target="_blank">clase "visuallyhidden" del HTML5 Boilerplate</a>.
 						</p>
 						<pre><code style="max-height:600px;">.visuallyhidden {
     border: 0;
@@ -541,6 +561,9 @@
 					</section>
 					<section>
 						<h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr> accesible</h4>
+						<p class="text">
+						    Utilizar sistemas que sean accesibles como reCAPTCHA.
+						</p>
 						<a href="http://www.google.com/recaptcha" target="_blank"><img alt="El servicio Web reCaptcha ofrece una alternativa sonora para la comprobación de si somos humanos o no." src="images/recaptcha.png" /></a>
 						<p>Otra alternativa es realizar directamente preguntas textuales.</p>
 						<blockquote>Prueba que eres humano, ¿cuanto es dos más dos?</blockquote>
@@ -550,7 +573,7 @@
 							<abbr title="Web Accessibility Initiative - Accessible Rich Internet Applications">WAI-ARIA</abbr>:   Aplicaciones Web Accessibles
 						</h4>
 						<p class="text">
-							Es una especificación de la <abbr title="World Wide Web Consortium">W3C</abbr> que describe como incrementar la accesibilidad de las páginas Web, en particular, aquellas con contenido dinámico y con componentes de interfaz desarrollados con HTML, CSS y JavaScript.
+							Es una especificación de la <abbr title="World Wide Web Consortium">W3C</abbr> que describe como incrementar la accesibilidad de las páginas Web, en particular, aquellas con contenido dinámico y con componentes de interfaz desarrollados con <abbr title="HyperText Markup Language" lang="en">HTML</abbr>, <abbr title="Hojas de estilo en cascada">CSS</abbr> y JavaScript.
 						</p>
 						<ul>
 							<li>
@@ -568,7 +591,7 @@
 								Permite el acceso a personas con discapacidad visual.
 							</li>
 							<li class="fragment">
-								Incrementa el <abbr title="Optimización para motores de búsqueda">SEO</abbr> del sitio. El ejemplo más concreto son las infografías en la Web.
+								Incrementa el <abbr title="Optimización para motores de búsqueda">SEO</abbr> del sitio. El ejemplo más concreto son las infografías en la Web. Que sin su alternativa textual, nunca su contenido sería indexado por los buscadores.
 							</li>
 						</ul>
 					</section>						 
@@ -580,10 +603,10 @@
 						<h4>Problemas de accesibilidad</h4>						
 						<ul>
 							<li class="fragment">
-								Personas con dificultad para utilizar un mouse no pueden acceder a contenido diseñado para ser accedido únicamente por este medio.
+								Personas con imposibilidad de utilizar un mouse no pueden acceder al contenido diseñado para ser accedido únicamente por ese dispositivo.
 							</li>
 							<li class="fragment">
-								Toda acción que pueda realizar mediante el mouse debería poder efectuarse utilizando el teclado u otro medio.
+								Toda acción que pueda realizarse mediante el mouse debería poder efectuarse utilizando el teclado u otro dispositivo o medio.
 							</li>
 							<li class="fragment">
 								No todo se resuelve utilizando el atributo <code>accesskey</code>
@@ -592,7 +615,9 @@
 					</section>
 					<section>
 						<h4>Ejemplo del problema</h4>
-						<p class="text">En el sitio de <a href="http://www.garbarino.com" target="_blank">Garbarino</a> hay lugares de la página que no se pueden acceder por teclado.</p>
+						<p class="text">
+						    En el sitio de <a href="http://www.garbarino.com" target="_blank">Garbarino</a> hay lugares de la página que no se pueden acceder por teclado.
+                        </p>
 						<video controls="" style="width:85%; max-height:550px;">
 						  <source src="videos/garbarino.ogv" type="video/ogg; codecs=theora,vorbis" />
 						  <source src="videos/garbarino.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
@@ -603,24 +628,24 @@
 					<section>
 						<h4>Cómo lograr que un elemento pueda recibir foco</h4>
 						<p class="text">
-							En ocaciones requerimos lograr que un elemento HTML (que no recibe foco de manera nativa) pueda recibir foco.
+							En ocaciones requerimos lograr que un elemento <abbr title="HyperText Markup Language" lang="en">HTML</abbr>(que no recibe foco de manera nativa) pueda recibir foco.
 						</p>
 						<p class="text">
-							Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco. Si seteamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
+							Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco. Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
 						</p>
 						<pre class="bigger"><code style="max-height:600px;">&lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
 						</code></pre>
 					</section>	
                     <section>
-                        <h4>Nunca retirar el outline de los elementos</h4>
+                        <h4>Nunca retirar el <code>outline</code> de los elementos</h4>
                         <p class="text">
-                            Retirar el outline provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado y no el mouse
+                            Retirar el <code>outline</code> provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado.
                         </p>
                         <p class="text">
                             Ejemplo de lo que no hay que hacer: <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Página de trámites Santa Fe</a>.
                         </p>
                         <p class="text">
-                            Algunos reset de CSS o templates incluyen erroneamente el siguiente código CSS:
+                            Algunos reset de CSS o templates incluyen erroneamente el siguiente código:
                         </p>
                         <pre><code>*:focus {
     outline: 0;
@@ -631,22 +656,22 @@
                         </p>
                     </section>
 					<section>
-						<h4>Cuestiones a chequear</h4>
+						<h4>Cuestiones a comprobar</h4>
 						<ul>
 							<li class="fragment">
 								Comprobar que todos los elementos que provean interacción (enlaces, botones, campos de textos, controles, etc.) puedan obtener foco mediante teclado.
 							</li>
 							<li class="fragment">
-								Que se mueva el foco programáticamente cuando sea necesario romper con el orden lógico del flujo de documento. Por ejemplo con un dialogo modal.
+								Cuando sea necesario romper con el orden lógico del flujo del documento, el foco de los elementos debe ser movido programáticamente. Por ejemplo al utilizar un diálogo modal.
 							</li>
 							<li class="fragment">
-								Que existan disparadores alternativos a las acciones que se activan en el estado "sobre" (<i lang="en">hover</i>).
+								Que existan disparadores alternativos a las acciones que se activan en el estado "sobre" (<code lang="en">hover</code>).
 							</li>
 							<li class="fragment">
 								Que se puedan disparar todas las funciones mediante mouse y teclado simultaneamente.
 							</li>
 							<li class="fragment">
-								Existan teclas rápidas para ejecutar las funciones más comunes.
+								Que existan teclas rápidas para ejecutar las funciones más comunes.
 							</li>
 						</ul>
 					</section>
@@ -654,10 +679,13 @@
 						<h4>Beneficios de la navegación mediante teclado</h4>						
 						<ul>
 							<li class="fragment">
-								Permite la navegación y utilización del sitio a personas con alguna <span class="text-hightlight">discapacidad motora</span>. Además que las personas con <span class="text-hightlight">dificultades visuales</span> también requieren de la utilización del teclado ya que ellos no pueden apuntar con el mouse.
+								Permite la navegación y utilización del sitio a personas con alguna <span class="text-hightlight">discapacidad motora</span>. 
 							</li>
 							<li class="fragment">
-								<span class="text-hightlight">Aumenta la productividad</span> de los usuarios en la utilización del sitio. Cuando una aplicación permite la utilización de atajos de teclado y la operabilidad utilizando el mismo se vuelve más productiva.
+							    Permite el acceso a las personas con <span class="text-hightlight">dificultades visuales</span> porque  este grupo también requiere de la utilización del teclado para navegar una Web.
+							</li>
+							<li class="fragment">
+								<span class="text-hightlight">Aumenta la productividad</span> de los usuarios en la utilización del sitio. Cuando una aplicación permite la utilización de atajos de teclado y la operabilidad utilizando el mismo esta se vuelve más productiva.
 							</li>
 						</ul>
 					</section>
@@ -668,10 +696,10 @@
 						<h4>Problemas de accesibilidad</h4>						
 						<ul>
 							<li class="fragment">
-							    Personas con moderada baja visión o daltónicas pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
+							    Personas con moderada o baja visión y personas con algún grado de daltonismo pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
 							</li>
 							<li class="fragment">
-							    Personas con dificultades cognitivas, del lenguaje o aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer. Por ejemplo si las distintas líneas del texto están muy cerca entre si o si el texto se encuentra justificado hacia algunos de los bordes del recuadro.
+							    Personas con dificultades cognitivas, del lenguaje o de aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer. Por ejemplo si las distintas líneas del texto están muy cerca entre si o si el texto se encuentra justificado hacia algunos de los bordes del recuadro.
 							</li>
 							<li class="fragment">
 							    Personas con dificultades en la visión o en la lectura de texto pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
@@ -705,9 +733,15 @@
 					<section>
 					    <h4>Beneficiones de mejorar la legibilidad</h4>
 					    <ul>
-					        <li><span class="text-hightlight">Disminuir la cantidad de rebotes en las páginas Web</span>, haciendo que el texto sea más agradable y fácil de leer.</li>
-					        <li>Permitir el acceso a personas con dilexia, personas con problemas en la vision o personas con problemas de aprendizaje.</li>
-					        <li><span class="text-hightlight">Mejora la visualización en ambientes de mucha luz</span> o con dispositivos en modo de ahorro de energía activado.</li>
+					        <li>
+					            <span class="text-hightlight">Disminuir la cantidad de rebotes en las páginas Web</span>, haciendo que el texto sea más agradable y fácil de leer.
+                            </li>
+					        <li>
+					            Permitir el acceso a personas con dilexia, personas con problemas en la visión o personas con problemas de aprendizaje.
+                            </li>
+					        <li>
+					            <span class="text-hightlight">Mejora la visualización en ambientes de mucha luz</span> o con dispositivos en modo de ahorro de energía activado.
+                            </li>
 					    </ul>
 					</section>
 				</section>
@@ -761,11 +795,21 @@
                 <section>
                     <h3>Resumen</h3>
                     <ul>
-                        <li class="fragment">Otorgar a cada elemento la etiqueta HTML que le corresponda, utilizando el lenguaje de una manera válida.</li>
-                        <li class="fragment">Etiquetar correctamente todo campo de entrada de un formulario.</li>
-                        <li class="fragment">Proveer alternativa textuales a elementos visuales, utilizando el atributo <code>alt</code> de manera correcta y CAPTCHA accesibles.</li>
-                        <li class="fragment">Permitir el acceso y utilización de cada elemento en una Web mediante teclado</li>
-                        <li class="fragment">El contenido del sitio tiene que ser legible.</li>
+                        <li class="fragment">
+                            Otorgar a cada elemento la etiqueta HTML que le corresponda, utilizando el lenguaje de una manera válida.
+                        </li>
+                        <li class="fragment">
+                            Etiquetar correctamente todo campo de entrada de un formulario.
+                        </li>
+                        <li class="fragment">
+                            Proveer alternativas textuales a elementos visuales, utilizando el atributo <code>alt</code> de manera correcta y CAPTCHA accesibles.
+                        </li>
+                        <li class="fragment">
+                            Permitir el acceso y utilización de cada elemento en una Web mediante teclado
+                        </li>
+                        <li class="fragment">
+                            El contenido del sitio tiene que ser legible.
+                        </li>
                     </ul>
                 </section>
                 <section>
