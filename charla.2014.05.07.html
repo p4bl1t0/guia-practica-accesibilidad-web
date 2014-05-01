@@ -125,6 +125,15 @@
                 position: absolute;
                 width: 1px;
             }
+            .reveal .list-item { 
+                margin: 0.75em 0;
+            }
+            .reveal .no-bullet { 
+                list-style-type: none;
+            }
+            .reveal sup {
+                font-size: .7em;
+            }
 		</style>
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -165,9 +174,9 @@
 						</li>
 						<li class="fragment"><strong><abbr title="Mini charlas tecnológicas">MCT</abbr> 2011</strong> - <a href="http://p4bl1t0.github.io/cross-browser-sites-slides/mct-slides.html" target="_blank">Sitios compatibles entre navegadores</a></li>
 						<li class="fragment"><strong><abbr title="Mini charlas tecnológicas">MCT</abbr> 2013</strong> - <a href="http://p4bl1t0.github.io/guia-practica-accesibilidad-web/presentacion.html" target="_blank">Accesibilidad Web Guía Práctica</a></li>
-						<li class="fragment"><strong>Creador</strong> de <a href="http://awar.com.ar/" target="_blank" class="external">Accesibilidad Web Argentina</a></li>
 						<li class="fragment"><strong>Colaborador</strong> en <a href="http://a11yproject.com/" target="_blank" class="external"><abbr title="Accessibility">A11y</abbr> Project</a></li>
-						<li class="fragment"><strong>Colaborador</strong> en <a href="http://www.forosdelweb.com/" target="_blank" class="external">Foros del Web</a></li>
+						<!--<li class="fragment"><strong>Colaborador</strong> en <a href="http://www.forosdelweb.com/" target="_blank" class="external">Foros del Web</a></li>-->
+						<li class="fragment"><strong>Creador</strong> de <a href="http://awar.com.ar/" target="_blank" class="external">Accesibilidad Web Argentina</a></li>
 					</ul>
 				</section>
 				<section>
@@ -179,10 +188,10 @@
 						<li class="fragment">
 							Segunda parte: Acercar <span class="text-hightlight">soluciones simples para mejorar la accesibilidad Web</span>. Útiles tanto para desarrolladores Web como para creadores de contenidos.
 						</li>-->
-						<li class="fragment">Introducción a la Accesibilidad Web y su problemática.</li>
-                        <li class="fragment">Beneficios del desarrollo accesible.</li>
-                        <li class="fragment">Ejemplos de sitios con barreras y sitios accesibles.</li>
-                        <li class="fragment">Consejos básicos para un contenido Web accsible.</li>
+						<li class="fragment list-item">Introducción a la Accesibilidad Web y su problemática.</li>
+                        <li class="fragment list-item">Beneficios del desarrollo accesible.</li>
+                        <li class="fragment list-item">Ejemplos de sitios con barreras y sitios accesibles.</li>
+                        <li class="fragment list-item">Consejos básicos para un contenido Web accsible.</li>
 					</ul>
 				</section>
 				<section>
@@ -209,11 +218,13 @@
 					<h2>Discapacidad en números</h2>
 					<p class="fragment text">
 						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)
-						<br />
-						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
 					</p>
 					<p class="fragment text">
 						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">12.7% de la población</strong> sufre de algún tipo de discapacidad (5 millones de personas). En 2003 el valor era del 8% se estima a que se debe por el envejecimiento de la población.
+					</p>
+				    <br />
+					<p class="fragment text">
+						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
 						<br />
 						<small>Fuente: <a href="http://www.indec.mecon.ar/principal.asp?id_tema=166" target="_blank">Censo Nacional de Población, Hogares y Viviendas 2010. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
 					</p>
@@ -227,7 +238,7 @@
 				<section>
 					<h3>La accesibilidad Web <span class="text-hightlight">NO es una tendencia</span></h3>
 					<!--<p>Interés relativo de búsqueda a lo largo del tiempo</p>-->
-					<img src="images/tendencia.png" width="800" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
+					<img src="images/tendencia-nueva.png" width="800" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
 					<br />
 					<!--<p>
 						Personas con discapacidad versus uso de <abbr title="Internet Explorer">IE</abbr> 6 y 7 (combinado)
@@ -248,13 +259,13 @@
 							</tr>
 							<tr>
 								<th>Población con discapacidad</th>
-								<td>7.1%</td>
+								<td>12.7%</td>
 								<td>15.0%</td>
 							</tr>
 						</tbody>
 					</table>-->
 					<br />
-					<p class="text text-hightlight">
+					<p class="text">
 						Existe la creencia entre los desarrolladores y los dueños de negocio que no existe público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
 					</p>
 					<p>
@@ -262,24 +273,21 @@
 					</p>
 				</section>
 				<section>
-					<h3>¿Por qué debería aplicarla entonces?</h3>
+					<h3>Entnces, ¿por qué debería aplicarla?</h3>
 					<img src="images/why.jpg" alt="" />
 					<p>
 						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/86979666@N00/7623744452/" target="_blank">Tsahi Levent-Levi</a></small>
 					</p>
 				</section>
 				<section>
-				    <h3>La accesibilidad Web es para TODOS</h3>
+				    <h3>Sus beneficios son para <span class="text-hightlight">TODOS</span></h3>
 				    <!--REVISAR-->
-				    <p>
+				    <p class="text">
+				        Los principios de la accesibilidad forman parte de la <strong class="text-hightlight">Usabilidad y la Experiencia del Usuario</strong>.
+				    </p>
+				    <p class="text">
 				        Su implementación en sitios Web beneficia a todas las personas y no solo a aquellas que tienen un algún tipo de dificultad.
                     </p>
-				    <p>
-				        Si la accesibilidad Web mejora la experiencia de usuario para las personas con discapacidades, por qué no lo haría en personas sin dificultades.
-				    </p>
-				    <p>
-				        La accesibilidad es parte de la usabilidad y la experiencia del usuario.
-				    </p>
 				</section>
 				<section>
 					<h3>"Discapacitados temporales"</h3>
@@ -294,10 +302,10 @@
 				<section>
 					<h3>Otros grupos beneficiados directamente</h3>
 					<ul>
-						<li class="fragment">Personas mayores</li>
-						<li class="fragment">Personas que carezcan de estudios o que no sean nativas en la lengua del sitio Web</li>
-						<li class="fragment">Personas con conexiones lentas o que utilizan tecnologías desactualizadas</li>
-						<li class="fragment">Nuevos usuarios o usuarios infrecuentes del sitio</li>
+						<li class="fragment list-item">Personas mayores</li>
+						<li class="fragment list-item">Personas que carezcan de estudios o que no sean nativas en la lengua del sitio Web</li>
+						<li class="fragment list-item">Personas con conexiones lentas o que utilizan tecnologías desactualizadas</li>
+						<li class="fragment list-item">Nuevos usuarios o usuarios infrecuentes del sitio</li>
 					</ul>
 					<br />
 					<br />
@@ -312,60 +320,57 @@
 						La aplicación de técnicas de Accesibilidad Web mejora la facilidad de uso, legibilidad y comprensión del contenido en la Web. <strong class="text-highlight">Ampliando la audiencia para nuestro sitio</strong>.
 					</p>
 					<p class="fragment text">
-						<i>Legal &amp; General</i> aumentó un <span class="text-hightlight">300% sus conversiones y disminuyó un 10% su tasa de rebote</span> tras aplicar un nuevo diseño accesible. [1]
-					</p>
-					<p class="fragment text">
-					    <i>TESCO</i> (cadena multinacional de locales de venta al por menor) aumentó su ganancias en 13 millones de euros anuales incorporando diseño accesible para personas no videntes. [2]
+					    <i>TESCO</i> (cadena multinacional de locales de venta al por menor) <span class="text-hightlight">aumentó su ganancias en 13 millones de euros anuales</span> incorporando diseño accesible para personas no videntes. <sup>[1]</sup>
 				    </p>
 					<p class="fragment text">
-					    <i>Virgin</i> incremento 68% sus ventas incorporando diseño accesible. [3]
+					    <i>Virgin</i> incremento 68% sus ventas incorporando diseño accesible. <sup>[2]</sup>
+					</p>
+					<p class="fragment text">
+						<i>Legal &amp; General</i> aumentó un 300% sus conversiones y disminuyó un 10% su tasa de rebote tras aplicar un nuevo diseño accesible. <sup>[3]</sup>
 					</p>
                     <br />
                     <br />
                     <div class="text">
-                        <small>[1] 34 mil visitantes únicos diarios según Alexa. Fuente: <a href="http://www.karlgroves.com/2011/04/13/chasing-the-accessibility-business-case-part-1/" target="_blank">Chasing the accessibility business case</a></small>
+                        <small>[1] 1.1 millon de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
                     </div>
                     <div class="text">
-                        <small>[2] 1.1 millon de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                        <small>[2] 51 mil de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
                     </div>
                     <div class="text">
-                        <small>[3] 51 mil de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                        <small>[3] 34 mil visitantes únicos diarios según Alexa. Fuente: <a href="http://www.karlgroves.com/2011/04/13/chasing-the-accessibility-business-case-part-1/" target="_blank">Chasing the accessibility business case</a></small>
                     </div>
 				</section>
-				<section>
-                    <section>
-                        <h3>Por normativa</h3>
-                        <p class="fragment text">
-                            En Argentina como en otros países del mundo <span class="text-hightlight">ciertos grupos de páginas o sitios Web están obligados a ser accesibles</span>.
-                        </p>
-                        <p class="fragment text">
-                            La ley de ACCESIBILIDAD DE LA INFORMACION EN LAS PAGINAS WEB número 26.653 se encuentra en vigencia desde el <time datetime="2013-04-04">4 de mayo de 2013</time>.
-                        </p>
-                        <p class="fragment text">
-                            Esta ley <span class="text-hightlight">obliga a los sitios alcanzados</span> (poderes del Estado Nacional, organismos autárquicos o descentralizados, entes públicos, empresas públicas y las empresas privadas contratistas del Estado) <span class="text-hightlight">a desarollar sus sitios de manera accesible</span> o a adecuar sus sitios actuales a las normativas de Accesibilidad Web Internacionales (<abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>).
-                        </p>
-                    </section>
-                    
-                    <section>
-                        <h4>Pautas de Accesibilidad para el contenido Web (<abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>)</h4>
-                        <h5>Estado actual de los sitios Web Gubernamentales en Argentina</h5>
-                        <br/>
-                        <p class="text">
-                            El <strong class="text-hightlight">98%</strong> de los sitios gubernamentales alojados bajo los dominios gob.ar y gov.ar presentan <strong class="text-hightlight">al menos una barrera de acceso al contenido</strong>. 
-                        </p>
-                        <p class="text">
-                            Estos sitios fallan en algunos de los criterios de nivel A propuestos en las pautas <abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>.
-                        </p>
-                        <small>Fuente: <a href="https://docs.google.com/presentation/d/1f6mHKd3B9XAXPZL1-vPto5XQxAwkYjFNawhXxWKlu9U/edit?usp=sharing" target="_blank">Accesibilidad Web Gubernamental - 2012</a></small>
-                    </section>
-				</section>
+                <section>
+                    <h3>Por normativa</h3>
+                    <p class="fragment text">
+                        En Argentina como en otros países del mundo <span class="text-hightlight">los sitios Web gubernamentales están obligados a ser accesibles</span>.
+                    </p>
+                    <p class="fragment text">
+                        La <a href="http://www.infoleg.gob.ar/infolegInternet/anexos/175000-179999/175694/norma.htm">ley de Accesibilidad de la información en las páginas web</a> (n° 26.653) se encuentra en vigencia desde el <time datetime="2013-04-04">4 de mayo de 2013</time>.
+                    </p>
+                    <p class="fragment text">
+                        <span class="text-hightlight">Obligando a los sitios alcanzados</span> (poderes del Estado Nacional, organismos autárquicos o descentralizados, entes públicos, empresas públicas y las empresas privadas contratistas del Estado) <span class="text-hightlight">a desarollar sus sitios de manera accesible</span> o a adecuar sus sitios actuales a las normativas de Accesibilidad Web Internacionales (<abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>).
+                    </p>
+                </section>
+                <section>
+                    <h3>Accesibilidad Web en Argentina (sitios gubernamentales)</h3>
+                    <h4>Pautas de Accesibilidad para el contenido Web</h4>
+                    <br/>
+                    <p class="text">
+                        El <strong class="text-hightlight">98%</strong> de los sitios gubernamentales (dominios gob.ar/gov.ar) presentan <strong class="text-hightlight">al menos una barrera de acceso al contenido web.</strong>. 
+                    </p>
+                    <p class="text">
+                        Estos sitios fallan por lo menos en uno de los criterios de nivel A (los más básicos) propuestos en las pautas <abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>.
+                    </p>
+                    <small>Fuente: <a href="https://docs.google.com/presentation/d/1f6mHKd3B9XAXPZL1-vPto5XQxAwkYjFNawhXxWKlu9U/edit?usp=sharing" target="_blank">Accesibilidad Web Gubernamental - 2012</a></small>
+                </section>
 				<section>
 					<h3>Otros beneficios</h3>
 					<ul>
 						<!--<li class="fragment">Aumenta la usabilidad del sitio </li>
 						<li class="fragment">Mejora el rendimiento de los usuarios</li>-->
-						<li class="fragment">Aumenta la interoperabildad</li>
-						<li class="fragment">Mejora la performance</li>
+						<li class="fragment list-item">Aumenta la interoperabildad (adaptación a distintos dispositivos y tecnologías)</li>
+						<li class="fragment list-item">Mejora la velocidad de carga de los sitios</li>
 					</ul>
 				</section>
 								
@@ -381,7 +386,7 @@
 				<section>
 					<!--<p>Ok todo muy lindo, entendimos la idea. Pero ...</p>-->
 					<h3>¿Cómo la aplico?</h3>
-					<img src="images/bla_bla.jpg" alt="" />
+					<img src="images/muchas_palabras.jpg" alt="" />
 				</section>
 				
 				<section>
@@ -833,19 +838,19 @@ Can your element work with high-contrast mode enabled? All modern operating syst
                 <section>
                     <h3>Resumen</h3>
                     <ul>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Otorgar a cada elemento la etiqueta HTML que le corresponda, utilizando el lenguaje de una manera válida.
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Etiquetar correctamente todo campo de entrada de un formulario.
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Proveer alternativas textuales a elementos visuales, utilizando el atributo <code>alt</code> de manera correcta y CAPTCHA accesibles.
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Permitir el acceso y utilización de cada elemento en una Web mediante teclado
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             El contenido del sitio tiene que ser legible.
                         </li>
                     </ul>
@@ -862,9 +867,11 @@ Can your element work with high-contrast mode enabled? All modern operating syst
 					<h4>Accesibilidad es pensar en todos</h4>
 					<p><br /></p>
 					<p>Contacto</p>
-					<p>
-					    <a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a> - <a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a> - <a href="https://plus.google.com/u/0/112792248555453721261/" target="_blank">Pablo en Google Plus</a> Mail: pabloluisbotta(arroba)gmail.com
-					</p>
+					<ul>
+					    <li class="list-item no-bullet"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></li>
+					    <li class="list-item no-bullet"><a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a></li>
+					    <li class="list-item no-bullet"$>pabloluisbotta(arroba)gmail.com</li>
+					</ul>
 				</section>
 				<!--<section>
 					<h3>6 - Subtítulos para videos</h3>
