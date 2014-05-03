@@ -188,10 +188,10 @@
 						<li class="fragment">
 							Segunda parte: Acercar <span class="text-hightlight">soluciones simples para mejorar la accesibilidad Web</span>. Útiles tanto para desarrolladores Web como para creadores de contenidos.
 						</li>-->
-						<li class="fragment list-item">Introducción a la Accesibilidad Web y su problemática.</li>
-                        <li class="fragment list-item">Beneficios del desarrollo accesible.</li>
-                        <li class="fragment list-item">Ejemplos de sitios con barreras y sitios accesibles.</li>
-                        <li class="fragment list-item">Consejos básicos para un contenido Web accsible.</li>
+						<li class="fragment list-item">Introducción a la Accesibilidad Web y su problemática</li>
+                        <li class="fragment list-item">Ejemplos de sitios con barreras y sitios accesibles</li>
+                        <li class="fragment list-item">Beneficios del desarrollo accesible</li>
+                        <li class="fragment list-item">Consejos básicos para un contenido Web accsible</li>
 					</ul>
 				</section>
 				<section>
@@ -228,7 +228,102 @@
 						<br />
 						<small>Fuente: <a href="http://www.indec.mecon.ar/principal.asp?id_tema=166" target="_blank">Censo Nacional de Población, Hogares y Viviendas 2010. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
 					</p>
+				</section>				
+				<section>
+					<h2>Barreras de accesibilidad</h2>
+					<p>Situaciones que generan que cierto grupo de personas no puedan acceder a un determinado contenido.</p>
 				</section>
+				<section>
+				    <h3>Imágenes sin alternativas textuales</h3>
+				</section>
+				<section>
+				    <h4>Infografías, gráficos, textos en imágenes</h4>
+                    <p>
+                        El sitio Progam.AR del Estado Nacional utiliza toda imágenes sin alternativas textuales resultando ser su sitio totalmente innaccesible.
+                    </p>
+                    <img src="images/programar.png" alt="" class="img" />
+				    <p>
+				        Los textos utilizados dentro de imágenes, imposibilitan a personas que con problemas visuales no puedan acceder al contenido. <span class="text-hightlight">A su vez esta información no estará disponible para los buscadores (impactará negativamente en el SEO).</span>
+                    </p>
+				</section>
+                
+                <section>
+                    <p>No todas las imágenes requieren alternativas</p>	
+                    <img src="images/rosario.png" alt="" class="tall-image" />
+                </section>
+                <section>
+                    <h4>Pero aquellas que transmiten información, sí</h4>
+                    <a href="http://www.rosario.gob.ar" target="_blank"><img src="images/rosario-textual.png" alt="La página de la Municipalidad de Rosario contiene elementos visuales sin alternativas textuales." class="tall-image" /></a>
+                </section>			
+                <section>
+                    <h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr>: Separando humanos de máquinas desde 1998</h4>
+                    <p>
+                        Se trata de una prueba desafío-respuesta utilizada para determinar cuándo el usuario es o no un ser humano. Mal implemetada puede <span class="text-hightlight">resultar ser una barrera para personas con dificultades</span>.
+                    </p>
+                    <figure tabindex="0">
+                        <img src="images/anses.png" alt="" class="img" />
+                        <figcaption>
+                            <p>
+                                El sitio de <abbr title="Administración Nacional de la Seguridad Social">ANSES</abbr> presenta un <abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos">CAPTCHA</abbr> sin alternativa para las personas con alguna discapacidad visual.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </section>
+				<section>
+				    <h3>Sitios innacesibles mediante teclado</h3>
+				</section>
+                <section>
+                    <p class="text">
+                        En el sitio de <a href="http://www.garbarino.com" target="_blank">Garbarino</a> hay lugares de la página que no se pueden acceder por teclado.
+                    </p>
+                    <video controls="" style="width:85%; max-height:550px;">
+                      <source src="videos/garbarino.ogv" type="video/ogg; codecs=theora,vorbis" />
+                      <source src="videos/garbarino.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+                      <source src="videos/garbarino.mpeg" type="video/mpeg" />
+                      <source src="videos/garbarino.avi" type="video/avi" />
+                    </video>
+                </section>
+                <section>
+                    <p class="text">
+                        En el sitio de la <a href="http://www.frro.utn.edu.ar/" target="_blank">facultad</a> hay enlaces de la página que no se pueden mediante teclado.
+                    </p>
+                    <video controls="" style="width:85%; max-height:550px;">
+                      <source src="videos/utn-frro.ogv" type="video/ogg; codecs=theora,vorbis" />
+                      <source src="videos/utn-frro.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+                      <source src="videos/utn-frro.mpeg" type="video/mpeg" />
+                      <source src="videos/utn-frro.avi" type="video/avi" />
+                    </video>
+                </section>
+                
+				<section>
+				    <h3>HTML inválido o esacasa semántica</h3>
+				</section>
+                <section>
+                    <p class="text">
+                        En el sitio del <a href="http://api.santafe.gov.ar/tra2010/pt/boleta/index.php" target="_blank">API de Santa Fe</a> hay opciones de selección no funcionan adecuadamente. Disminuyendo su compatibilidad en plataformas sin mecanismos de seleción tan precisos como el <i lang="en">mouse</i>.
+                    </p>
+                    <video controls="" style="width:85%; max-height:550px;">
+                      <source src="videos/radio-buttons.ogv" type="video/ogg; codecs=theora,vorbis" />
+                      <source src="videos/radio-buttons.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
+                      <source src="videos/radio-buttons.mpeg" type="video/mpeg" />
+                      <source src="videos/radio-buttons.avi" type="video/avi" />
+                    </video>
+                    <p>Esto también se nota en los sitios de la casa de electrodomésticos y de la facultad donde esos enlaces que no recibían foco es porque no eran enlaces propiamente dichos.</p>
+                </section>
+                
+				<section>
+				    <h3>Legibilidad de los textos</h3>
+				</section>
+                <section>
+                    <p class="text">
+                        Cuando un texto no es presentado de manera correcta incluso a cualquier persona le puede resultar difícil poder leerlo e interpretarlo.
+                   </p>
+                   <img src="images/legibilidad.png" alt="" class="tall-image" width="700" />
+                   <p class="text">
+                       Ejemplos: <a href="http://www.frro.utn.edu.ar/" target="_blank">Sitio Web UTN - Regional Rosario</a> y <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Portal de trámites Santa Fe</a>
+                   </p>
+                </section>
+                
 				
 				<section>
 					<h2>¿Por qué no se desarrolla accesible?</h2>
@@ -281,7 +376,6 @@
 				</section>
 				<section>
 				    <h3>Sus beneficios son para <span class="text-hightlight">TODOS</span></h3>
-				    <!--REVISAR-->
 				    <p class="text">
 				        Los principios de la accesibilidad forman parte de la <strong class="text-hightlight">Usabilidad y la Experiencia del Usuario</strong>.
 				    </p>
@@ -390,7 +484,7 @@
 				</section>
 				
 				<section>
-					<h3>Técnicas prácticas de  Accesibilidad Web</h3>
+					<h3>Técnicas prácticas de Accesibilidad Web</h3>
 					<h4>Consejos 80-20 (*)</h4>
 					<p class="fragment text">
 						Concentrarnos en un pequeño número de temas que tendrán efecto en una gran cantidad de barreras <span class="fragment text-hightlight">(Principio de Paretto).</span>

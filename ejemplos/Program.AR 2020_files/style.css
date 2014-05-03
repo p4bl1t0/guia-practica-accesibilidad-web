@@ -1,0 +1,83 @@
+body{
+margin:0;
+font-family: Arial, sans-serif;
+}
+
+ul, li{
+list-style:none;
+padding:0;
+}
+
+#page{
+width:980px;
+margin:0 auto;
+box-shadow: 0px 0px 10px #888;
+}
+#header{
+height:146px;
+}
+#logo{
+float:left;
+}
+#social{
+float:right;
+margin-right:30px;
+}
+#social ul li{
+float:left;
+margin-right:10px;
+}
+.linea{
+background:#00b5f0;
+height:30px;
+}
+#contenedor{
+margin:20px;
+padding:20px;
+background:url(../imgs/bg_gris.png);
+height:316px;
+border-radius:5px;
+}
+#contenedor > div{
+float:left;
+}
+
+#contenedor .texto{
+width: 325px;
+margin-right: 10px;
+color: white;
+font-size: 24px;
+}
+#contenedor .video{
+
+}
+
+#porque {
+margin: 20px;
+height: 250px;
+}
+#porque ul li{
+float:left;
+margin-right:60px;
+}
+#porque ul li:last-child{
+margin-right:0px;
+}
+#palabras{
+margin:20px;
+height: 300px;
+}
+#palabras > div{
+float:left;
+}
+
+#palabras .nube {
+width: 570px;
+height: 297px;
+margin-left: 20px;
+background:url(../imgs/nube_bg.png);
+}
+
+#footer{
+margin-top:20px;
+}
