@@ -96,6 +96,9 @@
 				font-family: consolas, "Courier New", monospace;
 				/*font-family: consolas!important;*/
 			}
+			.reveal pre {
+                width: 100%;
+			}
 			.reveal pre.bigger {
 				font-size: 0.8em;
 			    left: -10%;
@@ -496,392 +499,297 @@
 						<small>(*) 80-20 es marketinero y no es 100% real.</small>
 					</p>
 				</section>
-				<!-- http://www.polymer-project.org/articles/accessible-web-components.html
-				Can you use your element with the keyboard only? Does it manage to focus and avoid focus traps? Can it respond to the appropriate keyboard events? >>> Tabindex, Autofocus, Adding keyboard interaction is discoverable
-
-Can you use your element with a screen reader? Have you provided text alternatives for any information which is presented visually? Have you added semantic information using ARIA? Do all elements and images have meaningful text alternatives? Do your custom elements provide semantic information?
-
-Can your element work without sound? Turn off your speakers and go through your use cases. 
-
-Can it work without color? Ensure your element can be used by someone who cannot see colors. A helpful tool for simulating colorblindness is a Chrome extension called SEE, (try all four forms of color blindness simulation available). You may also be interested in the Daltonize extension which is similarly useful. Can users understand everything without relying on color? Is there sufficient contrast between the text/images and the background? Is the moving or flashing content in your elements stoppable and safe?
-
-Can your element work with high-contrast mode enabled? All modern operating systems support a high contrast mode.
-				-->
-				<section>
-				    <section>
-				        <h3>1 - HTML correcto y semnático</h3>
-				        <h4>Problemas de accesibilidad</h4>
-						<ul>
-							<li class="fragment">
-								Personas accediendo a la Web con medios no tradicionales (distintos a los navegadores) encuentra obstáculos para acceder a la información.
-							</li>
-							<li class="fragment">
-								Personas esperando un determinado comportamiento de la Web se encuentran con uno diferente.
-							</li>
-							<li class="fragment">
-								Lo que es en realidad (por ejemplo un <code>button</code>) no es lo que se dijo (<code>div</code>).
-							</li>
-						</ul>
-				    </section>
-				    <section>
-				        <h4>Utilizar HTML correcta y semánticamente</h4>
-				        <ul>
-				            <li>
-				            	Un <pre class="inline"><code>&lt;div class=&quot;boton-guardar&quot;&gt;</code></pre> no es un botón (<pre class="inline"><code>&lt;button class=&quot;boton-guardar&quot;&gt;</code></pre>).
-			            	</li>
-				            <li>
-				            	Un <pre class="inline"><code>&lt;span onclick=&quot;document.location=&#39;index.html&#39;&quot;&gt;</code></pre> no es un link (<pre class="inline"><code>&lt;a href=&quot;index.html&quot;&gt;</code></pre>).
-			            	</li>
-				            <li>
-				            	Un <pre class="inline"><code>&lt;span class=&quot;etiqueta&quot;&gt;</code></pre> no es una etiqueta (<pre class="inline"><code>&lt;label for=&quot;algun-input&quot; class=&quot;etiqueta&quot;&gt;</code></pre>).
-			            	</li>
-				            <li>
-				            	Un <pre class="inline"><code>&lt;div class=&quot;page-title&quot;&gt;</code></pre> no es un título (<pre class="inline"><code>&lt;h1 class=&quot;page-title&quot;&gt;</code></pre>).
-			            	</li>
-				        </ul>
-				    </section>
-				    <section>
-				    	<h4><abbr title="Application Programming Interface" lang="en">API</abbr> de Accesibilidad</h4>
-				    	<p class="text">
-				    		Son un conjunto de funciones que otorga un sistema operativo para facilitar la accesibilidad de cualquier aplicación.
-			    		</p>
-				    	<p class="text">
-				    		Los navegadores Web implementan esta <abbr title="Application Programming Interface" lang="en">API</abbr> sobre los elementos <abbr title="HyperText Markup Language" lang="en">HTML</abbr> presentes en cada sitio.
-			    		</p>
-				    	<p class="text">
-				    		Usar elementos nativos con un cierto significado, es asegurarse que tengan su correspondiente acceso a la <abbr title="Application Programming Interface" lang="en">API</abbr>.
-			    		</p>
-				    	<p class="text">
-				    		Utilizar <abbr title="HyperText Markup Language" lang="en">HTML</abbr> de manera incorrecta o no semántica anula el acceso a las <abbr title="Application Programming Interface" lang="en">API</abbr> de accesibilidad, afectando entre otros a las siguientes interacciones: foco, estados, acceso por teclado.
-			    		</p>
-				    </section>
-				    <section>
-                        <h4>Etiquetas para campos de entrada de datos</h4>
+                <section>
+                    <h3>HTML correcto y semnático</h3>
+                    <h4>Problemas de accesibilidad</h4>
+                    <ul>
+                        <li class="fragment list-item">
+                            Personas accediendo a la Web con medios no tradicionales (distintos a los navegadores) encuentra obstáculos para acceder a la información.
+                        </li>
+                        <li class="fragment list-item">
+                            Personas esperando un determinado comportamiento de la Web se encuentran con uno diferente.
+                        </li>
+                        <li class="fragment list-item">
+                            Lo que es en realidad (por ejemplo un <code>button</code>) no es lo que se dijo (<code>div</code>).
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Utilizar HTML correcta y semánticamente</h4>
+                    <ul>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;div class=&quot;boton-guardar&quot;&gt;</code></pre> no es un botón.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;span onclick=&quot;document.location=&#39;index.html&#39;&quot;&gt;</code></pre> no es un link.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;span class=&quot;etiqueta&quot;&gt;</code></pre> no es una etiqueta.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;div class=&quot;page-title&quot;&gt;</code></pre> no es un título.
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <div class="text">Realmente ...</div>
+                        <ul>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;button class=&quot;boton-guardar&quot;&gt;</code></pre> es un botón.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;a href=&quot;index.html&quot;&gt;</code></pre> es un enlace.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;label for=&quot;algun-input&quot; class=&quot;etiqueta&quot;&gt;</code></pre> es una etiqueta.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;h1 class=&quot;page-title&quot;&gt;</code></pre> es un título.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h4>Etiquetas para campos de entrada de datos</h4>
+                    <p class="text">
+                        Los controles sin etiquetas no comunican a las personas con dificultades en la visión el objetivo de dicha entrada y tampoco los requisitos del mismo (ejemplo: es obligatorio).
+                    </p>
+                    <div class="fragment">
                         <p class="text">
-                        	Los controles sin etiquetas no comunican a las personas con dificultades en la visión el objetivo de dicha entrada y tampoco los requisitos del mismo (ejemplo: es obligatorio).
-                    	</p>
-                        <p class="text">
-                        	Ejemplo: <a  target="_blank" href="http://api.santafe.gov.ar/tra2010/in/boleta/index.php">API Santa FE - Reimpresión de boleta</a>.
-                    	</p>
-                       	<pre class="bigger"><code>&lt;label title=&quot;Este campo es obligatorio&quot; for=&quot;ctal&quot;&gt;Número de Partida:&lt;/label&gt;
-&lt;input type=&quot;text&quot; name=&quot;cta1&quot; id=&quot;cta1&quot; /&gt;
-                       	</code></pre>
-                    </section>
-                    <section>
-                    	<h4>Beneficios del uso correcto del marcado</h4>
-                    	<ul>
-                    		<li>
-                    			<span class="text-hightlight">Obtener comportamiento nativo para los elementos presentes en una Web</span>, idéntico al de otras aplicaciones de la plataforma, compatible con el comportamiento que los usuarios están acostumbrados a esperar.
-                			</li>
-                    		<li>
-                				<span class="text-hightlight">Mejora la usabilidad</span>, porque muchos de estos controles ya traen comportamiento nativo. Por ejemplo, los enlaces y botones ya tienen acceso por teclado o al hacer click en una etiqueta se hace foco en una control.
-            				</li>
-                    	</ul>
-                    </section>
-				</section>
-				
-				<section>
-					<section>
-						<h3>2 - Alternativas textuales a elementos <br /> visuales</h3>
-						<h4>Problemas de accesibilidad</h4>						
-						<ul>
-							<li class="fragment">Personas con discapacidad visual no pueden acceder al contenido no textual</li>
-							<li class="fragment">Toda información transmitida por una imagen, video o cualquier otro elemento visual debería tener una alternativa textual</li>
-							<li class="fragment">No todo se resuelve incluyendo el atributo <code>alt</code></li>
-						</ul>
-					</section>
-					<section>
-						<p>No todo es lo que parece</p>	
-						<img src="images/rosario.png" alt="" class="tall-image" />
-					</section>
-					<section>
-						<h4>Las imágenes de fondo (en <abbr title="Hojas de estilo en cascada">CSS</abbr>) también requieren de alternativas textuales</h4>
-						<a href="http://www.rosario.gob.ar" target="_blank"><img src="images/rosario-textual.png" alt="La página de la Municipalidad de Rosario contiene elementos visuales sin alternativas textuales." class="tall-image" /></a>
-					</section>
-					<section>
-						<h4>Posibles soluciones</h4>
-						<p class="text">
-						    Utilizar el atributo <code>title</code> en aquellos elementos que su contenido va a ser una imagen de fondo en <abbr title="Hojas de estilo en cascada">CSS</abbr>.
-						</p>
-						<pre aria-hidden="true"><code style="max-height:600px;">&lt;div id=&quot;columna2&quot;&gt;
-  	&lt;a target=&quot;_blank&quot; title=&quot;Trámites online (abre en nueva ventana)&quot;
-		    href=&quot;http://www.rosario.gov.ar/tramitesonline/&quot; &lt;/a&gt;
-  	&lt;!-- Enlace que va ser leído como "LINK" --&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;cultura&quot;&gt;
-    &lt;a target=&quot;_blank&quot; title=&quot;Rosario Cultura (abre en nueva ventana)&quot;
-		    href=&quot;http://www.rosariocultura.gob.ar/&quot; &lt;/a&gt;
-  	&lt;!-- Enlace que va ser leído como "LINK" --&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;banner&quot;&gt;
-    &lt;!-- Objeto FLASH que no va ser leído, requiere que se agregue texto accesible --&gt;
-    &lt;object classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; 
-    codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab&quot;
-     width=&quot;200&quot; height=&quot;50&quot;&gt;
-      &lt;param name=&quot;movie&quot; value=&quot;flash/banner_1.swf&quot;&gt;
-      &lt;param name=&quot;quality&quot; value=&quot;high&quot;&gt;
-      &lt;embed src=&quot;flash/banner_1.swf&quot; quality=&quot;high&quot; 
-      pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; 
-      type=&quot;application/x-shockwave-flash&quot; 
-      width=&quot;200&quot; height=&quot;50&quot;&gt;
-    &lt;/object&gt;
-  &lt;/div&gt;
-   &lt;!-- . . . --&gt; 
-&lt;/div&gt; 		
-						</code></pre>
-					</section>
-					<section>
-						<h4>Como usar el atributo <code>alt</code> de manera correcta (primera parte)</h4>
-						<ul>
-							<li class="fragment">
-								Utilizar el atributo <code>alt</code> en todas imágenes de la página, <span class="text-hightlight">el contenido del atributo debe describir la función de la imagen y no la imagen en si misma</span>.
-							</li>
-						    <li class="fragment">
-						    	Asegurarse que <span class="text-hightlight">la descripción de la imagen sea útil</span>. Por ejemplo, si la imagen es el logo de una empresa el <code>alt</code> debería ser el nombre de la empresa y no "logo".
-						    </li>
-						    <li class="fragment">
-						    	<span class="text-hightlight">Las imágenes dentro de enlaces deben describir hacia donde se dirijen</span>. Por ejemplo, si el logo de la empresa está enlazado a la página principal debería marcarse como <code>alt="Principal"</code>
-						    </li>
-						    <li class="fragment">
-						    	No empenzar el contenido del atributo con "foto de ..." o "imagen de ...", ya que las tecnologías de apoyo actualmente ya realizan esto.
-						    </li>
-						</ul>
-						
-					</section>
-					<section>
-						<h4>Como usar el atributo <code>alt</code> de manera correcta (segunda parte)</h4>
-						<ul>
-							<li class="fragment">
-								Utilizar el atributo vacío <span class="text-hightlight"><code>alt=""</code> cuando la imagen que se está describiendo cumple una función decorativa</span> o no es necesaria para la comprensión del contenido. Por ejemplo si la imagen es un gráfico cuya información se encuentra descripta en el texto de la página, no existe necesidad de repetir la información.
-							</li>
-						    <li class="fragment">
-						    	Utilizar la misma imagen varias veces en una página Web no significa que el contenido del atributo <code>alt</code> tenga que ser el mismo para cada una, ya que el contenido del mismo cambia con el contexto de la imagen. Por ejemplo, ya vimos que un logo podría reemplazar a el nombre de la empresa <code>alt="Mi empresa"</code>, puede utilizarse en un enlace <code>alt="Principal"</code> o pudiera ser simplemente un decorado <code>alt=""</code>.
-						    </li>
-						</ul>
-					</section>		
-					<section>
-						<h4>Cómo ocultar contenido a los usuarios videntes</h4>
-						<p class="text">
-							En ocaciones <span class="text-hightlight">para dar una alternativa textual requerimos de texto extra que visualmente puede estropear el diseño de una página Web</span>.
-						</p>
-						<p class="text">
-							Existen técnicas en <abbr title="Hojas de estilo en cascada">CSS</abbr> para ocultar texto visualmente mientras que continuan siendo leídos por los programas de lectura de pantalla. Por ejemplo la <a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L152" target="_blank">clase "visuallyhidden" del HTML5 Boilerplate</a>.
-						</p>
-						<pre><code style="max-height:600px;">.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-						</code></pre>
-						<p class="text">
-						    Esta técnica puede ser útil por ejemplo para ocultar visualmente contenido que tenga sentido a la vista pero no a la lectura. Por ejemplo un sistema de pestañas.
-						</p>
-					</section>			
-					<section>
-						<h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr>: Separando humanos de máquinas desde 1998</h4>
-						<p>
-							Se trata de una prueba desafío-respuesta utilizada para determinar cuándo el usuario es o no un ser humano. Mal implemetada puede <span class="text-hightlight">resultar ser una barrera para personas con dificultades</span>.
-						</p>
-						<figure tabindex="0">
-							<img src="images/anses.png" alt="" class="img" />
-							<figcaption>
-								<p>
-									El sitio de <abbr title="Administración Nacional de la Seguridad Social">ANSES</abbr> presenta un <abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos">CAPTCHA</abbr> sin alternativa para las personas con alguna discapacidad visual.
-								</p>
-							</figcaption>
-						</figure>
-					</section>
-					<section>
-						<h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr> accesible</h4>
-						<p class="text">
-						    Utilizar sistemas que sean accesibles como reCAPTCHA.
-						</p>
-						<a href="http://www.google.com/recaptcha" target="_blank"><img alt="El servicio Web reCaptcha ofrece una alternativa sonora para la comprobación de si somos humanos o no." src="images/recaptcha.png" /></a>
-						<p>Otra alternativa es realizar directamente preguntas textuales.</p>
-						<blockquote>Prueba que eres humano, ¿cuanto es dos más dos?</blockquote>
-					</section>
-					<section>
-						<h4>
-							<abbr title="Web Accessibility Initiative - Accessible Rich Internet Applications">WAI-ARIA</abbr>:   Aplicaciones Web Accessibles
-						</h4>
-						<p class="text">
-							Es una especificación de la <abbr title="World Wide Web Consortium">W3C</abbr> que describe como incrementar la accesibilidad de las páginas Web, en particular, aquellas con contenido dinámico y con componentes de interfaz desarrollados con <abbr title="HyperText Markup Language" lang="en">HTML</abbr>, <abbr title="Hojas de estilo en cascada">CSS</abbr> y JavaScript.
-						</p>
-						<ul>
-							<li>
-				                <code>&lt;button aria-label=&quot;cerrar&quot;&gt;x&lt;/button&gt;</code> será leído como "botón cerrar".
-							</li>
-							<li>
-								<code>aria-hidden="true"</code> representaría contenido textual que no debería ser leído.
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Beneficios de las alternativas textuales</h4>						
-						<ul>
-							<li class="fragment">
-								Permite el acceso a personas con discapacidad visual.
-							</li>
-							<li class="fragment">
-								Incrementa el <abbr title="Optimización para motores de búsqueda">SEO</abbr> del sitio. El ejemplo más concreto son las infografías en la Web. Que sin su alternativa textual, nunca su contenido sería indexado por los buscadores.
-							</li>
-						</ul>
-					</section>						 
-				</section>
-				
-				<section>
-					<section>
-						<h3>3 - Accesible por teclado</h3>
-						<h4>Problemas de accesibilidad</h4>						
-						<ul>
-							<li class="fragment">
-								Personas con imposibilidad de utilizar un mouse no pueden acceder al contenido diseñado para ser accedido únicamente por ese dispositivo.
-							</li>
-							<li class="fragment">
-								Toda acción que pueda realizarse mediante el mouse debería poder efectuarse utilizando el teclado u otro dispositivo o medio.
-							</li>
-							<li class="fragment">
-								No todo se resuelve utilizando el atributo <code>accesskey</code>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Ejemplo del problema</h4>
-						<p class="text">
-						    En el sitio de <a href="http://www.garbarino.com" target="_blank">Garbarino</a> hay lugares de la página que no se pueden acceder por teclado.
+                            Ejemplo: <a  target="_blank" href="http://api.santafe.gov.ar/tra2010/in/boleta/index.php">API Santa FE - Reimpresión de boleta</a>.
                         </p>
-						<video controls="" style="width:85%; max-height:550px;">
-						  <source src="videos/garbarino.ogv" type="video/ogg; codecs=theora,vorbis" />
-						  <source src="videos/garbarino.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" />
-						  <source src="videos/garbarino.mpeg" type="video/mpeg" />
-						  <source src="videos/garbarino.avi" type="video/avi" />
-						</video>
-					</section>
-					<section>
-						<h4>Cómo lograr que un elemento pueda recibir foco</h4>
-						<p class="text">
-							En ocaciones requerimos lograr que un elemento <abbr title="HyperText Markup Language" lang="en">HTML</abbr>(que no recibe foco de manera nativa) pueda recibir foco.
-						</p>
-						<p class="text">
-							Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco. Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
-						</p>
-						<pre class="bigger"><code style="max-height:600px;">&lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
-						</code></pre>
-					</section>	
-                    <section>
-                        <h4>Nunca retirar el <code>outline</code> de los elementos</h4>
+                        <pre class="bigger"><code>&lt;label title=&quot;Este campo es obligatorio&quot; for=&quot;ctal&quot;&gt;Número de Partida:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;cta1&quot; id=&quot;cta1&quot; /&gt;
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h4>Beneficios del uso correcto del marcado</h4>
+                    <ul>
+                        <li class="list-item">
+                            <span class="text-hightlight">Obtener comportamiento nativo para los elementos presentes en una Web</span>, idéntico al de otras aplicaciones de la plataforma, compatible con el comportamiento que los usuarios están acostumbrados a esperar.
+                        </li>
+                        <li class="list-item">
+                            <span class="text-hightlight">Mejora la usabilidad</span>, porque muchos de estos controles ya traen comportamiento nativo. Por ejemplo, los enlaces y botones ya tienen acceso por teclado o al hacer click en una etiqueta se hace foco en una control.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Alternativas textuales a elementos <br /> visuales</h3>
+                    <h4>Problemas de accesibilidad</h4>						
+                    <ul>
+                        <li class="fragment list-item">Personas con discapacidad visual no pueden acceder al contenido no textual</li>
+                        <li class="fragment list-item">Toda información transmitida por una imagen, video o cualquier otro elemento visual debería tener una alternativa textual</li>
+                        <li class="fragment list-item">No todo se resuelve incluyendo el atributo <code>alt</code></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Formas de proporcionar alternativas textuales</h4>
+                    <!--
+                    alt, aria-label, title (si no es imagen) (imagenes, botones, links que sean imagenes). El valor tiene que ser descriptivo si es que este aporta valor sino tiene que estar vacío
+                    alt = "" y luego un parrafo que lo describa (infografias / graficos)
+                    
+                    -->
+                    <div class="fragment">
+                        <p class="text list-item">Colocar el texto alternativo en el atributo <code>alt</code> para las imágenes (<code>img</code>). Salvo en aquellas sean meramente decorativas (<code>alt=""</code>).</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;img alt=&quot;UTN Facultad Regional Rosario&quot; src=&quot;imagenes/utn_logohome2.gif&quot;&gt;</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <p class="text list-item">En los demás elementos (que no sean <code>img</code>) utilizar los atributos <code>aria-label</code> o <code>title</code> para colocar el texto alternativo.</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;button arial-label=&quot;Cerrar ventana&quot;&gt;X&lt;/button&gt;</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <p class="text list-item">Utilizar <code>longdesc</code> para imágenes que requieran una explicación larga.</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;img longdesc=&quot;ventas.html#desc&quot; alt=&quot;Ventas anuales 2013&quot; src=&quot;/imagenes/grafico-ventas.png&quot;&gt;
+    &lt;div id=&quot;desc&quot;&gt;
+        &lt;h3&gt;Ventas anuales 2013&lt;/h3&gt;
+        &lt;!-- Descripci&#243;n larga del contenido del gr&#225;fico --&gt;
+        &lt;p&gt;Las ventas ...&lt;/p&gt;
+    &lt;div&gt;
+                        </code></pre>
+                    </div>
+                </section>	
+                <section>
+                    <h4>Cómo ocultar contenido a los usuarios videntes</h4>
+                    <p class="text">
+                        En ocaciones <span class="text-hightlight">para dar una alternativa textual requerimos de texto extra que visualmente puede estropear el diseño de una página Web</span>.
+                    </p>
+                    <div class="fragment">
                         <p class="text">
-                            Retirar el <code>outline</code> provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado.
+                            Existen técnicas en <abbr title="Hojas de estilo en cascada">CSS</abbr> para ocultar texto visualmente mientras que continuan siendo leídos por los programas de lectura de pantalla.
                         </p>
-                        <p class="text">
-                            Ejemplo de lo que no hay que hacer: <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Página de trámites Santa Fe</a>.
-                        </p>
-                        <p class="text">
-                            Algunos reset de CSS o templates incluyen erroneamente el siguiente código:
-                        </p>
-                        <pre><code>*:focus {
-    outline: 0;
-}
+                        <pre><code style="max-height:600px;">.visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
                         </code></pre>
                         <p class="text">
-                            Solución: No eliminar el outline del navegador, o proveer uno de mayor contraste.
+                            <small><a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L152" target="_blank">Clase <i lang="en">"visuallyhidden"</i> del HTML5 Boilerplate</a></small>
                         </p>
-                    </section>
-					<section>
-						<h4>Cuestiones a comprobar</h4>
-						<ul>
-							<li class="fragment">
-								Comprobar que todos los elementos que provean interacción (enlaces, botones, campos de textos, controles, etc.) puedan obtener foco mediante teclado.
-							</li>
-							<li class="fragment">
-								Cuando sea necesario romper con el orden lógico del flujo del documento, el foco de los elementos debe ser movido programáticamente. Por ejemplo al utilizar un diálogo modal.
-							</li>
-							<li class="fragment">
-								Que existan disparadores alternativos a las acciones que se activan en el estado "sobre" (<code lang="en">hover</code>).
-							</li>
-							<li class="fragment">
-								Que se puedan disparar todas las funciones mediante mouse y teclado simultaneamente.
-							</li>
-							<li class="fragment">
-								Que existan teclas rápidas para ejecutar las funciones más comunes.
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Beneficios de la navegación mediante teclado</h4>						
-						<ul>
-							<li class="fragment">
-								Permite la navegación y utilización del sitio a personas con alguna <span class="text-hightlight">discapacidad motora</span>. 
-							</li>
-							<li class="fragment">
-							    Permite el acceso a las personas con <span class="text-hightlight">dificultades visuales</span> porque  este grupo también requiere de la utilización del teclado para navegar una Web.
-							</li>
-							<li class="fragment">
-								<span class="text-hightlight">Aumenta la productividad</span> de los usuarios en la utilización del sitio. Cuando una aplicación permite la utilización de atajos de teclado y la operabilidad utilizando el mismo esta se vuelve más productiva.
-							</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-					    <h3>4 - Contraste de colores y texto legible</h3>
-						<h4>Problemas de accesibilidad</h4>						
-						<ul>
-							<li class="fragment">
-							    Personas con moderada o baja visión y personas con algún grado de daltonismo pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
-							</li>
-							<li class="fragment">
-							    Personas con dificultades cognitivas, del lenguaje o de aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer. Por ejemplo si las distintas líneas del texto están muy cerca entre si o si el texto se encuentra justificado hacia algunos de los bordes del recuadro.
-							</li>
-							<li class="fragment">
-							    Personas con dificultades en la visión o en la lectura de texto pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
-							</li>
-						</ul>
-					</section>
-					<section>
-					    <h4>Problema con la legibilidad de un texto</h4>
-					    <p class="text">
-					        Cuando un texto no es presentado de manera correcta incluso a cualquier persona le puede resultar difícil poder leerlo e interpretarlo.
-					   </p>
-					   <img src="images/legibilidad.png" alt="" class="tall-image" width="700" />
-					   <p class="text">
-					       Ejemplos: <a href="http://www.frro.utn.edu.ar/" target="_blank">Sitio Web UTN - Regional Rosario</a> y <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Portal de trámites Santa Fe</a>
-                       </p>
-					</section>
-					<section>
-					    <h4>Soluciones</h4>
-					    <ul>
-					        <li>
-					            Las líneas de texto deben contener un número aproximado de 80 carácteres. (Ver herramientas)
-                            </li>
-					        <li>
-					            El alto de cada línea (<code>line-height</code>) debe ser al menos de una vez y media (<code>1.5em</code>) del tamaño de la fuente.
-                            </li>
-                            <li>
-                                El contraste de color entra la fuente y el color de fondo tiene que ser suficiente. (Ver herramientas)
-                            </li>
-					    </ul>
-					</section>
-					<section>
-					    <h4>Beneficiones de mejorar la legibilidad</h4>
-					    <ul>
-					        <li>
-					            <span class="text-hightlight">Disminuir la cantidad de rebotes en las páginas Web</span>, haciendo que el texto sea más agradable y fácil de leer.
-                            </li>
-					        <li>
-					            Permitir el acceso a personas con dilexia, personas con problemas en la visión o personas con problemas de aprendizaje.
-                            </li>
-					        <li>
-					            <span class="text-hightlight">Mejora la visualización en ambientes de mucha luz</span> o con dispositivos en modo de ahorro de energía activado.
-                            </li>
-					    </ul>
-					</section>
-				</section>
+                        <!--<p class="text">
+                            Esta técnica puede ser útil por ejemplo para ocultar visualmente contenido que tenga sentido a la vista pero no a la lectura. Por ejemplo un sistema de pestañas.
+                        </p>-->
+                    </div>
+                </section>			
+                <section>
+                    <h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr> accesible</h4>
+                    <p>
+                        Utilizar sistemas que sean accesibles como <a href="http://www.google.com/recaptcha" target="_blank">reCAPTCHA</a>
+                    </p>
+                    <img alt="El servicio Web reCaptcha ofrece una alternativa sonora para la comprobación de si somos humanos o no." src="images/recaptcha.png" />
+                    <p>Otra alternativa es realizar directamente preguntas textuales.</p>
+                    <blockquote>Prueba que eres humano, ¿cuanto es dos más dos?</blockquote>
+                </section>
+                <section>
+                    <h4>
+                        <abbr title="Web Accessibility Initiative - Accessible Rich Internet Applications">WAI-ARIA</abbr>:   Aplicaciones Web Accessibles
+                    </h4>
+                    <p class="text">
+                        Es una especificación de la <abbr title="World Wide Web Consortium">W3C</abbr> que describe como incrementar la accesibilidad de las páginas Web, en particular, aquellas con contenido dinámico y con componentes de interfaz desarrollados con <abbr title="HyperText Markup Language" lang="en">HTML</abbr>, <abbr title="Hojas de estilo en cascada">CSS</abbr> y JavaScript.
+                    </p>
+                    <ul>
+                        <li class="list-item">
+                            <code>&lt;button aria-label=&quot;cerrar&quot;&gt;x&lt;/button&gt;</code> será leído como "botón cerrar".
+                        </li>
+                        <li class="list-item">
+                            <code>aria-hidden="true"</code> representaría contenido textual que no debería ser leído.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Beneficios de las alternativas textuales</h4>						
+                    <ul>
+                        <li class="fragment list-item">
+                            Permite el <span class="text-hightlight">acceso a personas con discapacidad visual</span>.
+                        </li>
+                        <li class="fragment list-item">
+                            <span class="text-hightlight">Incrementa el <abbr title="Optimización para motores de búsqueda">SEO</abbr></span> del sitio. El ejemplo más concreto son las infografías en la Web. Que sin su alternativa textual, nunca su contenido sería indexado por los buscadores.
+                        </li>
+                    </ul>
+                </section>		
+
+                <section>
+                    <h3>Accesible por teclado</h3>
+                    <h4>Problemas de accesibilidad</h4>						
+                    <ul>
+                        <li class="fragment list-item">
+                            Personas con imposibilidad de utilizar un mouse no pueden acceder al contenido diseñado para ser accedido únicamente por ese dispositivo.
+                        </li>
+                        <li class="fragment list-item">
+                            Toda acción que pueda realizarse mediante el mouse debería poder efectuarse utilizando el teclado u otro dispositivo o medio.
+                        </li>
+                        <li class="fragment list-item">
+                            No todo se resuelve utilizando el atributo <code>accesskey</code>
+                        </li>
+                        <li class="fragment list-item">
+                            Las atajos de teclado no están debidamente señalizados.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Cómo lograr que un elemento pueda recibir foco</h4>
+                    <p class="text">
+                        En ocaciones requerimos lograr que un elemento <abbr title="HyperText Markup Language" lang="en">HTML</abbr>(que no recibe foco de manera nativa) pueda recibir foco.
+                    </p>
+                    <p class="text">
+                        Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco. Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
+                    </p>
+                    <pre class="bigger"><code style="max-height:600px;">&lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
+                    </code></pre>
+                </section>	
+                <section>
+                    <h4>Nunca retirar el <code>outline</code> de los elementos</h4>
+                    <p class="text">
+                        Retirar el <code>outline</code> provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado.
+                    </p>
+                    <p class="text">
+                        Ejemplo de lo que no hay que hacer: <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Página de trámites Santa Fe</a>.
+                    </p>
+                    <p class="text">
+                        Algunos reset de CSS o templates incluyen erroneamente el siguiente código:
+                    </p>
+                    <pre><code>*:focus {
+outline: 0;
+}
+                    </code></pre>
+                    <p class="text">
+                        Solución: No eliminar el outline del navegador, o proveer uno de mayor contraste.
+                    </p>
+                </section>
+                <!--<section>
+                    <h4>Cuestiones a comprobar</h4>
+                    <ul>
+                        <li class="fragment">
+                            Comprobar que todos los elementos que provean interacción (enlaces, botones, campos de textos, controles, etc.) puedan obtener foco mediante teclado.
+                        </li>
+                        <li class="fragment">
+                            Cuando sea necesario romper con el orden lógico del flujo del documento, el foco de los elementos debe ser movido programáticamente. Por ejemplo al utilizar un diálogo modal.
+                        </li>
+                        <li class="fragment">
+                            Que existan disparadores alternativos a las acciones que se activan en el estado "sobre" (<code lang="en">hover</code>).
+                        </li>
+                        <li class="fragment">
+                            Que se puedan disparar todas las funciones mediante mouse y teclado simultaneamente.
+                        </li>
+                        <li class="fragment">
+                            Que existan teclas rápidas para ejecutar las funciones más comunes.
+                        </li>
+                    </ul>
+                </section>-->
+                <section>
+                    <h4>Beneficios de la navegación mediante teclado</h4>						
+                    <ul>
+                        <li class="fragment">
+                            Permite la navegación y utilización del sitio a personas con alguna <span class="text-hightlight">discapacidad motora</span>. 
+                        </li>
+                        <li class="fragment">
+                            Permite el acceso a las personas con <span class="text-hightlight">dificultades visuales</span> porque  este grupo también requiere de la utilización del teclado para navegar una Web.
+                        </li>
+                        <li class="fragment">
+                            <span class="text-hightlight">Aumenta la productividad</span> de los usuarios en la utilización del sitio. Cuando una aplicación permite la utilización de atajos de teclado y la operabilidad utilizando el mismo esta se vuelve más productiva.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Contraste de colores y texto legible</h3>
+                    <h4>Problemas de accesibilidad</h4>						
+                    <ul>
+                        <li class="fragment">
+                            Personas con moderada o baja visión y personas con algún grado de daltonismo pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
+                        </li>
+                        <li class="fragment">
+                            Personas con dificultades cognitivas, del lenguaje o de aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer. Por ejemplo si las distintas líneas del texto están muy cerca entre si o si el texto se encuentra justificado hacia algunos de los bordes del recuadro.
+                        </li>
+                        <li class="fragment">
+                            Personas con dificultades en la visión o en la lectura de texto pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Soluniones</h4>
+                    <ul>
+                        <li>
+                            Las líneas de texto deben contener un número aproximado de 80 carácteres.
+                        </li>
+                        <li>
+                            El alto de cada línea (<code>line-height</code>) debe ser al menos de una vez y media (<code>1.5em</code>) del tamaño de la fuente.
+                        </li>
+                        <li>
+                            El contraste de color entra la fuente y el color de fondo tiene que ser suficiente.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Beneficiones de mejorar la legibilidad</h4>
+                    <ul>
+                        <li>
+                            <span class="text-hightlight">Disminuir la cantidad de rebotes en las páginas Web</span>, haciendo que el texto sea más agradable y fácil de leer.
+                        </li>
+                        <li>
+                            Permitir el acceso a personas con dilexia, personas con problemas en la visión o personas con problemas de aprendizaje.
+                        </li>
+                        <li>
+                            <span class="text-hightlight">Mejora la visualización en ambientes de mucha luz</span> o con dispositivos en modo de ahorro de energía activado.
+                        </li>
+                    </ul>
+                </section>
 				<section>
 					<h2>Mitos sobre Accesiblidad Web</h2>
 					<ul>
@@ -929,8 +837,25 @@ Can your element work with high-contrast mode enabled? All modern operating syst
                         </li>
                     </ul>
                 </section>
+                
                 <section>
-                    <h3>Resumen</h3>
+				    <!-- http://www.polymer-project.org/articles/accessible-web-components.html-->
+                    <h3>Resumen - autoevaluación</h3>
+                    <p class="text list-item">
+                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es normal? ¿Los atajos del teclado son facilmente predecibles?
+                    </p>
+                    <p class="text list-item">
+                        ¿Es el contenido compresinble sin imágenes?
+                    </p>
+                    <p class="text list-item">
+                        ¿Necesito tener activado el sonido para poder usar el sitio?
+                    </p>
+                    <p class="text list-item">
+                        ¿El sitio se visualiza correctamente en modo de alto contraste? ¿Existe el contraste suficiente entre los colores de fondo y de fuentes? ¿Necesito distinguir colores para usar el sitio?
+                    </p>
+                </section>
+                <section>
+                    <h3>Resumen - Soluciones</h3>
                     <ul>
                         <li class="fragment list-item">
                             Otorgar a cada elemento la etiqueta HTML que le corresponda, utilizando el lenguaje de una manera válida.
