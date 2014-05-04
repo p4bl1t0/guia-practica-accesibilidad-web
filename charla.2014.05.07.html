@@ -500,8 +500,8 @@
 					</p>
 				</section>
                 <section>
-                    <h3>HTML correcto y semnático</h3>
-                    <h4>Problemas de accesibilidad</h4>
+                    <h3><abbr title="HyperText Markup Language" lang="en">HTML</abbr> correcto y semnático</h3>
+                    <h4>Barrera de accesibilidad</h4>
                     <ul>
                         <li class="fragment list-item">
                             Personas accediendo a la Web con medios no tradicionales (distintos a los navegadores) encuentra obstáculos para acceder a la información.
@@ -550,7 +550,7 @@
                             Ejemplo: <a  target="_blank" href="http://api.santafe.gov.ar/tra2010/in/boleta/index.php">API Santa FE - Reimpresión de boleta</a>.
                         </p>
                         <pre class="bigger"><code>&lt;label title=&quot;Este campo es obligatorio&quot; for=&quot;ctal&quot;&gt;Número de Partida:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;cta1&quot; id=&quot;cta1&quot; /&gt;
+&lt;input type=&quot;text&quot; name=&quot;cta1&quot; id=&quot;cta1&quot; /&gt;
                         </code></pre>
                     </div>
                 </section>
@@ -563,11 +563,14 @@
                         <li class="list-item">
                             <span class="text-hightlight">Mejora la usabilidad</span>, porque muchos de estos controles ya traen comportamiento nativo. Por ejemplo, los enlaces y botones ya tienen acceso por teclado o al hacer click en una etiqueta se hace foco en una control.
                         </li>
+                        <li class="list-item">
+                           <span class="text-hightlight">Aumenta la interoperabilidad</span> (compatibilidad entre dispositivos y navegadores) del sitio. Excepto con Internet Explorer 6,7 y 8.
+                        </li>
                     </ul>
                 </section>
                 <section>
                     <h3>Alternativas textuales a elementos <br /> visuales</h3>
-                    <h4>Problemas de accesibilidad</h4>						
+                    <h4>Barreras de accesibilidad</h4>						
                     <ul>
                         <li class="fragment list-item">Personas con discapacidad visual no pueden acceder al contenido no textual</li>
                         <li class="fragment list-item">Toda información transmitida por una imagen, video o cualquier otro elemento visual debería tener una alternativa textual</li>
@@ -592,11 +595,11 @@
                     <div class="fragment">
                         <p class="text list-item">Utilizar <code>longdesc</code> para imágenes que requieran una explicación larga.</p>
                         <pre aria-hidden="true"><code style="max-height:600px;">&lt;img longdesc=&quot;ventas.html#desc&quot; alt=&quot;Ventas anuales 2013&quot; src=&quot;/imagenes/grafico-ventas.png&quot;&gt;
-    &lt;div id=&quot;desc&quot;&gt;
-        &lt;h3&gt;Ventas anuales 2013&lt;/h3&gt;
-        &lt;!-- Descripci&#243;n larga del contenido del gr&#225;fico --&gt;
-        &lt;p&gt;Las ventas ...&lt;/p&gt;
-    &lt;div&gt;
+&lt;div id=&quot;desc&quot;&gt;
+    &lt;h3&gt;Ventas anuales 2013&lt;/h3&gt;
+    &lt;!-- Descripci&#243;n larga del contenido del gr&#225;fico --&gt;
+    &lt;p&gt;Las ventas ...&lt;/p&gt;
+&lt;div&gt;
                         </code></pre>
                     </div>
                 </section>	
@@ -667,7 +670,7 @@
 
                 <section>
                     <h3>Accesible por teclado</h3>
-                    <h4>Problemas de accesibilidad</h4>						
+                    <h4>Barreras de accesibilidad</h4>						
                     <ul>
                         <li class="fragment list-item">
                             Personas con imposibilidad de utilizar un mouse no pueden acceder al contenido diseñado para ser accedido únicamente por ese dispositivo.
@@ -684,94 +687,74 @@
                     </ul>
                 </section>
                 <section>
-                    <h4>Cómo lograr que un elemento pueda recibir foco</h4>
+                    <h4>Elementos que puedan recibir foco</h4>
                     <p class="text">
-                        En ocaciones requerimos lograr que un elemento <abbr title="HyperText Markup Language" lang="en">HTML</abbr>(que no recibe foco de manera nativa) pueda recibir foco.
+                        Los elementos de <abbr title="HyperText Markup Language" lang="en">HTML</abbr> no reciben foco por defecto (salvo excepciones). En ocaciones necesitamos que así sea.
                     </p>
-                    <p class="text">
-                        Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco. Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
+                    <p class="text list-item">
+                        Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco.
                     </p>
-                    <pre class="bigger"><code style="max-height:600px;">&lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
+                    <pre class="bigger"><code style="max-height:600px;">        &lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
                     </code></pre>
+                    <p class="text">
+                        Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
+                    </p>
                 </section>	
                 <section>
-                    <h4>Nunca retirar el <code>outline</code> de los elementos</h4>
+                    <h4>No retirar el <code>outline</code> de los elementos</h4>
                     <p class="text">
                         Retirar el <code>outline</code> provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado.
                     </p>
-                    <p class="text">
-                        Ejemplo de lo que no hay que hacer: <a href="http://www.santafe.gov.ar/index.php/tramites/modul1/index?m=home" target="_blank">Página de trámites Santa Fe</a>.
-                    </p>
-                    <p class="text">
+                    <p class="text list-item">
                         Algunos reset de CSS o templates incluyen erroneamente el siguiente código:
                     </p>
-                    <pre><code>*:focus {
-outline: 0;
-}
+                    <pre class="bigger"><code>        *:focus {
+            outline: 0;
+        }
                     </code></pre>
                     <p class="text">
                         Solución: No eliminar el outline del navegador, o proveer uno de mayor contraste.
                     </p>
                 </section>
-                <!--<section>
-                    <h4>Cuestiones a comprobar</h4>
-                    <ul>
-                        <li class="fragment">
-                            Comprobar que todos los elementos que provean interacción (enlaces, botones, campos de textos, controles, etc.) puedan obtener foco mediante teclado.
-                        </li>
-                        <li class="fragment">
-                            Cuando sea necesario romper con el orden lógico del flujo del documento, el foco de los elementos debe ser movido programáticamente. Por ejemplo al utilizar un diálogo modal.
-                        </li>
-                        <li class="fragment">
-                            Que existan disparadores alternativos a las acciones que se activan en el estado "sobre" (<code lang="en">hover</code>).
-                        </li>
-                        <li class="fragment">
-                            Que se puedan disparar todas las funciones mediante mouse y teclado simultaneamente.
-                        </li>
-                        <li class="fragment">
-                            Que existan teclas rápidas para ejecutar las funciones más comunes.
-                        </li>
-                    </ul>
-                </section>-->
                 <section>
                     <h4>Beneficios de la navegación mediante teclado</h4>						
                     <ul>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Permite la navegación y utilización del sitio a personas con alguna <span class="text-hightlight">discapacidad motora</span>. 
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             Permite el acceso a las personas con <span class="text-hightlight">dificultades visuales</span> porque  este grupo también requiere de la utilización del teclado para navegar una Web.
                         </li>
-                        <li class="fragment">
+                        <li class="fragment list-item">
                             <span class="text-hightlight">Aumenta la productividad</span> de los usuarios en la utilización del sitio. Cuando una aplicación permite la utilización de atajos de teclado y la operabilidad utilizando el mismo esta se vuelve más productiva.
                         </li>
                     </ul>
                 </section>
                 <section>
                     <h3>Contraste de colores y texto legible</h3>
-                    <h4>Problemas de accesibilidad</h4>						
+                    <h4>Barreras de accesibilidad</h4>						
                     <ul>
-                        <li class="fragment">
-                            Personas con moderada o baja visión y personas con algún grado de daltonismo pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
+                        <li class="fragment list-item">
+                            Personas con <strong class="text-hightlight">moderada o baja visión y personas con algún grado de daltonismo</strong> pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
                         </li>
-                        <li class="fragment">
-                            Personas con dificultades cognitivas, del lenguaje o de aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer. Por ejemplo si las distintas líneas del texto están muy cerca entre si o si el texto se encuentra justificado hacia algunos de los bordes del recuadro.
+                        <li class="fragment list-item">
+                            Personas con <strong class="text-hightlight">dificultades cognitivas, del lenguaje o de aprendizaje</strong> pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer.
                         </li>
-                        <li class="fragment">
-                            Personas con dificultades en la visión o en la lectura de texto pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
+                        <li class="fragment list-item">
+                            Personas con <strong class="text-hightlight">dificultades en la visión o en la comprensión de texto</strong> pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
                         </li>
                     </ul>
                 </section>
                 <section>
                     <h4>Soluniones</h4>
                     <ul>
-                        <li>
+                        <li class="list-item">
                             Las líneas de texto deben contener un número aproximado de 80 carácteres.
                         </li>
-                        <li>
+                        <li class="list-item">
                             El alto de cada línea (<code>line-height</code>) debe ser al menos de una vez y media (<code>1.5em</code>) del tamaño de la fuente.
                         </li>
-                        <li>
+                        <li class="list-item">
                             El contraste de color entra la fuente y el color de fondo tiene que ser suficiente.
                         </li>
                     </ul>
@@ -779,13 +762,13 @@ outline: 0;
                 <section>
                     <h4>Beneficiones de mejorar la legibilidad</h4>
                     <ul>
-                        <li>
+                        <li class="list-item">
                             <span class="text-hightlight">Disminuir la cantidad de rebotes en las páginas Web</span>, haciendo que el texto sea más agradable y fácil de leer.
                         </li>
-                        <li>
+                        <li class="list-item">
                             Permitir el acceso a personas con dilexia, personas con problemas en la visión o personas con problemas de aprendizaje.
                         </li>
-                        <li>
+                        <li class="list-item">
                             <span class="text-hightlight">Mejora la visualización en ambientes de mucha luz</span> o con dispositivos en modo de ahorro de energía activado.
                         </li>
                     </ul>
@@ -793,17 +776,17 @@ outline: 0;
 				<section>
 					<h2>Mitos sobre Accesiblidad Web</h2>
 					<ul>
-						<li>
+						<li class="list-item">
 							<span class="text-hightlight-blue">MITO</span>: Es incompatible con JavaScript. <span class="fragment">Sin embargo, por ejemplo el 98% de personas que navegan utilizando un lector de pantalla, tienen JavaScript activado [<a href="http://a11yproject.com/posts/myth-screen-readers-dont-use-javascript/" class="link--external"target="_blank">fuente</a>].</span>
 						</li>
-						<li>
+						<li class="list-item">
 							<span class="text-hightlight-blue">MITO</span>: Convierte a los sitios web en feos y aburridos. <span class="fragment">Sin embargo, con el mismo código HTML se pueden hacer maravillas de diseños solo con CSS [<a href="http://www.csszengarden.com/" class="link--external" target="_blank">ejemplos en Zen Garden</a>]. Únicamente hay que evitar introducir barreras con nuestro CSS.</span>
 						</li>
-						<li>
+						<li class="list-item">
 							<span class="text-hightlight-blue">MITO</span>: Requiere mucho más tiempo. <span class="fragment">Pero si se incluye dentro del proceso de desarollo no debería aumentar el costo de las soluciones.</span>
 						</li>
-						<li>
-							<span class="text-hightlight-blue">MITO</span>: No aporta ningún beneficio extra. <span class="fragment">Salvo que mejora la usabilidad de nuestro sitio al mismo tiempo que los tiempos de carga y el SEO.</span>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: No aporta ningún beneficio extra. <span class="fragment">Mejora la usabilidad y las conversiones de nuestro sitio al mismo tiempo que los tiempos de carga y el SEO.</span>
 						</li>
 					</ul>
 				</section>
@@ -840,12 +823,12 @@ outline: 0;
                 
                 <section>
 				    <!-- http://www.polymer-project.org/articles/accessible-web-components.html-->
-                    <h3>Resumen - autoevaluación</h3>
+                    <h3>Resumen - Autoevaluación</h3>
                     <p class="text list-item">
-                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es normal? ¿Los atajos del teclado son facilmente predecibles?
+                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es el esperado? ¿Los atajos del teclado son facilmente predecibles?
                     </p>
                     <p class="text list-item">
-                        ¿Es el contenido compresinble sin imágenes?
+                        ¿Es el contenido comprensinble sin imágenes?
                     </p>
                     <p class="text list-item">
                         ¿Necesito tener activado el sonido para poder usar el sitio?
@@ -884,13 +867,11 @@ outline: 0;
 				<section>
 					<h3>Gracias</h3>
 					<h4>Accesibilidad es pensar en todos</h4>
-					<p><br /></p>
+					<br />
 					<p>Contacto</p>
-					<ul>
-					    <li class="list-item no-bullet"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></li>
-					    <li class="list-item no-bullet"><a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a></li>
-					    <li class="list-item no-bullet"$>pabloluisbotta(arroba)gmail.com</li>
-					</ul>
+					<div class="list-item"><a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a></div>
+					<div class="list-item"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></div>
+					<div class="list-item">pabloluisbotta(arroba)gmail.com</div>
 				</section>
 				<!--<section>
 					<h3>6 - Subtítulos para videos</h3>
