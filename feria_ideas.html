@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Accesibilidad Web - Guía Práctica</title>
+		<meta name="description" content="Presentación para las mini charlas tecnológicas 2013">
+		<meta name="author" content="Pablo Botta">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!--<link rel="stylesheet" href="css/reveal.min.css">-->
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		
+		<style type="text/css">
+			.text-hightlight {
+				color:yellow;
+			}
+			.text-hightlight-blue {
+				color:#00DDDD;
+			}
+			.tall-image {
+				max-height:80%!important;
+				max-width:80%!important;
+			}
+			.text {
+				text-align: left;
+			}
+			figure {
+				position:relative;
+				width:80%;
+				margin:auto;
+				display:inline-block!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > .img {
+				position:relative;
+				z-index:0;
+				max-width:100%!important;
+				max-height:100%!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > figcaption {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+				z-index:1;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure:hover > figcaption,
+			figure:focus > figcaption {
+				border: 0;
+				clip: auto;
+				height: auto;
+				margin: auto;
+				width: 100%;
+				overflow: hidden;
+				padding: .3em;
+				position: absolute;
+				bottom:0;
+				background:gray;
+				z-index:1;
+			}
+			.reveal table {
+				margin: auto;
+			}
+			
+			.reveal table th {
+				text-shadow:none;
+				text-align: right;
+			}
+			.reveal table td  {
+				text-align: right;
+				color:#00DDDD;
+			}
+			.reveal h1 {
+				font-size: 2.8em;
+			}
+			.reveal code {
+				font-family: consolas, "Courier New", monospace;
+				/*font-family: consolas!important;*/
+			}
+			.reveal pre {
+                width: 100%;
+			}
+			.reveal pre.bigger {
+				font-size: 0.8em;
+			    left: -10%;
+			    width: 120%;
+			}
+            .reveal pre.inline {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                display: inline-block;
+                font-family: consolas, "Courier New", monospace;
+                font-size: 0.9em;
+                line-height: 1em;
+                position: relative;
+                width:auto;
+                margin:0 auto;
+                vertical-align:top;
+            }
+            .reveal small {
+                display:inline;
+            }
+            .visuallyhidden {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            .reveal .list-item { 
+                margin: 0.75em 0;
+            }
+            .reveal .no-bullet { 
+                list-style-type: none;
+            }
+            .reveal sup {
+                font-size: .7em;
+            }
+		</style>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<img src="images/accesibilidad-2.png" alt="" style="width:40%; background: transparent; border:0;" />
+					<h1>Accesibilidad Web <br />es pensar en todos</h1>
+					<p>Feria de Ideas - Congreso sobre Democracia - 2016</p>
+					<p>
+						<a href="https://twitter.com/pablo_botta">Pablo Botta</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Pablo Botta</h2>
+					<p>Algunos detalles para que me conozcan un poco mejor...</p>
+					<ul>
+						<li class="fragment"><strong>Ingeniero en Sistemas</strong> de la <abbr title="Universidad Tecnológica Nacional">UTN</abbr></li>
+						<li class="fragment"><strong>Desarrollador Web</strong> (desde el 2008)</li>
+						<li class="fragment">Miembro de <a href="http://stsrosario.org.ar"><strong><abbr title="Soluciones Tecnológicas Sustentables">STS</abbr> Rosario</strong></a>. <br /> Coordinador de desarrollo de <a href="http://carpoolear.com.ar">Carpoolear</a></li>
+						<li class="fragment">Fundador de <a href="https://movilizame.com.ar"><strong>Movilizame</strong></a></li>
+					</ul>
+				</section>
+                <section>
+                    <h2>Accesibilidad Web</h2>
+                    <div class="fragment">
+                        <p>
+                            La accesibilidad Web significa que <span class="text-hightlight">personas con algún tipo de discapacidad van a poder hacer uso de la Web</span>. En concreto, al hablar de accesibilidad Web se está haciendo referencia a un diseño Web que va a permitir que estas personas puedan percibir, entender, navegar e interactuar con la Web, aportando a su vez contenidos a la misma.
+                        </p>
+                        <p>
+                            <small>Fuente: <a href="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility" target="_blank">Introducción a la Accesibilidad Web - <abbr title="World Wide Web Consortium">W3C</abbr></a></small>
+                        </p>
+                    </div>
+                </section>
+				<section>
+					<h2>Analogía para entender la <br /> accesibilidad Web</h2>
+					<img src="images/analogia-explicada.jpg" alt="" width="750" />
+					<p>
+						En nuestro entorno cotidiano (<span class="text-hightlight">la web</span>) y a pesar de que las personas (<span class="text-hightlight">usuarios</span>) cuenten con herramientas, tales como una silla de ruedas, para disminuir sus dificultades (<span class="text-hightlight">tecnologías de apoyo, por ejemplo un lector de pantalla</span>) existen lugares públicos o privados (<span class="text-hightlight">sitios web</span>) que <strong>NO</strong> tienen las condiciones para recibirlos (<span class="text-hightlight">Accesibilidad Web</span>).
+					</p>
+				</section>	
+				<section>
+					<h2>Discapacidad en números</h2>
+					<p class="fragment text">
+						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)
+					</p>
+					<p class="fragment text">
+						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">12.7% de la población</strong> sufre de algún tipo de discapacidad (5 millones de personas). En 2003 el valor era del 8% se estima a que se debe por el envejecimiento de la población.
+					</p>
+				    <br />
+					<p class="fragment text">
+						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
+						<br />
+						<small>Fuente: <a href="http://www.indec.mecon.ar/principal.asp?id_tema=166" target="_blank">Censo Nacional de Población, Hogares y Viviendas 2010. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
+					</p>
+				</section>	
+                
+                <section>
+                    <h2>No solo para desarrolladores</h2>
+                    <div class="fragment">
+                        <img src="images/componentes-accesibilidad-web.png" alt="">
+                        <ul class="no-bullets">
+                            <li><a href="https://www.w3.org/WAI/gettingstarted/tips/developing">Accesibilidad web para desarrolladores</a></li>
+                            <li><a href="https://www.w3.org/WAI/gettingstarted/tips/designing">Accesibilidad web para diseñadores</a></li>
+                            <li><a href="https://www.w3.org/WAI/gettingstarted/tips/writing">Accesibilidad web para escritores y productores</a></li>
+                        </ul>
+                    </div>
+                </section>			
+				<section>
+					<h2>Barreras de accesibilidad</h2>
+					<p>Situaciones que generan que cierto grupo de personas no puedan acceder a un determinado contenido.</p>
+                    <br />
+                    <ul>
+                        <li>Imágenes sin alternativas textuales: Infografías, gráficos, textos en imágenes</li>
+                        <li><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr>: Separando humanos de máquinas desde 1998</li>
+                        <li>Sitios innacesibles mediante teclado</li>
+                        <li>Sitios carentes de significados</li>
+                        <li>Legibilidad de los textos</li>
+                    </ul>
+				</section>	
+                
+				<section>
+					<h3>La accesibilidad Web <span class="text-hightlight">NO es una tendencia</span></h3>
+					<img src="images/tendencia-nueva.png" width="800" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
+					<br />
+					<br />
+					<p class="text">
+						Existe la creencia entre los desarrolladores y los dueños de negocio que no existe público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
+					</p>
+					<p>
+						<small>Fuente: <a href="http://www.google.com/trends/explore?q=web+accesibility#q=web%20accesibility%2C%20css3%2C%20html5%2C%20internet%20explorer%206%2C%20internet%20explorer%209&cmpt=q" target="_blank">Google Trends</a>, <a href="http://www.netmarketshare.com/" target="_blank">Net Market Share</a> y <a href="http://gs.statcounter.com/#browser_version_partially_combined-AR-monthly-201202-201302" target="_blank">Stats Counter</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>Entnces, ¿por qué debería aplicarla?</h3>
+					<img src="images/why.jpg" alt="" />
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/86979666@N00/7623744452/" target="_blank">Tsahi Levent-Levi</a></small>
+					</p>
+				</section>
+				<section>
+				    <h3>Sus beneficios son para <span class="text-hightlight">TODOS</span></h3>
+				    <p class="text">
+				        Los principios de la accesibilidad forman parte de la <strong class="text-hightlight">Usabilidad y la Experiencia del Usuario</strong>.
+				    </p>
+				    <p class="text">
+				        Su implementación en sitios Web beneficia a todas las personas y no solo a aquellas que tienen un algún tipo de dificultad.
+                    </p>
+				</section>
+				<section>
+					<h3>"Discapacitados temporales"</h3>
+					<img src="images/discapacitados_temporales.jpg" alt="" />
+					<p>
+						Las estadísticas anteriores no tienen en cuenta que todos podemos quedar temporalmente disminuidos, siendo entonces el número de personas afectadas, en un período de tiempo, aún mayor.
+					</p>
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/cameronparkins/3717438663/" target="_blank">Cameron Parkins</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>Otros grupos beneficiados directamente</h3>
+					<ul>
+						<li class="fragment list-item">Personas mayores</li>
+						<li class="fragment list-item">Personas que carezcan de estudios o que no sean nativas en la lengua del sitio Web</li>
+						<li class="fragment list-item">Personas con conexiones lentas o que utilizan tecnologías desactualizadas</li>
+						<li class="fragment list-item">Nuevos usuarios o usuarios infrecuentes del sitio</li>
+					</ul>
+					<br />
+					<br />
+					<p class="fragment text">
+						<small>Fuente: <a href="http://www.amazon.es/Web-Accessibility-Standards-Regulatory-Compliance/dp/1590596382" target="_blank">Web Accessibility Web Standards and Regulatory Compliance</a></small>
+					</p>
+				</section>
+								
+				<section>
+					<h3>Aumenta las conversiones</h3>
+					<p class="fragment text">
+						La aplicación de técnicas de Accesibilidad Web mejora la facilidad de uso, legibilidad y comprensión del contenido en la Web. <strong class="text-highlight">Ampliando la audiencia para nuestro sitio</strong>.
+					</p>
+					<p class="fragment text">
+					    <i>TESCO</i> (cadena multinacional de locales de venta al por menor) <span class="text-hightlight">aumentó su ganancias en 13 millones de euros anuales</span> incorporando diseño accesible para personas no videntes. <sup>[1]</sup>
+				    </p>
+					<p class="fragment text">
+					    <i>Virgin</i> incremento 68% sus ventas incorporando diseño accesible. <sup>[2]</sup>
+					</p>
+					<p class="fragment text">
+						<i>Legal &amp; General</i> aumentó un 300% sus conversiones y disminuyó un 10% su tasa de rebote tras aplicar un nuevo diseño accesible. <sup>[3]</sup>
+					</p>
+                    <br />
+                    <br />
+                    <div class="text">
+                        <small>[1] 1.1 millon de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                    </div>
+                    <div class="text">
+                        <small>[2] 51 mil de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                    </div>
+                    <div class="text">
+                        <small>[3] 34 mil visitantes únicos diarios según Alexa. Fuente: <a href="http://www.karlgroves.com/2011/04/13/chasing-the-accessibility-business-case-part-1/" target="_blank">Chasing the accessibility business case</a></small>
+                    </div>
+				</section>
+                <section>
+                    <h3>Por normativa</h3>
+                    <p class="fragment text">
+                        En Argentina como en otros países del mundo <span class="text-hightlight">los sitios Web gubernamentales están obligados a ser accesibles</span>.
+                    </p>
+                    <p class="fragment text">
+                        La <a href="http://www.infoleg.gob.ar/infolegInternet/anexos/175000-179999/175694/norma.htm">ley de Accesibilidad de la información en las páginas web</a> (n° 26.653) se encuentra en vigencia desde el <time datetime="2013-04-04">4 de mayo de 2013</time>.
+                    </p>
+                    <p class="fragment text">
+                        <span class="text-hightlight">Obligando a los sitios alcanzados</span> (poderes del Estado Nacional, organismos autárquicos o descentralizados, entes públicos, empresas públicas y las empresas privadas contratistas del Estado) <span class="text-hightlight">a desarollar sus sitios de manera accesible</span> o a adecuar sus sitios actuales a las normativas de Accesibilidad Web Internacionales (<abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>).
+                    </p>
+                </section>
+                <section>
+                    <h3>Accesibilidad Web en Argentina (sitios gubernamentales)</h3>
+                    <h4>Pautas de Accesibilidad para el contenido Web</h4>
+                    <br/>
+                    <p class="text">
+                        El <strong class="text-hightlight">98%</strong> de los sitios gubernamentales (dominios gob.ar/gov.ar) presentan <strong class="text-hightlight">al menos una barrera de acceso al contenido web.</strong>. 
+                    </p>
+                    <p class="text">
+                        Estos sitios fallan por lo menos en uno de los criterios de nivel A (los más básicos) propuestos en las pautas <abbr title="Web Content Accesibility Guidelines" >WCAG</abbr>.
+                    </p>
+                    <small>Fuente: <a href="https://docs.google.com/presentation/d/1f6mHKd3B9XAXPZL1-vPto5XQxAwkYjFNawhXxWKlu9U/edit?usp=sharing" target="_blank">Accesibilidad Web Gubernamental - 2012</a></small>
+                </section>
+				<section>
+					<h3>Otros beneficios</h3>
+					<ul>
+						<!--<li class="fragment">Aumenta la usabilidad del sitio </li>
+						<li class="fragment">Mejora el rendimiento de los usuarios</li>-->
+						<li class="fragment list-item">Aumenta la interoperabildad (adaptación a distintos dispositivos y tecnologías)</li>
+						<li class="fragment list-item">Mejora la velocidad de carga de los sitios</li>
+					</ul>
+				</section>
+								
+				<section>
+					<p>Finalmente ...</p>
+					<h3 class="fragment">Para ser un buen tipo</h3>
+					<div class="fragment">
+						<img src="images/buen_tipo.jpg" alt="" />
+						<p><small>Imagen cortesía de <a href="http://www.flickr.com/photos/kellysue/2674511946/" target="_blank">Kelly Sue</a></small></p>
+					</div>
+				</section>	
+
+             
+          
+                
+                <section>
+				    <!-- http://www.polymer-project.org/articles/accessible-web-components.html-->
+                    <h3>Autoevaluación</h3>
+                    <p class="text list-item">
+                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es el esperado? ¿Los atajos del teclado son facilmente predecibles?
+                    </p>
+                    <p class="text list-item">
+                        ¿Es el contenido comprensinble sin imágenes?
+                    </p>
+                    <p class="text list-item">
+                        ¿Necesito tener activado el sonido para poder usar el sitio?
+                    </p>
+                    <p class="text list-item">
+                        ¿El sitio se visualiza correctamente en modo de alto contraste? ¿Existe el contraste suficiente entre los colores de fondo y de fuentes? ¿Necesito distinguir colores para usar el sitio?
+                    </p>
+                </section>
+                <section>
+                    <h3>Preguntas</h3>
+                    <img src="images/questions.jpg" alt="No todas las preguntas las responde Google" />
+                    <p><small>Cortesía de <a href="http://www.flickr.com/photos/jaygooby/" target="_blank">Jay Gooby</a></small></p>
+                    <!--Poner una linda imagen -->
+                </section>
+                
+				<section>
+					<h3>Gracias</h3>
+					<h4>Accesibilidad es pensar en todos</h4>
+					<br />
+					<div class="list-item">
+					    <strong>http://bit.do/accesibilidad-web</strong>
+					</div>
+					<br />
+					<p>Contacto</p>
+					<div class="list-item"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></div>
+					<div class="list-item">pabloluisbotta(arroba)gmail.com</div>
+				</section>
+				<!--<section>
+					<h3>6 - Subtítulos para videos</h3>
+				</section>-->
+				<!--<section>
+					<h3>6 - JavaScript no obstrusivo</h3>
+				</section>-->
+                <!-- Tener en cuenta por ejemplo BB que viene con JS desactivado -->
+                <!-- 						
+                    Ejemplos:
+                    
+                    - Problemas con el foco (no outline): afip.gob.ar
+                    - Imagen sin alternativas: afip.gob.ar
+                    - Imagenes sin alternativas: rosario.gob.ar
+                    - Alternativas textuales (captcha): anses.gob.ar (tratar de sacar la constancia luces apagadas)
+                    - Campos sin label: santafe.gob.ar
+                    - No hay contraste entre elementos: tramites.gob.ar
+                    - Label + Alt: http://www.frro.utn.edu.ar/
+                    - Mala presentación del texto: http://www.frro.utn.edu.ar/ 
+                    - Problemas con el foco: Se pueden enfocar elementos no visibles: http://www.frro.utn.edu.ar/ En el menu superior, en cambio en el menú lateral si
+                    
+                    http://www.frro.utn.edu.ar/ >> Teclado
+                    http://program.ar/ >> alternativas en imagenes
+                    http://anses.gov.ar/ >> Captcha
+                    
+                    http://www.tramites.gob.ar/ >> Un buen ejemplo
+                    
+                -->
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="lib/js/head.min.js"></script>
+		<script type="text/javascript" src="js/reveal.min.js"></script> 
+		<script type="text/javascript">
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
