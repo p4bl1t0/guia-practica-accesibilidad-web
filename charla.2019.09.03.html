@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Accesibilidad Web - Guía Práctica</title>
+		<meta name="description" content="Presentación para las mini charlas tecnológicas 2013">
+		<meta name="author" content="Pablo Botta">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!--<link rel="stylesheet" href="css/reveal.min.css">-->
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		
+		<style type="text/css">
+			.text-hightlight {
+				color:yellow;
+			}
+			.text-hightlight-blue {
+				color:#00DDDD;
+			}
+			.tall-image {
+				max-height:80%!important;
+				max-width:80%!important;
+			}
+			.text {
+				text-align: left;
+			}
+			figure {
+				position:relative;
+				width:80%;
+				margin:auto;
+				display:inline-block!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > .img {
+				position:relative;
+				z-index:0;
+				max-width:100%!important;
+				max-height:100%!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > figcaption {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+				z-index:1;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure:hover > figcaption,
+			figure:focus > figcaption {
+				border: 0;
+				clip: auto;
+				height: auto;
+				margin: auto;
+				width: 100%;
+				overflow: hidden;
+				padding: .3em;
+				position: absolute;
+				bottom:0;
+				background:gray;
+				z-index:1;
+			}
+			.reveal table {
+				margin: auto;
+			}
+			
+			.reveal table th {
+				text-shadow:none;
+				text-align: right;
+			}
+			.reveal table td  {
+				text-align: right;
+				color:#00DDDD;
+			}
+			.reveal h1 {
+				font-size: 2.8em;
+			}
+			.reveal code {
+				font-family: consolas, "Courier New", monospace;
+				/*font-family: consolas!important;*/
+			}
+			.reveal pre {
+                width: 100%;
+			}
+			.reveal pre.bigger {
+				font-size: 0.8em;
+			    left: -10%;
+			    width: 120%;
+			}
+            .reveal pre.inline {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                display: inline-block;
+                font-family: consolas, "Courier New", monospace;
+                font-size: 0.9em;
+                line-height: 1em;
+                position: relative;
+                width:auto;
+                margin:0 auto;
+                vertical-align:top;
+            }
+            .reveal small {
+                display:inline;
+            }
+            .visuallyhidden {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            .reveal .list-item { 
+                margin: 0.75em 0;
+            }
+            .reveal .no-bullet { 
+                list-style-type: none;
+            }
+            .reveal sup {
+                font-size: .7em;
+            }
+		</style>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<img src="images/accesibilidad-2.png" alt="" style="width:40%; background: transparent; border:0;" />
+					<h1>Accesibilidad Web <br />Guía práctica</h1>
+					<p><abbr title="Conferencia Future of Digital Content">DC NxT</abbr> - 2019</p>
+					<p>
+						<a href="https://twitter.com/pablo_botta">Pablo Botta</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Pablo Botta</h2>
+					<p>Algunos detalles para que me conozcan un poco mejor...</p>
+					<ul>
+						<!-- Organizar la presentación -->
+						<li><strong>Ingeniero en Sistemas</strong> de la <abbr title="Universidad Tecnológica Nacional">UTN</abbr></li>
+						<li><strong>Desarrollador web (desde el 2008) y móvil</strong>
+						<li><strong>Colaborador</strong> en <a href="http://a11yproject.com/" target="_blank" class="external"><abbr title="Accessibility">A11y</abbr> Project</a></li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Accesibilidad Web</h2>
+						<div class="">
+                            <p>
+                                La accesibilidad Web significa que <span class="text-hightlight">personas con algún tipo de discapacidad van a poder hacer uso de la Web</span>. En concreto, al hablar de accesibilidad Web se está haciendo referencia a un diseño Web que va a permitir que estas personas puedan percibir, entender, navegar e interactuar con la Web, aportando a su vez contenidos a la misma.
+                            </p>
+                            <p>
+                                <small>Fuente: <a href="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility" target="_blank">Introducción a la Accesibilidad Web - <abbr title="World Wide Web Consortium">W3C</abbr></a></small>
+                            </p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2>Analogía para entender la <br /> accesibilidad Web</h2>
+					<img src="images/analogia-explicada.jpg" alt="" width="750" />
+					<p>
+						En nuestro entorno cotidiano (<span class="text-hightlight">la web</span>) y a pesar de que las personas (<span class="text-hightlight">usuarios</span>) cuenten con herramientas, tales como una silla de ruedas, para disminuir sus dificultades (<span class="text-hightlight">tecnologías de apoyo, por ejemplo un lector de pantalla</span>) existen lugares públicos o privados (<span class="text-hightlight">sitios web</span>) que <strong>NO</strong> tienen las condiciones para recibirlos (<span class="text-hightlight">Accesibilidad Web</span>).
+					</p>
+				</section>	
+				<section>
+					<h2>Discapacidad en números</h2>
+					<p class="text">
+						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)
+					</p>
+					<p class="text">
+						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">12.7% de la población</strong> sufre de algún tipo de discapacidad (5 millones de personas). En 2003 el valor era del 8% se estima a que se debe por el envejecimiento de la población.
+					</p>
+				    <br />
+					<p class="text">
+						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
+						<br />
+						<small>Fuente: <a href="http://www.indec.mecon.ar/principal.asp?id_tema=166" target="_blank">Censo Nacional de Población, Hogares y Viviendas 2010. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
+					</p>
+				</section>				
+				<section>
+					<h2>Barreras de accesibilidad</h2>
+					<p>Situaciones que generan que cierto grupo de personas no puedan acceder a un determinado contenido.</p>
+					<ul>
+						<li class="list-item">Imágenes sin alternativas textuales (información / captchas)</li>
+						<li class="list-item">Acceso únicamente por teclado</li>
+                        <li class="list-item">HTML inválido o escasa semántica</li>
+                        <li class="list-item">Legibilidad de los textos</li>
+					</ul>
+				</section>
+				<section>
+					<h2>¿Por qué no se desarrolla  <br />accesible?</h2>
+					<p>(Opinión Personal)</p>
+				</section>
+				
+				<section>
+					<h3>La accesibilidad <span class="text-hightlight">NO es una tendencia</span></h3>
+					<!--<p>Interés relativo de búsqueda a lo largo del tiempo</p>-->
+					<img src="images/tendencia-2019.png" width="800" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
+					<br />
+					<br />
+					<p class="text">
+						Existe la creencia entre los desarrolladores y los dueños de negocio que no existe público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
+					</p>
+					<p>
+						<small>Fuente: <a href="https://trends.google.com/trends/explore?date=today%205-y&q=web%20accesibility,responsive%20design,Single%20Page%20Application,pwa" target="_blank">Google Trends</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>Entnces, ¿por qué debería aplicarla?</h3>
+					<img src="images/why.jpg" alt="" />
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/86979666@N00/7623744452/" target="_blank">Tsahi Levent-Levi</a></small>
+					</p>
+				</section>
+				<section>
+				    <h3>Sus beneficios son para <span class="text-hightlight">TODOS</span></h3>
+				    <p class="text">
+				        Los principios de la accesibilidad forman parte de la <strong class="text-hightlight">Usabilidad y la Experiencia del Usuario</strong>.
+				    </p>
+				    <p class="text">
+				        Su implementación en sitios Web beneficia a todas las personas y no solo a aquellas que tienen un algún tipo de dificultad.
+                    </p>
+				</section>
+				<section>
+					<h3>"Discapacitados temporales"</h3>
+					<img src="images/discapacitados_temporales.jpg" alt="" />
+					<p>
+						Las estadísticas anteriores no tienen en cuenta que todos podemos quedar temporalmente disminuidos, siendo entonces el número de personas afectadas, en un período de tiempo, aún mayor.
+					</p>
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/cameronparkins/3717438663/" target="_blank">Cameron Parkins</a></small>
+					</p>
+				</section>
+								
+				<section>
+					<h3>Aumenta las conversiones</h3>
+					<p class=" text">
+						La aplicación de técnicas de Accesibilidad Web mejora la facilidad de uso, legibilidad y comprensión del contenido en la Web. <strong class="text-highlight">Ampliando la audiencia para nuestro sitio</strong>.
+					</p>
+					<p class=" text">
+					    <i>TESCO</i> (cadena multinacional de locales de venta al por menor) <span class="text-hightlight">aumentó su ganancias en 13 millones de euros anuales</span> incorporando diseño accesible para personas no videntes. <sup>[1]</sup>
+				    </p>
+					<p class=" text">
+					    <i>Virgin</i> incremento 68% sus ventas incorporando diseño accesible. <sup>[2]</sup>
+					</p>
+					<p class=" text">
+						<i>Legal &amp; General</i> aumentó un 300% sus conversiones y disminuyó un 10% su tasa de rebote tras aplicar un nuevo diseño accesible. <sup>[3]</sup>
+					</p>
+                    <br />
+                    <br />
+                    <div class="text">
+                        <small>[1] 1.1 millon de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                    </div>
+                    <div class="text">
+                        <small>[2] 51 mil de visitas diarias según Alexa. Fuente: <a href="http://www.wsi-ic.com/PConnolly/FileContent/improve_website.pdf">Improve your website’s usability and accessibility to increase sales</a></small>
+                    </div>
+                    <div class="text">
+                        <small>[3] 34 mil visitantes únicos diarios según Alexa. Fuente: <a href="http://www.karlgroves.com/2011/04/13/chasing-the-accessibility-business-case-part-1/" target="_blank">Chasing the accessibility business case</a></small>
+                    </div>
+				</section>
+                <section>
+                    <h3>Por normativa</h3>
+                    <img src="images/bbc_domino.png" alt="" width="480">
+                    <p class=" text">
+                        En Argentina como en otros países del mundo <span class="text-hightlight">los sitios Web gubernamentales están obligados a ser accesibles</span>.
+                    </p>
+                    <p class=" text">
+                        La <a href="http://www.infoleg.gob.ar/infolegInternet/anexos/175000-179999/175694/norma.htm">ley de Accesibilidad de la información en las páginas web</a> (n° 26.653) se encuentra en vigencia desde el <time datetime="2013-04-04">4 de mayo de 2013</time>.
+                    </p>
+                </section>
+				<section>
+					<!--<p>Ok todo muy lindo, entendimos la idea. Pero ...</p>-->
+					<h3>¿Cómo hago más accesible mi sitio?</h3>
+					<img src="images/muchas_palabras.jpg" alt="" />
+				</section>
+                <section>
+                    <h4><abbr title="HyperText Markup Language" lang="en">HTML</abbr> correcto y semnático</h4>
+                    <ul>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;div class=&quot;boton-guardar&quot;&gt;</code></pre> no es un botón.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;span onclick=&quot;document.location=&#39;index.html&#39;&quot;&gt;</code></pre> no es un link.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;span class=&quot;etiqueta&quot;&gt;</code></pre> no es una etiqueta.
+                        </li>
+                        <li class="list-item no-bullet">
+                            Un <pre class="inline"><code>&lt;div class=&quot;page-title&quot;&gt;</code></pre> no es un título.
+                        </li>
+                    </ul>
+                    <div class="">
+                        <div class="text">Realmente ...</div>
+                        <ul>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;button class=&quot;boton-guardar&quot;&gt;</code></pre> es un botón.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;a href=&quot;index.html&quot;&gt;</code></pre> es un enlace.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;label for=&quot;algun-input&quot; class=&quot;etiqueta&quot;&gt;</code></pre> es una etiqueta.</li>
+                            <li class="list-item no-bullet"><pre class="inline"><code>&lt;h1 class=&quot;page-title&quot;&gt;</code></pre> es un título.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h4>Alternativas textuales a elementos <br /> visuales</h4>
+                    <!--
+                    alt, aria-label, title (si no es imagen) (imagenes, botones, links que sean imagenes). El valor tiene que ser descriptivo si es que este aporta valor sino tiene que estar vacío
+                    alt = "" y luego un parrafo que lo describa (infografias / graficos)
+                    
+                    -->
+                    <div class="">
+                        <p class="text list-item">Colocar el texto alternativo en el atributo <code>alt</code> para las imágenes (<code>img</code>). Salvo en aquellas sean meramente decorativas (<code>alt=""</code>).</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;img alt=&quot;UTN Facultad Regional Rosario&quot; src=&quot;imagenes/utn_logohome2.gif&quot;&gt;</code></pre>
+                    </div>
+                    <div class="">
+                        <p class="text list-item">En los demás elementos (que no sean <code>img</code>) utilizar los atributos <code>aria-label</code> o <code>title</code> para colocar el texto alternativo.</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;button arial-label=&quot;Cerrar ventana&quot;&gt;X&lt;/button&gt;</code></pre>
+                    </div>
+                    <div class="">
+                        <p class="text list-item">Utilizar <code>longdesc</code> para imágenes que requieran una explicación larga.</p>
+                        <pre aria-hidden="true"><code style="max-height:600px;">&lt;img longdesc=&quot;ventas.html#desc&quot; alt=&quot;Ventas anuales 2013&quot; src=&quot;/imagenes/grafico-ventas.png&quot;&gt;
+&lt;div id=&quot;desc&quot;&gt;
+    &lt;h3&gt;Ventas anuales 2013&lt;/h3&gt;
+    &lt;!-- Descripci&#243;n larga del contenido del gr&#225;fico --&gt;
+    &lt;p&gt;Las ventas ...&lt;/p&gt;
+&lt;div&gt;
+                        </code></pre>
+                    </div>
+                </section>	
+                <section>
+                    <h4><abbr title="Prueba de Turing pública y automática para diferenciar máquinas y humanos" >CAPTCHA</abbr> accesible</h4>
+                    <p>
+                        Utilizar sistemas que sean accesibles como <a href="http://www.google.com/recaptcha" target="_blank">reCAPTCHA</a>
+                    </p>
+                    <img alt="El servicio Web reCaptcha ofrece una alternativa sonora para la comprobación de si somos humanos o no." src="images/recaptcha.png" />
+                    <p>Otra alternativa es realizar directamente preguntas textuales.</p>
+                    <blockquote>Prueba que eres humano, ¿cuanto es dos más dos?</blockquote>
+                </section>	
+                <section>
+                    <h4>Cómo ocultar contenido a los usuarios videntes</h4>
+                    <p class="text">
+                        En ocaciones <span class="text-hightlight">para dar una alternativa textual requerimos de texto extra que visualmente puede estropear el diseño de una página Web</span>.
+                    </p>
+                    <div class="">
+                        <p class="text">
+                            Existen técnicas en <abbr title="Hojas de estilo en cascada">CSS</abbr> para ocultar texto visualmente mientras que continuan siendo leídos por los programas de lectura de pantalla.
+                        </p>
+                        <pre><code style="max-height:600px;">.visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+                        </code></pre>
+                        <p class="text">
+                            <small><a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L152" target="_blank">Clase <i lang="en">"visuallyhidden"</i> del HTML5 Boilerplate</a></small>
+                        </p>
+                        <!--<p class="text">
+                            Esta técnica puede ser útil por ejemplo para ocultar visualmente contenido que tenga sentido a la vista pero no a la lectura. Por ejemplo un sistema de pestañas.
+                        </p>-->
+                    </div>
+                </section>			
+
+                <section>
+                    <h4>Elementos que puedan recibir foco</h4>
+                    <p class="text">
+                        Los elementos de <abbr title="HyperText Markup Language" lang="en">HTML</abbr> no reciben foco por defecto (salvo excepciones). En ocaciones necesitamos que así sea.
+                    </p>
+                    <p class="text list-item">
+                        Mediante el atributo <code>tabindex</code> podemos lograr que un elemento reciba foco.
+                    </p>
+                    <pre class="bigger"><code style="max-height:600px;">        &lt;div tabindex=&quot;0&quot; class=&quot;x-widget&quot;&gt;&lt;!-- contenido --&gt;&lt;/div&gt;
+                    </code></pre>
+                    <p class="text">
+                        Si marcamos el valor en 0 recibirá foco de acuerdo al flujo natural del documento.
+                    </p>
+                </section>	
+                <section>
+                    <h4>No retirar el <code>outline</code> de los elementos</h4>
+                    <p class="text">
+                        Retirar el <code>outline</code> provoca que no se pueda saber que elemento tiene el foco, afecta a personas que navegan utilizando la vista y el teclado.
+                    </p>
+                    <p class="text list-item">
+                        Algunos reset de CSS o templates incluyen erroneamente el siguiente código:
+                    </p>
+                    <pre class="bigger"><code>        *:focus {
+            outline: 0;
+        }
+                    </code></pre>
+                    <p class="text">
+                        Solución: No eliminar el outline del navegador, o proveer uno de mayor contraste.
+                    </p>
+                </section>
+                <section>
+                    <h4>Elementos ocultos y que van descubrirse</h4>			
+                </section>
+                <section>
+                    <h4>Contraste de colores y texto legible</h4>
+                    <ul>
+                        <li class="list-item">
+                            Las líneas de texto deben contener un número aproximado de 80 carácteres.
+                        </li>
+                        <li class="list-item">
+                            El alto de cada línea (<code>line-height</code>) debe ser al menos de una vez y media (<code>1.5em</code>) del tamaño de la fuente.
+                        </li>
+                        <li class="list-item">
+                            El contraste de color entre la fuente y el color de fondo tiene que ser suficiente.
+                        </li>
+                    </ul>
+                </section>
+				<section>
+					<h2>Mitos sobre Accesiblidad Web</h2>
+					<ul>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Es incompatible con JavaScript. <span class="">Sin embargo, por ejemplo el 98% de personas que navegan utilizando un lector de pantalla, tienen JavaScript activado [<a href="http://a11yproject.com/posts/myth-screen-readers-dont-use-javascript/" class="link--external"target="_blank">fuente</a>].</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Convierte a los sitios web en feos y aburridos. <span class="">Sin embargo, con el mismo código HTML se pueden hacer maravillas de diseños solo con CSS [<a href="http://www.csszengarden.com/" class="link--external" target="_blank">ejemplos en Zen Garden</a>]. Únicamente hay que evitar introducir barreras con nuestro CSS.</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Requiere mucho más tiempo. <span class="">Pero si se incluye dentro del proceso de desarollo no debería aumentar el costo de las soluciones.</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: No aporta ningún beneficio extra. <span class="">Mejora la usabilidad y las conversiones de nuestro sitio al mismo tiempo que los tiempos de carga y el SEO.</span>
+						</li>
+					</ul>
+				</section>
+                <section>
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>
+                            <div>Validadores de pautas de accesibilidad</div>
+                            <ul>
+                                <li><a href="http://squizlabs.github.com/HTML_CodeSniffer/" target="_blank">HTML CodeSniffer</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb" target="_blank">Accesibility developer toolbar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Lectores de pantallas</div>
+                            <ul>
+                                <li><a href="http://www.chromevox.com/" target="_blank">Chrome Vox</a></li>
+                                <li><a href="https://projects.gnome.org/orca/" target="_blank">Orca</a></li>
+                                <li><a href="http://www.nvaccess.org/" target="_blank">NDVA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Otros</div>
+                            <ul>
+                                <li><a href="http://www.w3.org/2009/cheatsheet/#wcag2" target="_blank">"Machete" WCAG 2.0</a></li>
+                                <li><a href="http://www.pearsonified.com/typography/" target="_blank">Calculadora de ancho de línea (legibilidad de texto)</a></li>
+                                <li><a href="http://snook.ca/technical/colour_contrast/colour.html" target="_blank">Calculadora de contraste de texto</a></li>
+                                <li><a href="http://colorfilter.wickline.org/" target="_blank">Simulador de daltonismo en páginas web</a></li>
+                                <li><a href="http://www.etre.com/tools/colourblindsimulator/" target="_blank">Simulador de daltonismo en imágenes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+				    <!-- http://www.polymer-project.org/articles/accessible-web-components.html-->
+                    <h3>Resumen - Autoevaluación</h3>
+                    <p class="text list-item">
+                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es el esperado? ¿Los atajos del teclado son facilmente predecibles?
+                    </p>
+                    <p class="text list-item">
+                        ¿Es el contenido comprensinble sin imágenes?
+                    </p>
+                    <p class="text list-item">
+                        ¿Necesito tener activado el sonido para poder usar el sitio?
+                    </p>
+                    <p class="text list-item">
+                        ¿El sitio se visualiza correctamente en modo de alto contraste? ¿Existe el contraste suficiente entre los colores de fondo y de fuentes? ¿Necesito distinguir colores para usar el sitio?
+                    </p>
+                </section>
+                <section>
+                    <h3>Preguntas</h3>
+                    <img src="images/questions.jpg" alt="No todas las preguntas las responde Google" />
+                    <p><small>Cortesía de <a href="http://www.flickr.com/photos/jaygooby/" target="_blank">Jay Gooby</a></small></p>
+                    <!--Poner una linda imagen -->
+                </section>
+                
+				<section>
+					<h3>Gracias</h3>
+					<h4>Accesibilidad es pensar en todos</h4>
+					<br />
+					<br />
+					<p>Contacto</p>
+					<div class="list-item"><a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a></div>
+					<div class="list-item"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></div>
+					<div class="list-item">pabloluisbotta(arroba)gmail.com</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="lib/js/head.min.js"></script>
+		<script type="text/javascript" src="js/reveal.min.js"></script> 
+		<script type="text/javascript">
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
