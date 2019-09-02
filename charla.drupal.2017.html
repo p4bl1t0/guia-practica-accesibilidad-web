@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Drupal inclusivo, un CMS diseñado con accesibilidad</title>
+		<meta name="description" content="Presentación para las Drupal Meetup Rosario 2017">
+		<meta name="author" content="Pablo Botta">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!--<link rel="stylesheet" href="css/reveal.min.css">-->
+		<link rel="stylesheet" href="css/reveal.css">
+		<!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		
+		<style type="text/css">
+			.text-hightlight {
+				color:yellow;
+			}
+			.text-hightlight-blue {
+				color:#00DDDD;
+			}
+			.tall-image {
+				max-height:80%!important;
+				max-width:80%!important;
+			}
+			.text {
+				text-align: left;
+			}
+			figure {
+				position:relative;
+				width:80%;
+				margin:auto;
+				display:inline-block!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > .img {
+				position:relative;
+				z-index:0;
+				max-width:100%!important;
+				max-height:100%!important;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure > figcaption {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+				z-index:1;
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+				box-sizing: border-box;         /* Opera/IE 8+ */
+			}
+			figure:hover > figcaption,
+			figure:focus > figcaption {
+				border: 0;
+				clip: auto;
+				height: auto;
+				margin: auto;
+				width: 100%;
+				overflow: hidden;
+				padding: .3em;
+				position: absolute;
+				bottom:0;
+				background:gray;
+				z-index:1;
+			}
+			.reveal table {
+				margin: auto;
+			}
+			
+			.reveal table th {
+				text-shadow:none;
+				text-align: right;
+			}
+			.reveal table td  {
+				text-align: right;
+				color:#00DDDD;
+			}
+			.reveal h1 {
+				font-size: 2.8em;
+			}
+			.reveal code {
+				font-family: consolas, "Courier New", monospace;
+				/*font-family: consolas!important;*/
+			}
+			.reveal pre {
+                width: 100%;
+			}
+			.reveal pre.bigger {
+				font-size: 0.8em;
+			    left: -10%;
+			    width: 120%;
+			}
+            .reveal pre.inline {
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                display: inline-block;
+                font-family: consolas, "Courier New", monospace;
+                font-size: 0.9em;
+                line-height: 1em;
+                position: relative;
+                width:auto;
+                margin:0 auto;
+                vertical-align:top;
+            }
+            .reveal small {
+                display:inline;
+            }
+            .visuallyhidden {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            .reveal .list-item { 
+                margin: 0.75em 0;
+            }
+            .reveal .no-bullet { 
+                list-style-type: none;
+            }
+            .reveal sup {
+                font-size: .7em;
+            }
+		</style>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+                    <!--<div>
+                        <img src="https://www.drupal.org/files/drupal-wordmark.svg" alt="" style="width:30%; background: transparent; border:0;" />
+                        <img src="images/accesibilidad-2.png" alt="" style="width:30%; background: transparent; border:0;" />
+					</div>-->
+					<div>
+						<img src="https://www.drupal.org/sites/all/themes/bluecheese/images/icon-w-drupal.svg" alt=""  style="width:150px; background: transparent; border:0;" />
+					</div>
+                    <h1>Drupal inclusivo</h1>
+                    <h3>Un CMS diseñado con accesibilidad</h3>
+                    <br />
+					<p>Drupal Meetup Rosario 2017</p>
+					<p>
+						<a href="https://twitter.com/pablo_botta">Pablo Botta</a>
+					</p>
+				</section>
+
+				<section>
+                    <h2>Pablo Botta</h2>
+                    <br />
+					<p>Algunos detalles para que me conozcan un poco mejor...</p>
+                    <br />
+					<ul>
+						<li class="fragment"><strong>Ingeniero en Sistemas</strong> de la <abbr title="Universidad Tecnológica Nacional">UTN</abbr> 2012</li>
+						<li class="fragment"><strong>Desarrollador Web y Drupal (desde el 2008)</strong>
+						<li class="fragment"><strong>Colaborador</strong> en <a href="http://a11yproject.com/" target="_blank" class="external"><abbr title="Accessibility">A11y</abbr> Project</a></li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Accesibilidad Web <br /> (de manual)</h2>
+						<div class="fragment">
+                            <p>
+                                La accesibilidad Web significa que <span class="text-hightlight">personas con algún tipo de discapacidad van a poder hacer uso de la Web</span>. En concreto, al hablar de accesibilidad Web se está haciendo referencia a un diseño Web que va a permitir que estas personas puedan percibir, entender, navegar e interactuar con la Web, aportando a su vez contenidos a la misma.
+                            </p>
+                            <p>
+                                <small>Fuente: <a href="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility" target="_blank">Introducción a la Accesibilidad Web - <abbr title="World Wide Web Consortium">W3C</abbr></a></small>
+                            </p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2>Analogía para entender la <br /> accesibilidad Web</h2>
+					<img src="images/analogia-explicada.jpg" alt="" width="750" />
+					<p>
+						En nuestro entorno cotidiano (<span class="text-hightlight">la web</span>) y a pesar de que las personas (<span class="text-hightlight">usuarios</span>) cuenten con herramientas, tales como una silla de ruedas, para disminuir sus dificultades (<span class="text-hightlight">tecnologías de apoyo, por ejemplo un lector de pantalla</span>) existen lugares públicos o privados (<span class="text-hightlight">sitios web</span>) que <strong>NO</strong> tienen las condiciones para recibirlos (<span class="text-hightlight">Accesibilidad Web</span>).
+					</p>
+				</section>	
+				<section>
+					<h2>Discapacidad en números  <br /> (no es algo marginal)</h2>
+					<p class="fragment text">
+						<strong class="text-hightlight">Aproximadamente el 15%</strong> de la personas en el <strong class="text-hightlight">mundo</strong> están afectadas por algún tipo de discapacidad. (13 veces la población Argentina)
+					</p>
+					<p class="fragment text">
+						En <strong class="text-hightlight">Argentina</strong> aproximadamente el <strong class="text-hightlight">12.7% de la población</strong> sufre de algún tipo de discapacidad (5 millones de personas). En 2003 el valor era del 8% se estima a que se debe por el envejecimiento de la población.
+					</p>
+				    <br />
+					<p class="fragment text">
+						<small>Fuente: <a href="http://whqlibdoc.who.int/publications/2011/9789240685215_eng.pdf" target="_blank">World Report on Disability 2011 - <abbr title="Organización Mundial de la Salud">OMS</abbr></a></small>
+						<br />
+						<small>Fuente: <a href="http://www.indec.mecon.ar/principal.asp?id_tema=166" target="_blank">Censo Nacional de Población, Hogares y Viviendas 2010. <abbr title="Instituto Nacional de Estadísitcas y Censo">INDEC</abbr></a></small>
+					</p>
+                </section>		
+                
+                
+				<section>
+                        <h2>Drupal accesible</h2>
+                        <p class="text">
+                            A través de la iniciativa de Accesibilidad, <strong class="text-hightlight">Drupal y su comunidad</strong> se encuentran comprometidos en asegurar en que el <span lang="en">core</span> de Drupal cumpla con las guías de la <a href="http://www.w3.org/" rel="nofollow" lang="en">World Wide Web Consortium</a> (W3C): 
+                        </p>
+                            <br />
+                            <ul>
+                                <li>
+                                    <a href="http://www.w3.org/TR/WCAG20/#contents" title="Web Content Accessibility Guidelines" rel="nofollow">WCAG 2.0</a>: hacer el contenido de la web accesible. 
+                                </li>
+                                <li>
+                                    <a href="http://www.w3.org/TR/ATAG20/#contents" title="Authoring Tool Accessibility Guidelines" rel="nofollow">ATAG 2.0</a>: hacer que una herramienta de creación de contenido sea accesible y genere contenido accesible.
+                                </li>
+                            </ul>
+                </section>	
+
+				<section>
+                    <h2>WCAG 2.0: Principios</h2>
+                    <br />
+                    <p class="text">Situaciones que generan que cierto grupo de personas no puedan acceder a un determinado contenido.</p>
+                    <br />
+                    <ul>
+                        <li><strong class="text-hightlight">Perceptibilidad</strong> - La información y los componentes de la interfaz de usuario deben presentarse a los usuarios de la manera en que puedan percibirlos.</li>
+                        <li><strong class="text-hightlight">Operabilidad</strong> - Los componentes de la interfaz de usuario y la navegación deben ser operables.</li>
+                        <li><strong class="text-hightlight">Comprensibilidad</strong> - La información y el manejo de la interfaz de usuario deben ser comprensibles.</li>
+                        <li><strong class="text-hightlight">Robustez</strong> - El contenido debe ser lo suficientemente robusto como para confiarse en su interpretación por parte de una amplia variedad de agentes de usuario, incluidas las tecnologías asistivas.</li>
+                    </ul>
+				</section>
+				<section>
+					<h2>Barreras de accesibilidad</h2>
+				</section>
+                <section>
+                    <h3><abbr title="HyperText Markup Language" lang="en">HTML</abbr> correcto y semnático</h3>
+                    <ul>
+                        <li class="fragment list-item">
+                            Personas accediendo a la Web con medios no tradicionales (distintos a los navegadores) encuentra obstáculos para acceder a la información.
+                        </li>
+                        <li class="fragment list-item">
+                            Personas esperando un determinado comportamiento de la Web se encuentran con uno diferente.
+                        </li>
+                        <li class="fragment list-item">
+                            Lo que es en realidad (por ejemplo un <code>button</code>) no es lo que se dijo (<code>div</code>).
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Alternativas textuales a elementos <br /> visuales</h3>			
+                    <ul>
+                        <li class="fragment list-item">Personas con discapacidad visual no pueden acceder al contenido no textual</li>
+                        <li class="fragment list-item">Toda información transmitida por una imagen, video o cualquier otro elemento visual debería tener una alternativa textual</li>
+                        <li class="fragment list-item">No todo se resuelve incluyendo el atributo <code>alt</code></li>
+                    </ul>
+                </section>
+				
+				<section>
+					<h3>Accesible por teclado</h3>					
+					<ul>
+						<li class="fragment list-item">
+							Personas con imposibilidad de utilizar un mouse no pueden acceder al contenido diseñado para ser accedido únicamente por ese dispositivo.
+						</li>
+						<li class="fragment list-item">
+							Toda acción que pueda realizarse mediante el mouse debería poder efectuarse utilizando el teclado u otro dispositivo o medio.
+						</li>
+						<li class="fragment list-item">
+							No todo se resuelve utilizando el atributo <code>accesskey</code>
+						</li>
+						<li class="fragment list-item">
+							Las atajos de teclado no están debidamente señalizados.
+						</li>
+					</ul>
+				</section>
+                <section>
+                    <h3>Contraste de colores y texto legible</h3>				
+                    <ul>
+                        <li class="fragment list-item">
+                            Personas con moderada o baja visión y personas con algún grado de daltonismo pueden encontrar dificultad en leer texto con bajo contraste. <!-- tramites.gob.ar -->
+                        </li>
+                        <li class="fragment list-item">
+                            Personas con dificultades cognitivas, del lenguaje o de aprendizaje pueden no percibir el texto y/o perder el foco de lectura si el texto es presentado de una manera que sea compleja de leer.
+                        </li>
+                        <li class="fragment list-item">
+                            Personas con dificultades en la visión o en la comprensión de texto pueden enfrentar problemas en mantener el foco y seguir el flujo de largas líneas de texto o si es necesario realizar scroll horizontal para poder continuar leyendo el texto presentado en pantalla.
+                        </li>
+                    </ul>
+                </section>
+
+
+
+                <section>
+                        <h2>Drupal accessibility team</h2>
+                        <p class="text">
+                            Drupal 8 tiene muchas mejoras tanto en la parte de acceso de los usuarios como administradores en cuanto accesbilidad
+                        </p>
+                        <ul>
+                            <li>Presentación y operatividad de la búsqueda</li>
+                            <li>Funcionalidad Drag &amp; Drop</li>
+                            <li>Contraste e intensidad de los colores</li>
+                            <li>Agregar links de navegación a los temas bases</li>
+                            <li>Manejo de imágenes</li>
+                            <li>Etiquetado de campos de formularios</li>
+                        </ul>
+						<br />
+						<br />
+                        <p class=" text">
+                            <small>Fuente: <a href="https://www.drupal.org/about/features/accessibility" target="_blank">Accessible Features in Drupal</a></small>
+                        </p>
+                </section>	
+
+                <section>
+                        <h2>#D8AX - Drupal 8 Accessibility eXperienc</h2>
+                        <p class="fragment text">
+                            Los desarrolladores se comprometen a hacer una evaluación básica de su módulo o tema; solucionar problemas de accesibilidad etiquetados con accesibilidad o D8AX; pidiendo ayuda para construir mejoras de accesibilidad para el desarrollo futuro; y respondiendo a los problemas de accesibilidad cuando se archivan. Los desarrolladores deben considerar la experiencia del usuario de los administradores, creadores de contenido y visitantes del sitio.
+                        </p>
+                </section>	
+
+				
+				
+				<section>
+					<h2>Veamos algunos ejemplos</h2>
+					<p class="fragment text">Entonces, Drupal es accesible por defecto, como desarrolladores debemos cuidarnos de no romper dicha accesibilidad.</p>
+					<p class="fragment text">No solo es responsabilidad de los desarrolladores sino también de los creadores de contenido.</p>
+				</section>
+                
+				
+				<section>
+					<h2>¿Por qué no se desarrolla accesible?</h2>
+					<p>(Opinión Personal)</p>
+				</section>
+				
+				<section>
+					<h3>La accesibilidad Web <span class="text-hightlight">NO es una tendencia</span></h3>
+					<!--<p>Interés relativo de búsqueda a lo largo del tiempo</p>-->
+					<img src="images/tendencia-nueva.png" width="800" alt="Términos como HTML5, CSS3 o Internet Explorer tienen mayor interés que Accesibilidad Web" />
+					<br />
+					<br />
+					<p class="text">
+						Existe la creencia entre los desarrolladores y los dueños de negocio que no existe público beneficiado por la Accesibilidad Web, además que no es tema de gran debate.
+					</p>
+					<p>
+						<small>Fuente: <a href="http://www.google.com/trends/explore?q=web+accesibility#q=web%20accesibility%2C%20css3%2C%20html5%2C%20internet%20explorer%206%2C%20internet%20explorer%209&cmpt=q" target="_blank">Google Trends</a>, <a href="http://www.netmarketshare.com/" target="_blank">Net Market Share</a> y <a href="http://gs.statcounter.com/#browser_version_partially_combined-AR-monthly-201202-201302" target="_blank">Stats Counter</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>Entnces, ¿por qué debería tenerla en cuenta?</h3>
+					<img src="images/why.jpg" alt="" />
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/86979666@N00/7623744452/" target="_blank">Tsahi Levent-Levi</a></small>
+					</p>
+				</section>
+				<section>
+				    <h3>Sus beneficios son para <span class="text-hightlight">TODOS</span></h3>
+				    <p class="text">
+				        Los principios de la accesibilidad forman parte de la <strong class="text-hightlight">Usabilidad y la Experiencia del Usuario</strong>.
+				    </p>
+				    <p class="text">
+				        Su implementación en sitios Web beneficia a todas las personas y no solo a aquellas que tienen un algún tipo de dificultad.
+                    </p>
+				</section>
+				<section>
+					<h3>"Discapacitados temporales"</h3>
+					<img src="images/discapacitados_temporales.jpg" alt="" />
+					<p>
+						Las estadísticas anteriores no tienen en cuenta que todos podemos quedar temporalmente disminuidos, siendo entonces el número de personas afectadas, en un período de tiempo, aún mayor.
+					</p>
+					<p>
+						<small>Imagen cortesía de <a href="http://www.flickr.com/photos/cameronparkins/3717438663/" target="_blank">Cameron Parkins</a></small>
+					</p>
+				</section>
+				<section>
+					<h3>Otros grupos beneficiados directamente</h3>
+					<ul>
+						<li class="fragment list-item">Personas mayores</li>
+						<li class="fragment list-item">Personas que carezcan de estudios o que no sean nativas en la lengua del sitio Web</li>
+						<li class="fragment list-item">Personas con conexiones lentas o que utilizan tecnologías desactualizadas</li>
+						<li class="fragment list-item">Nuevos usuarios o usuarios infrecuentes del sitio</li>
+					</ul>
+					<br />
+					<br />
+					<p class="fragment text">
+						<small>Fuente: <a href="http://www.amazon.es/Web-Accessibility-Standards-Regulatory-Compliance/dp/1590596382" target="_blank">Web Accessibility Web Standards and Regulatory Compliance</a></small>
+					</p>
+				</section>
+								
+				
+				<section>
+					<h2>Mitos sobre Accesiblidad Web</h2>
+					<ul>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Es incompatible con JavaScript. <span class="fragment">Sin embargo, por ejemplo el 98% de personas que navegan utilizando un lector de pantalla, tienen JavaScript activado [<a href="http://a11yproject.com/posts/myth-screen-readers-dont-use-javascript/" class="link--external"target="_blank">fuente</a>].</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Convierte a los sitios web en feos y aburridos. <span class="fragment">Sin embargo, con el mismo código HTML se pueden hacer maravillas de diseños solo con CSS [<a href="http://www.csszengarden.com/" class="link--external" target="_blank">ejemplos en Zen Garden</a>]. Únicamente hay que evitar introducir barreras con nuestro CSS.</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: Requiere mucho más tiempo. <span class="fragment">Pero si se incluye dentro del proceso de desarollo no debería aumentar el costo de las soluciones.</span>
+						</li>
+						<li class="list-item">
+							<span class="text-hightlight-blue">MITO</span>: No aporta ningún beneficio extra. <span class="fragment">Mejora la usabilidad y las conversiones de nuestro sitio al mismo tiempo que los tiempos de carga y el SEO.</span>
+						</li>
+					</ul>
+				</section>
+
+                <section>
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>
+                            <div>Validadores de pautas de accesibilidad</div>
+                            <ul>
+                                <li><a href="http://squizlabs.github.com/HTML_CodeSniffer/" target="_blank">HTML CodeSniffer</a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb" target="_blank">Accesibility developer toolbar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Lectores de pantallas</div>
+                            <ul>
+                                <li><a href="http://www.chromevox.com/" target="_blank">Chrome Vox</a></li>
+                                <li><a href="https://projects.gnome.org/orca/" target="_blank">Orca</a></li>
+                                <li><a href="http://www.nvaccess.org/" target="_blank">NDVA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Otros</div>
+                            <ul>
+                                <li><a href="http://www.w3.org/2009/cheatsheet/#wcag2" target="_blank">"Machete" WCAG 2.0</a></li>
+                                <li><a href="http://www.pearsonified.com/typography/" target="_blank">Calculadora de ancho de línea (legibilidad de texto)</a></li>
+                                <li><a href="http://snook.ca/technical/colour_contrast/colour.html" target="_blank">Calculadora de contraste de texto</a></li>
+                                <li><a href="http://colorfilter.wickline.org/" target="_blank">Simulador de daltonismo en páginas web</a></li>
+                                <li><a href="http://www.etre.com/tools/colourblindsimulator/" target="_blank">Simulador de daltonismo en imágenes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+				    <!-- http://www.polymer-project.org/articles/accessible-web-components.html-->
+                    <h3>Autoevaluación</h3>
+                    <p class="text list-item">
+                        ¿Es el sitio accesible mediante teclado? ¿El <i>focus</i> de los elementos es el esperado? ¿Los atajos del teclado son facilmente predecibles?
+                    </p>
+                    <p class="text list-item">
+                        ¿Es el contenido comprensinble sin imágenes?
+                    </p>
+                    <p class="text list-item">
+                        ¿Necesito tener activado el sonido para poder usar el sitio?
+                    </p>
+                    <p class="text list-item">
+                        ¿El sitio se visualiza correctamente en modo de alto contraste? ¿Existe el contraste suficiente entre los colores de fondo y de fuentes? ¿Necesito distinguir colores para usar el sitio?
+                    </p>
+                </section>
+                <section>
+                    <h3>Preguntas</h3>
+                    <img src="images/questions.jpg" alt="No todas las preguntas las responde Google" />
+                    <p><small>Cortesía de <a href="http://www.flickr.com/photos/jaygooby/" target="_blank">Jay Gooby</a></small></p>
+                    <!--Poner una linda imagen -->
+                </section>
+                
+				<section>
+					<h3>Gracias</h3>
+					<h4>Accesibilidad es pensar en todos</h4>
+					<br />
+					<!-- <div class="list-item">
+					    <strong>http://bit.do/accesibilidad-web</strong>
+					</div> -->
+					<br />
+					<p>Contacto</p>
+					<div class="list-item"><a href="https://github.com/p4bl1t0/" target="_blank">p4bl1t0 en GitHub</a></div>
+					<div class="list-item"><a href="https://twitter.com/pablo_botta" target="_blank">@pablo_botta en Twitter</a></div>
+					<div class="list-item">pabloluisbotta(arroba)gmail.com</div>
+				</section>
+                <!-- 
+                    Mostrar o auditar sitios:
+                    * Drupal.org
+                    * rosario.org.ar >> Hay algunas cosas que tienen mal focus, Carousel de abajo no es accesible, imagenes sin alternativas, links vacios, alternativas mal puestas
+
+                -->
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="lib/js/head.min.js"></script>
+		<script type="text/javascript" src="js/reveal.min.js"></script> 
+		<script type="text/javascript">
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
